@@ -1,0 +1,177 @@
+.product-features-container {
+    background-color: var(--classic-color-surface);
+    min-height: 100vh;
+}
+
+/* === Product Features Section Classes === */
+.classic-delivery-icon {
+    color: var(--classic-color-primary);
+}
+
+.classic-delivery-title {
+    color: var(--classic-color-on-surface);
+}
+
+.classic-delivery-subtitle {
+    color: var(--classic-color-on-surface-variant);
+}
+
+/* === Icon Color Classes === */
+.classic-header-icon {
+    color: var(--classic-color-primary);
+}
+
+.classic-primary-icon {
+    color: var(--classic-color-primary);
+}
+
+.classic-secondary-icon {
+    color: var(--classic-color-secondary);
+}
+
+.classic-tertiary-icon {
+    color: var(--classic-color-tertiary);
+}
+
+.classic-success-icon {
+    color: var(--classic-color-success);
+}
+
+.classic-warning-icon {
+    color: var(--classic-color-warning);
+}
+
+.classic-error-icon {
+    color: var(--classic-color-error);
+}
+
+.classic-info-icon {
+    color: var(--classic-color-info);
+}
+
+/* === Background Color Classes === */
+.classic-primary-bg {
+    background-color: var(--classic-color-primary);
+}
+
+.classic-secondary-bg {
+    background-color: var(--classic-color-secondary);
+}
+
+.classic-tertiary-bg {
+    background-color: var(--classic-color-tertiary);
+}
+
+.classic-success-bg {
+    background-color: var(--classic-color-success);
+}
+
+.classic-warning-bg {
+    background-color: var(--classic-color-warning);
+}
+
+.classic-error-bg {
+    background-color: var(--classic-color-error);
+}
+
+.classic-info-bg {
+    background-color: var(--classic-color-info);
+}
+
+.classic-surface-bg {
+    background-color: var(--classic-color-surface);
+}
+
+.classic-surface-variant {
+    background-color: var(--classic-color-surface-variant);
+}
+
+.classic-outline-bg {
+    background-color: var(--classic-color-outline);
+}
+
+/* === Border Classes === */
+.classic-border {
+    border-color: var(--classic-color-outline-variant);
+}
+
+/* === Tag Styling === */
+.classic-tag {
+    background-color: var(--classic-color-surface-container);
+    color: var(--classic-color-on-surface-variant);
+}
+
+/* === Hover Effects === */
+.hover\:shadow-lg:hover {
+    box-shadow: var(--classic-section-shadow);
+}
+
+/* === Expandable Content Animation === */
+.expandable-content {
+    transition: max-height 0.3s ease-in-out;
+}
+
+.classic-chevron {
+    color: var(--classic-color-on-surface-variant);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+    .classic-section {
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+    
+    .classic-middle-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Timeline responsive adjustments */
+    .timeline-responsive {
+        padding-left: 2rem;
+    }
+    
+    .timeline-responsive .absolute {
+        left: 1rem;
+    }
+}
+
+/* === Container Responsive === */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}

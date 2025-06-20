@@ -1,0 +1,45 @@
+/* Additional custom styles if needed */
+.navbar-brand {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Smooth mobile menu animation */
+  @media (max-width: 768px) {
+    .mobile-menu-enter {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    
+    .mobile-menu-enter-active {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.3s ease-out;
+    }
+  }
+  
+  /* Active link custom styling */
+  .router-link-active {
+    position: relative;
+  }
+  
+  .router-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    border-radius: 1px;
+  }
+  
+  /* Hover effects */
+  @media (hover: hover) {
+    .nav-link:hover {
+      transform: translateY(-1px);
+    }
+  }
