@@ -1,0 +1,48 @@
+/* === Enhanced Classic FAQ Component Styles === */
+/* Only colors using CSS variables, everything else uses Tailwind */
+
+/* FAQ Item Colors */
+.classic-faq-item {
+    background-color: var(--classic-color-surface);
+    border-color: var(--classic-color-outline-variant);
+  }
+  
+  /* Question Button Colors */
+  .classic-faq-question:hover {
+    background-color: var(--classic-color-surface-variant);
+  }
+  
+  .classic-faq-question:focus {
+    --tw-ring-color: var(--classic-color-primary);
+  }
+  
+  /* Question Text Color */
+  .classic-faq-question-text {
+    color: var(--classic-color-on-surface);
+  }
+  
+  /* FAQ Icon Color */
+  .classic-faq-icon {
+    color: var(--classic-color-on-surface-variant);
+  }
+  
+  /* Answer Content Colors */
+  .classic-faq-answer-content {
+    color: var(--classic-color-on-surface-variant);
+    border-color: var(--classic-color-outline-variant);
+  }
+  
+  /* Primary Icon Color */
+  .classic-primary-icon {
+    color: var(--classic-color-primary);
+  }
+  
+  /* Active/Hover State Colors */
+  .classic-faq-item:hover .classic-faq-icon {
+    color: var(--classic-color-primary);
+  }
+  
+  /* Shadow using CSS variable */
+  .classic-faq-item:hover {
+    box-shadow: var(--classic-section-shadow);
+  }

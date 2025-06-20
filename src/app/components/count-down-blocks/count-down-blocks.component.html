@@ -1,1 +1,43 @@
-<p>count-down-blocks works!</p>
+<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+<!-- Elegant Countdown Timer with proper spacing for fixed header -->
+<section id="classic-countdown" class="classic-section">
+    <div class="classic-countdown-container px-6 text-center">
+      <div class="classic-middle-title">
+        <h2 data-translate="countdown.offerEndsIn">
+          ينتهي العرض خلال
+        </h2>
+      </div>
+  
+      <div
+        class="classic-countdown-display flex justify-center gap-4 sm:gap-8 items-center my-7"
+        id="countdown"
+        data-time="5125"
+      >
+        <!-- Hours display block -->
+        <div class="classic-countdown-block rounded-2xl p-5 min-w-20 border-2 flex flex-col justify-center items-center">
+          <div class="classic-countdown-number text-4xl font-extrabold" id="hours">01</div>
+          <div class="classic-countdown-label text-sm font-serif" data-translate="countdown.hours">
+            ساعات
+          </div>
+        </div>
+  
+        <!-- Minutes display block -->
+        <div class="classic-countdown-block rounded-2xl p-5 min-w-20 border-2 flex flex-col justify-center items-center">
+          <div class="classic-countdown-number text-4xl font-extrabold" id="minutes">25</div>
+          <div class="classic-countdown-label text-sm font-serif" data-translate="countdown.minutes">
+            دقائق
+          </div>
+        </div>
+  
+        <!-- Seconds display block -->
+        <div class="classic-countdown-block rounded-2xl p-5 min-w-20 border-2 flex flex-col justify-center items-center">
+          <div class="classic-countdown-number text-4xl font-extrabold" id="seconds">45</div>
+          <div class="classic-countdown-label text-sm font-serif" data-translate="countdown.seconds">
+            ثواني
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+  
+</section>

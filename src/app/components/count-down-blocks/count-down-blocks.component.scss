@@ -1,0 +1,12 @@
+.classic-countdown-block {
+    background-color: var(--classic-color-surface-variant);
+    color: var(--classic-color-primary-dark);
+    border-color: var(--classic-color-secondary);
+    box-shadow: var(--classic-section-shadow);
+    transition: all 0.3s ease;
+}
+
+.classic-countdown-block:hover {
+    box-shadow: var(--classic-section-shadow);
+    transform: scale(1.05);
+}

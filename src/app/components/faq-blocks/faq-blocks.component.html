@@ -1,1 +1,44 @@
-<p>faq-blocks works!</p>
+<!-- Enhanced FAQ Component Template -->
+<section class="classic-section max-w-4xl mx-auto">
+  
+  <!-- Header -->
+  <div class="classic-section-header">
+    <i [class]="icon" class="text-3xl classic-primary-icon"></i>
+    <h5 class="classic-middle-title">{{ title }}</h5>
+  </div>
+
+  <!-- FAQ Items -->
+  <div class="flex flex-col gap-4">
+    <div
+      *ngFor="let faq of faqs; let i = index"
+      class="classic-faq-item rounded-2xl border overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+    >
+      <!-- Question Button -->
+      <button
+        (click)="toggle(i)"
+        class="classic-faq-question w-full  p-6 flex items-center justify-between bg-transparent border-none cursor-pointer text-left hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200"
+      >
+        <p class="classic-faq-question-text font-medium flex-1">
+          {{ faq.question }}
+        </p>
+        <span
+          class="classic-faq-icon text-xl font-light transition-transform duration-300 ease-in-out flex-shrink-0 w-6 h-6 flex items-center justify-center ml-4"
+          [ngClass]="{ 'rotate-45': openIndex === i, 'rotate-0': openIndex !== i }"
+        >
+          +
+        </span>
+      </button>
+
+      <!-- Answer Content -->
+      <div
+        class="px-6 transition-all duration-300 ease-out overflow-hidden"
+        [style.maxHeight]="openIndex === i ? '500px' : '0px'"
+      >
+        <div class="classic-faq-answer-content leading-relaxed py-2 border-t">
+          {{ faq.answer }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
