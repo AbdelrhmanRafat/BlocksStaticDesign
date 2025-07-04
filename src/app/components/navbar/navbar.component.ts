@@ -1,5 +1,5 @@
 import { CommonModule, NgClass, NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,8 +8,9 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   isMenuOpen = false;
+  screenIsMobile = false;
 
   navigationItems = [
     { path: '/home', label: 'Home' },
@@ -31,11 +32,17 @@ export class NavbarComponent {
     { path: '/today-orders-blocks', label: 'Today\'s Orders' }
   ];
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
+  ngOnInit() {
+  this.checkScreen();
+  window.addEventListener('resize', () => this.checkScreen());
+}
 
-  closeMenu() {
-    this.isMenuOpen = false;
-  }
+checkScreen() {
+  this.screenIsMobile = window.innerWidth < 768; // Tailwind md breakpoint
+  if (!this.screenIsMobile) this.isMenuOpen = true; // always open on desktop
+}
+
+toggleMenu() {
+  this.isMenuOpen = !this.isMenuOpen;
+}
 }

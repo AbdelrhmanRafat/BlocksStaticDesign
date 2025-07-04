@@ -1,1 +1,67 @@
-<p>modal-purchase-info-blocks works!</p>
+<section class="py-7">
+<div data-modal-celebration-view class="modal-view celebration-view w-full">
+    <div class="classic-modal-header celebration-header flex justify-between items-center p-4 border-b">
+      <h3 class="classic-modal-title celebration-title text-xl font-bold m-0">
+        تم تأكيد طلبك بنجاح!
+      </h3>
+      <button type="button" class="classic-modal-close bg-transparent border-none cursor-pointer text-xl p-1 flex items-center justify-center transition-colors duration-200" data-modal-celebration-close-button>
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+  
+    <div class="classic-modal-body p-4">
+      <div class="classic-modal-content celebration-content flex flex-col gap-8 text-center">
+  
+        <!-- Success Animation -->
+        <div class="celebration-animation flex justify-center items-center my-4">
+          <div class="success-checkmark w-20 h-20 rounded-full block relative mx-auto">
+            <div class="check-icon w-14 h-14 absolute left-3 top-3 z-10 rounded-full"></div>
+          </div>
+        </div>
+  
+        <!-- Thank You Message -->
+        <div class="celebration-message my-8">
+          <h2 class="celebration-main-title text-3xl font-bold mb-4">
+            شكراً لطلبك!
+          </h2>
+          <p class="celebration-subtitle text-lg leading-relaxed max-w-md mx-auto">
+            تم استلام طلبك وسنقوم بالتواصل معك لتأكيد تفاصيل الشحن والدفع.
+          </p>
+        </div>
+  
+        <!-- Order Summary -->
+        <div class="celebration-summary p-6 rounded-xl my-6">
+          <div class="celebration-summary-item flex items-center gap-4 py-3 last:border-b-0">
+            <i class="fa-solid fa-shopping-bag celebration-icon text-2xl w-6 text-center"></i>
+            <div class="celebration-summary-text flex flex-col text-left flex-1">
+              <strong class="font-semibold mb-1">رقم الطلب</strong>
+              <span class="text-sm">#12345</span>
+            </div>
+          </div>
+          <div class="celebration-summary-item flex items-center gap-4 py-3 last:border-b-0">
+            <i class="fa-solid fa-clock celebration-icon text-2xl w-6 text-center"></i>
+            <div class="celebration-summary-text flex flex-col text-left flex-1">
+              <strong class="font-semibold mb-1">موعد التوصيل المتوقع</strong>
+              <span class="text-sm">من 1 إلى 3 أيام عمل</span>
+            </div>
+          </div>
+          <div class="celebration-summary-item flex items-center gap-4 py-3 last:border-b-0">
+            <i class="fa-solid fa-phone celebration-icon text-2xl w-6 text-center"></i>
+            <div class="celebration-summary-text flex flex-col text-left flex-1">
+              <strong class="font-semibold mb-1">سوف يتم التواصل معك عبر الهاتف</strong>
+              <span class="text-sm">خلال الساعات القادمة لتأكيد الطلب</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Actions -->
+        <div class="celebration-actions mt-8">
+          <button type="button" class="celebration-primary-button py-4 px-8 rounded-full border-none font-semibold text-lg cursor-pointer transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:shadow-xl">
+            متابعة التسوق
+          </button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  </section>

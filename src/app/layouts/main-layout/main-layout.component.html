@@ -1,4 +1,7 @@
-<main class="md:container w-11/12 mx-auto">
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<main class="w-full md:flex md:justify-start md:items-start min-h-screen">
+  <app-navbar class="w-full md:w-2/12"></app-navbar>
+
+  <div class="w-full md:w-10/12 p-4">
+    <router-outlet></router-outlet>
+  </div>
 </main>
