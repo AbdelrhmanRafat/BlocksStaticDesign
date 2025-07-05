@@ -1,511 +1,315 @@
-    <!-- Layout 1: Side by Side (Original) -->
-    <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-        <section id="classic-image-text-beside" class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
-            <!-- Header -->
-            <div class="classic-section-header">
-                <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
-                <h5 class="classic-middle-title">معلومات عن المنتج - التخطيط الجانبي</h5>
-            </div>
-            
-            <!-- Product Grid -->
-            <div class="classic-image-text-beside grid grid-cols-1 lg:grid-cols-2 gap-6 items-start overflow-hidden rounded-2xl">
-                <!-- Image Section -->
-                <div class="h-64 sm:h-96 overflow-hidden rounded-2xl">
-                    <img
-                        src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                        alt="صورة المنتج"
-                        class="w-full h-full object-cover classic-image-text-beside-image transition-transform duration-300 hover:scale-105"
-                    />
-                </div>
-                
-                <!-- Text Section -->
-                <div class="classic-image-text-beside-content flex flex-col justify-start items-start w-full gap-2 p-6 sm:p-10 space-y-6 text-right h-full rounded-2xl">
-                    <h2 class="classic-image-text-beside-title text-3xl font-bold">
-                        لماذا هذا المنتج هو الأفضل؟
-                    </h2>
-                    <p class="classic-image-text-beside-description text-base leading-relaxed">
-                        هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة. استثمر في الأفضل الآن!
-                    </p>
-                    <div class="flex-1"></div>
-                    <div>
-                        <a class="classic-buy-now-button inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
-                            <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
-                            <span>شراء المنتج الآن</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- Layout 2: Content Overlay on Image -->
-    <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-        <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
-            <!-- Header -->
-            <div class="classic-section-header">
-                <i class="fa-solid fa-layer-group text-3xl classic-secondary-icon"></i>
-                <h5 class="classic-middle-title">تخطيط المحتوى المتراكب</h5>
-            </div>
-            
-            <!-- Overlay Layout -->
-            <div class="relative h-96 sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden">
-                <!-- Background Image -->
-                <img
-                    src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                    alt="خلفية المنتج"
-                    class="w-full h-full object-cover"
-                />
-                
-                <!-- Overlay Content -->
-                <div class="absolute inset-0 classic-overlay-bg flex items-center justify-center">
-                    <div class="classic-overlay-content max-w-2xl mx-auto text-center px-6 py-8 rounded-2xl backdrop-blur-md">
-                        <h2 class="classic-overlay-title text-4xl sm:text-5xl font-bold mb-6">
-                            عطر فاخر للشخصية المميزة
-                        </h2>
-                        <p class="classic-overlay-description text-lg sm:text-xl leading-relaxed mb-8">
-                            اكتشف عالم العطور الفاخرة مع تركيبتنا الحصرية التي تدوم طوال اليوم. رائحة ساحرة تعكس شخصيتك الأنيقة وتترك انطباعاً لا يُنسى.
-                        </p>
-                        <a class="classic-buy-now-button inline-flex items-center gap-3 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105 shadow-2xl" href="#shop">
-                            <i class="fa-solid fa-sparkles classic-buy-now-button-icon"></i>
-                            <span>اطلب الآن - خصم 30%</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- Layout 3: Vertical Card Layout -->
-    <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-        <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
-            <!-- Header -->
-            <div class="classic-section-header">
-                <i class="fa-solid fa-address-card text-3xl classic-tertiary-icon"></i>
-                <h5 class="classic-middle-title">تخطيط البطاقة العمودية</h5>
-            </div>
-            
-            <!-- Vertical Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="classic-card-vertical rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="h-48 overflow-hidden">
-                        <img
-                            src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                            alt="عطر كلاسيكي"
-                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                        />
-                    </div>
-                    <div class="classic-card-content p-6 text-center space-y-4">
-                        <h3 class="classic-card-title text-2xl font-bold">عطر كلاسيكي فاخر</h3>
-                        <p class="classic-card-description text-sm leading-relaxed">
-                            تركيبة كلاسيكية خالدة تناسب الأناقة والرقي. مزيج من الورد والياسمين مع لمسة من العود الطبيعي.
-                        </p>
-                        <div class="pt-4">
-                            <a class="classic-buy-now-button inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#product1">
-                                <i class="fa-solid fa-shopping-bag classic-buy-now-button-icon text-sm"></i>
-                                <span>عرض التفاصيل</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="classic-card-vertical rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="h-48 overflow-hidden">
-                        <img
-                            src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                            alt="عطر رياضي"
-                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                        />
-                    </div>
-                    <div class="classic-card-content p-6 text-center space-y-4">
-                        <h3 class="classic-card-title text-2xl font-bold">عطر رياضي منعش</h3>
-                        <p class="classic-card-description text-sm leading-relaxed">
-                            رائحة منعشة ونشطة مثالية للأنشطة اليومية. مزيج من الحمضيات والنعناع مع لمسة من الخشب الأبيض.
-                        </p>
-                        <div class="pt-4">
-                            <a class="classic-buy-now-button inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#product2">
-                                <i class="fa-solid fa-shopping-bag classic-buy-now-button-icon text-sm"></i>
-                                <span>عرض التفاصيل</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="classic-card-vertical rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="h-48 overflow-hidden">
-                        <img
-                            src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                            alt="عطر مسائي"
-                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                        />
-                    </div>
-                    <div class="classic-card-content p-6 text-center space-y-4">
-                        <h3 class="classic-card-title text-2xl font-bold">عطر مسائي ساحر</h3>
-                        <p class="classic-card-description text-sm leading-relaxed">
-                            تركيبة غامضة وجذابة للمناسبات الخاصة. مزيج من الفانيليا والمسك مع نفحات من الكهرمان الدافئ.
-                        </p>
-                        <div class="pt-4">
-                            <a class="classic-buy-now-button inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#product3">
-                                <i class="fa-solid fa-shopping-bag classic-buy-now-button-icon text-sm"></i>
-                                <span>عرض التفاصيل</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- Layout 4: Split Screen Layout -->
-    <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-        <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
-            <!-- Header -->
-            <div class="classic-section-header">
-                <i class="fa-solid fa-columns text-3xl classic-success-icon"></i>
-                <h5 class="classic-middle-title">تخطيط الشاشة المقسمة</h5>
-            </div>
-            
-            <!-- Split Screen Layout -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px] rounded-2xl overflow-hidden">
-                <!-- Left Side - Image -->
-                <div class="relative overflow-hidden">
-                    <img
-                        src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                        alt="مجموعة العطور"
-                        class="w-full h-full object-cover"
-                    />
-                    <div class="absolute inset-0 classic-split-overlay"></div>
-                </div>
-                
-                <!-- Right Side - Content -->
-                <div class="classic-split-content flex flex-col justify-center items-start p-8 lg:p-12 space-y-6 text-right">
-                    <div class="space-y-4">
-                        <span class="classic-split-badge inline-block px-4 py-2 rounded-full text-sm font-semibold">جديد 2024</span>
-                        <h2 class="classic-split-title text-4xl lg:text-5xl font-bold leading-tight">
-                            مجموعة العطور الحصرية
-                        </h2>
-                    </div>
-                    <p class="classic-split-description text-lg leading-relaxed">
-                        اكتشف مجموعتنا الحصرية من العطور الفاخرة المصممة خصيصاً للشخصيات المميزة. كل عطر يحكي قصة فريدة ويعكس طابعاً مختلفاً يناسب جميع المناسبات والأوقات.
-                    </p>
-                    <ul class="classic-split-features space-y-3 text-base">
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle classic-success-icon"></i>
-                            <span class="classic-split-feature-text">تركيبات طبيعية 100%</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle classic-success-icon"></i>
-                            <span class="classic-split-feature-text">ثبات يدوم أكثر من 12 ساعة</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle classic-success-icon"></i>
-                            <span class="classic-split-feature-text">تغليف فاخر وأنيق</span>
-                        </li>
-                    </ul>
-                    <div class="pt-6">
-                        <a class="classic-buy-now-button inline-flex items-center gap-3 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105" href="#collection">
-                            <i class="fa-solid fa-crown classic-buy-now-button-icon"></i>
-                            <span>اكتشف المجموعة</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- Layout 5: Banner with Floating Content -->
-    <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-        <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
-            <!-- Header -->
-            <div class="classic-section-header">
-                <i class="fa-solid fa-star text-3xl classic-warning-icon"></i>
-                <h5 class="classic-middle-title">تخطيط البانر العائم</h5>
-            </div>
-            
-            <!-- Banner Layout -->
-            <div class="relative h-80 sm:h-96 lg:h-[500px] rounded-2xl overflow-hidden">
-                <!-- Background Image -->
-                <img
-                    src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                    alt="عرض خاص"
-                    class="w-full h-full object-cover"
-                />
-                
-                <!-- Floating Content Card -->
-                <div class="absolute top-8 right-8 sm:top-12 sm:right-12 lg:top-16 lg:right-16">
-                    <div class="classic-floating-card p-6 lg:p-8 rounded-2xl backdrop-blur-lg max-w-md space-y-4 text-right">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i class="fa-solid fa-fire classic-error-icon text-2xl"></i>
-                            <span class="classic-floating-badge px-3 py-1 rounded-full text-sm font-bold">عرض محدود</span>
-                        </div>
-                        <h3 class="classic-floating-title text-2xl lg:text-3xl font-bold">
-                            خصم حصري 50%
-                        </h3>
-                        <p class="classic-floating-description text-sm lg:text-base leading-relaxed">
-                            لفترة محدودة فقط! احصل على خصم 50% على جميع العطور الفاخرة. عرض ينتهي خلال 48 ساعة.
-                        </p>
-                        <div class="pt-4">
-                            <a class="classic-buy-now-button inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105" href="#sale">
-                                <i class="fa-solid fa-bolt classic-buy-now-button-icon"></i>
-                                <span>استفد من العرض</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-<!-- Layout 6: Diagonal Split Layout -->
 <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-  <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+
+  <!-- Variation 1: Original Side by Side Layout -->
+  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+    <section id="classic-image-text-beside" class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
       <!-- Header -->
       <div class="classic-section-header">
-          <i class="fa-solid fa-slash text-3xl classic-info-icon"></i>
-          <h5 class="classic-middle-title">تخطيط القطع القطري</h5>
+        <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
+        <h5 class="classic-middle-title">معلومات عن المنتج - التخطيط الجانبي</h5>
       </div>
       
-      <!-- Diagonal Layout -->
-      <div class="relative h-96 sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden">
-          <!-- Background Image -->
+      <!-- Product Grid -->
+      <div class="classic-image-text-beside grid grid-cols-1 lg:grid-cols-2 gap-6 items-start overflow-hidden rounded-2xl">
+        <!-- Image Section -->
+        <div class="h-64 sm:h-96 overflow-hidden rounded-2xl">
           <img
-              src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-              alt="عطور فاخرة"
-              class="w-full h-full object-cover"
+            src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+            alt="صورة المنتج"
+            class="w-full h-full object-cover classic-image-text-beside-image transition-transform duration-300 hover:scale-105"
           />
+        </div>
+        
+        <!-- Text Section -->
+        <div class="classic-image-text-beside-content flex flex-col justify-start items-start w-full gap-2 p-6 sm:p-10 space-y-6 text-right h-full rounded-2xl">
+          <h2 class="classic-image-text-beside-title text-3xl font-bold">
+            لماذا هذا المنتج هو الأفضل؟
+          </h2>
+          <p class="classic-image-text-beside-description text-base leading-relaxed">
+            هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة. استثمر في الأفضل الآن!
+          </p>
+          <div class="flex-1"></div>
+          <div>
+            <a class="classic-buy-now-button inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
+              <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+              <span>شراء المنتج الآن</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Variation 2: Original Content Overlay -->
+  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+      <!-- Header -->
+      <div class="classic-section-header">
+        <i class="fa-solid fa-layer-group text-3xl classic-secondary-icon"></i>
+        <h5 class="classic-middle-title">تخطيط المحتوى المتراكب</h5>
+      </div>
+      
+      <!-- Overlay Layout -->
+      <div class="relative h-96 sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden">
+        <!-- Background Image -->
+        <img
+          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+          alt="خلفية المنتج"
+          class="w-full h-full object-cover"
+        />
+        
+        <!-- Overlay Content -->
+        <div class="absolute inset-0 classic-overlay-bg flex items-center justify-center">
+          <div class="classic-overlay-content max-w-2xl mx-auto text-center px-6 py-8 rounded-2xl backdrop-blur-md">
+            <h2 class="classic-overlay-title text-4xl sm:text-5xl font-bold mb-6">
+              لماذا هذا المنتج هو الأفضل؟
+            </h2>
+            <p class="classic-overlay-description text-lg sm:text-xl leading-relaxed mb-8">
+              هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة. استثمر في الأفضل الآن!
+            </p>
+            <a class="classic-buy-now-button inline-flex items-center gap-3 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105 shadow-2xl" href="#shop">
+              <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+              <span>شراء المنتج الآن</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Variation 3: Vertical Card Layout -->
+  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-4xl">
+      <!-- Header -->
+      <div class="classic-section-header">
+        <i class="fa-solid fa-grip-vertical text-3xl classic-tertiary-icon"></i>
+        <h5 class="classic-middle-title">تخطيط البطاقة العمودية</h5>
+      </div>
+      
+      <!-- Vertical Card -->
+      <div class="classic-card-vertical rounded-2xl overflow-hidden shadow-lg">
+        <!-- Image Section -->
+        <div class="h-64 sm:h-80 overflow-hidden">
+          <img
+            src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+            alt="صورة المنتج"
+            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        
+        <!-- Content Section -->
+        <div class="classic-card-content p-8 text-center">
+          <h2 class="classic-card-title text-3xl font-bold mb-6">
+            لماذا هذا المنتج هو الأفضل؟
+          </h2>
+          <p class="classic-card-description text-lg leading-relaxed mb-8">
+            هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة. استثمر في الأفضل الآن!
+          </p>
+          <a class="classic-buy-now-button inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
+            <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+            <span>شراء المنتج الآن</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Variation 4: Split Screen Layout -->
+  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+      <!-- Header -->
+      <div class="classic-section-header">
+        <i class="fa-solid fa-columns text-3xl classic-warning-icon"></i>
+        <h5 class="classic-middle-title">تخطيط الشاشة المقسمة</h5>
+      </div>
+      
+      <!-- Split Screen Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-96 lg:h-[500px] rounded-2xl overflow-hidden">
+        <!-- Image Side -->
+        <div class="relative h-full">
+          <img
+            src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+            alt="صورة المنتج"
+            class="w-full h-full object-cover"
+          />
+          <div class="classic-split-overlay absolute inset-0"></div>
+          <div class="absolute top-6 right-6">
+            <span class="classic-split-badge px-4 py-2 rounded-full text-sm font-bold">منتج مميز</span>
+          </div>
+        </div>
+        
+        <!-- Content Side -->
+        <div class="classic-split-content h-full flex flex-col justify-center p-8 lg:p-12">
+          <h2 class="classic-split-title text-3xl lg:text-4xl font-bold mb-6">
+            لماذا هذا المنتج هو الأفضل؟
+          </h2>
+          <p class="classic-split-description text-lg leading-relaxed mb-8">
+            هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة.
+          </p>
           
-          <!-- Diagonal Content Box -->
-          <div class="absolute top-0 left-0 w-full h-full">
-              <div class="classic-diagonal-content h-full w-3/5 md:w-1/2 p-8 lg:p-12 flex flex-col justify-center text-right" style="clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);">
-                  <div class="space-y-6">
-                      <span class="classic-diagonal-badge inline-block px-4 py-2 rounded-full text-sm font-bold">حصري</span>
-                      <h2 class="classic-diagonal-title text-3xl lg:text-4xl font-bold leading-tight">
-                          عطر الملوك الفاخر
-                      </h2>
-                      <p class="classic-diagonal-description text-base lg:text-lg leading-relaxed">
-                          تجربة عطرية ملكية لا مثيل لها. مزيج نادر من أجود أنواع العود والزعفران مع لمسة من الورد الدمشقي الأصيل.
-                      </p>
-                      <div class="flex flex-col sm:flex-row gap-4">
-                          <a class="classic-buy-now-button inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105" href="#royal">
-                              <i class="fa-solid fa-crown classic-buy-now-button-icon"></i>
-                              <span>اطلب الآن</span>
-                          </a>
-                          <a class="classic-secondary-button inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105" href="#details">
-                              <i class="fa-solid fa-info-circle classic-secondary-button-icon"></i>
-                              <span>المزيد من التفاصيل</span>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
+          <!-- Features List -->
+          <ul class="mb-8 space-y-3">
+            <li class="flex items-center gap-3">
+              <i class="fas fa-check-circle classic-success-icon"></i>
+              <span class="classic-split-feature-text">جودة عالية ومتانة فائقة</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-check-circle classic-success-icon"></i>
+              <span class="classic-split-feature-text">تصميم عصري وأنيق</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-check-circle classic-success-icon"></i>
+              <span class="classic-split-feature-text">سهولة في الاستخدام</span>
+            </li>
+          </ul>
+          
+          <a class="classic-buy-now-button inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 w-fit" href="#classic-quantity-selection">
+            <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+            <span>شراء المنتج الآن</span>
+          </a>
+        </div>
       </div>
+    </section>
   </section>
-</section>
 
-<!-- Layout 7: Zigzag Layout -->
-<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-  <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+  <!-- Variation 5: Floating Banner Layout -->
+  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
       <!-- Header -->
       <div class="classic-section-header">
-          <i class="fa-solid fa-chart-line text-3xl classic-success-icon"></i>
-          <h5 class="classic-middle-title">تخطيط متعرج</h5>
+        <i class="fa-solid fa-window-restore text-3xl classic-info-icon"></i>
+        <h5 class="classic-middle-title">تخطيط البانر العائم</h5>
       </div>
       
-      <!-- Zigzag Items -->
+      <!-- Floating Banner Container -->
+      <div class="relative h-96 sm:h-[500px] rounded-2xl overflow-hidden">
+        <!-- Background Image -->
+        <img
+          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+          alt="خلفية المنتج"
+          class="w-full h-full object-cover"
+        />
+        
+        <!-- Floating Card -->
+        <div class="absolute top-8 right-8 left-8 lg:left-auto lg:w-96">
+          <div class="classic-floating-card rounded-2xl p-8 backdrop-blur-lg">
+            <div class="classic-floating-badge inline-block px-3 py-1 rounded-full text-sm font-bold mb-4">
+              عرض خاص
+            </div>
+            <h2 class="classic-floating-title text-2xl font-bold mb-4">
+              لماذا هذا المنتج هو الأفضل؟
+            </h2>
+            <p class="classic-floating-description text-base leading-relaxed mb-6">
+              هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق.
+            </p>
+            <a class="classic-buy-now-button inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 w-full justify-center" href="#classic-quantity-selection">
+              <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+              <span>شراء المنتج الآن</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Variation 6: Diagonal Split Layout -->
+  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+      <!-- Header -->
+      <div class="classic-section-header">
+        <i class="fa-solid fa-slash text-3xl classic-secondary-icon"></i>
+        <h5 class="classic-middle-title">تخطيط القسم القطري</h5>
+      </div>
+      
+      <!-- Diagonal Container -->
+      <div class="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden">
+        <!-- Background Image -->
+        <img
+          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+          alt="خلفية المنتج"
+          class="w-full h-full object-cover"
+        />
+        
+        <!-- Diagonal Content -->
+        <div class="absolute inset-0 flex items-end">
+          <div class="classic-diagonal-content w-full lg:w-3/5 p-8 lg:p-12" style="clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);">
+            <div class="classic-diagonal-badge inline-block px-4 py-2 rounded-full text-sm font-bold mb-4">
+              الأفضل مبيعًا
+            </div>
+            <h2 class="classic-diagonal-title text-3xl font-bold mb-4">
+              لماذا هذا المنتج هو الأفضل؟
+            </h2>
+            <p class="classic-diagonal-description text-base leading-relaxed mb-6">
+              هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a class="classic-buy-now-button inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
+                <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+                <span>شراء الآن</span>
+              </a>
+              <a class="classic-secondary-button inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105" href="#details">
+                <i class="fa-solid fa-info-circle classic-secondary-button-icon"></i>
+                <span>المزيد من التفاصيل</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Variation 7: Zigzag Layout -->
+  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+      <!-- Header -->
+      <div class="classic-section-header">
+        <i class="fa-solid fa-wave-square text-3xl classic-success-icon"></i>
+        <h5 class="classic-middle-title">تخطيط متعرج</h5>
+      </div>
+      
+      <!-- Zigzag Container -->
       <div class="space-y-16">
-          <!-- Zigzag Item 1 -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div class="order-2 lg:order-1">
-                  <div class="classic-zigzag-content p-8 rounded-2xl text-right space-y-6">
-                      <div class="flex items-center gap-3 justify-end">
-                          <span class="classic-zigzag-number">01</span>
-                          <h3 class="classic-zigzag-title text-2xl lg:text-3xl font-bold">عطور نهارية منعشة</h3>
-                      </div>
-                      <p class="classic-zigzag-description text-base leading-relaxed">
-                          ابدأ يومك بانتعاش وحيوية مع مجموعتنا من العطور النهارية. تركيبات خفيفة ومنعشة تناسب الأجواء الصباحية والأنشطة اليومية.
-                      </p>
-                      <ul class="classic-zigzag-features space-y-2">
-                          <li class="flex items-center gap-3 justify-end">
-                              <span class="classic-zigzag-feature-text">رائحة منعشة تدوم 8 ساعات</span>
-                              <i class="fa-solid fa-check-circle classic-success-icon"></i>
-                          </li>
-                          <li class="flex items-center gap-3 justify-end">
-                              <span class="classic-zigzag-feature-text">مناسب للاستخدام اليومي</span>
-                              <i class="fa-solid fa-check-circle classic-success-icon"></i>
-                          </li>
-                      </ul>
-                      <div>
-                          <a class="classic-buy-now-button inline-flex items-center gap-3 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#day">
-                              <i class="fa-solid fa-sun classic-buy-now-button-icon"></i>
-                              <span>تسوق العطور النهارية</span>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-              <div class="order-1 lg:order-2">
-                  <div class="h-64 lg:h-80 rounded-2xl overflow-hidden">
-                      <img
-                          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                          alt="عطور نهارية"
-                          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                  </div>
-              </div>
+        <!-- First Section - Image Right -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div class="classic-zigzag-content rounded-2xl p-8">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="classic-zigzag-number">1</span>
+              <h3 class="classic-zigzag-title text-2xl font-bold">لماذا هذا المنتج هو الأفضل؟</h3>
+            </div>
+            <p class="classic-zigzag-description text-lg leading-relaxed mb-6">
+              هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-3">
+                <i class="fas fa-star classic-warning-icon"></i>
+                <span class="classic-zigzag-feature-text">جودة عالية ومتانة فائقة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-star classic-warning-icon"></i>
+                <span class="classic-zigzag-feature-text">تصميم عصري وأنيق</span>
+              </li>
+            </ul>
           </div>
-
-          <!-- Zigzag Item 2 -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div class="h-64 lg:h-80 rounded-2xl overflow-hidden">
-                  <img
-                      src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                      alt="عطور مسائية"
-                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
-              </div>
-              <div class="classic-zigzag-content p-8 rounded-2xl text-right space-y-6">
-                  <div class="flex items-center gap-3 justify-end">
-                      <span class="classic-zigzag-number">02</span>
-                      <h3 class="classic-zigzag-title text-2xl lg:text-3xl font-bold">عطور مسائية ساحرة</h3>
-                  </div>
-                  <p class="classic-zigzag-description text-base leading-relaxed">
-                      استمتع بسحر الليل مع مجموعتنا من العطور المسائية الفاخرة. تركيبات غنية وعميقة تضفي لمسة من الأناقة والغموض على إطلالتك المسائية.
-                  </p>
-                  <ul class="classic-zigzag-features space-y-2">
-                      <li class="flex items-center gap-3 justify-end">
-                          <span class="classic-zigzag-feature-text">تركيبة فاخرة وعميقة</span>
-                          <i class="fa-solid fa-check-circle classic-success-icon"></i>
-                      </li>
-                      <li class="flex items-center gap-3 justify-end">
-                          <span class="classic-zigzag-feature-text">مثالي للمناسبات الخاصة</span>
-                          <i class="fa-solid fa-check-circle classic-success-icon"></i>
-                      </li>
-                  </ul>
-                  <div>
-                      <a class="classic-buy-now-button inline-flex items-center gap-3 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#night">
-                          <i class="fa-solid fa-moon classic-buy-now-button-icon"></i>
-                          <span>تسوق العطور المسائية</span>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-</section>
-
-<!-- Layout 8: Masonry Grid Layout -->
-<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-  <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
-      <!-- Header -->
-      <div class="classic-section-header">
-          <i class="fa-solid fa-th text-3xl classic-tertiary-icon"></i>
-          <h5 class="classic-middle-title">تخطيط الشبكة المتداخلة</h5>
-      </div>
-      
-      <!-- Masonry Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Large Featured Item -->
-          <div class="md:col-span-2 lg:col-span-2">
-              <div class="classic-masonry-large relative h-80 lg:h-96 rounded-2xl overflow-hidden group">
-                  <img
-                      src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                      alt="المجموعة المميزة"
-                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div class="absolute inset-0 classic-masonry-overlay group-hover:bg-opacity-70 transition-all duration-300"></div>
-                  <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                      <div class="classic-masonry-content space-y-4 text-right">
-                          <h3 class="classic-masonry-large-title text-2xl lg:text-3xl font-bold">
-                              المجموعة المميزة الجديدة
-                          </h3>
-                          <p class="classic-masonry-large-description text-sm lg:text-base">
-                              اكتشف أحدث إبداعاتنا في عالم العطور الفاخرة
-                          </p>
-                          <a class="classic-buy-now-button inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105" href="#featured">
-                              <i class="fa-solid fa-arrow-left classic-buy-now-button-icon"></i>
-                              <span>استكشف المجموعة</span>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Small Items -->
-          <div class="space-y-6">
-              <!-- Small Item 1 -->
-              <div class="classic-masonry-small rounded-2xl overflow-hidden">
-                  <div class="h-32 overflow-hidden">
-                      <img
-                          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                          alt="عطر زهري"
-                          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                  </div>
-                  <div class="classic-masonry-small-content p-4 text-center space-y-3">
-                      <h4 class="classic-masonry-small-title text-lg font-semibold">عطر زهري رقيق</h4>
-                      <a class="classic-buy-now-button inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105" href="#floral">
-                          <i class="fa-solid fa-shopping-cart classic-buy-now-button-icon text-xs"></i>
-                          <span>أضف للسلة</span>
-                      </a>
-                  </div>
-              </div>
-
-              <!-- Small Item 2 -->
-              <div class="classic-masonry-small rounded-2xl overflow-hidden">
-                  <div class="h-32 overflow-hidden">
-                      <img
-                          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                          alt="عطر خشبي"
-                          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                  </div>
-                  <div class="classic-masonry-small-content p-4 text-center space-y-3">
-                      <h4 class="classic-masonry-small-title text-lg font-semibold">عطر خشبي دافئ</h4>
-                      <a class="classic-buy-now-button inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105" href="#woody">
-                          <i class="fa-solid fa-shopping-cart classic-buy-now-button-icon text-xs"></i>
-                          <span>أضف للسلة</span>
-                      </a>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Medium Items -->
-          <div class="classic-masonry-medium h-48 lg:h-64 rounded-2xl overflow-hidden relative group">
+          <div class="lg:order-last">
+            <div class="h-64 lg:h-80 rounded-2xl overflow-hidden">
               <img
-                  src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                  alt="عطور للرجال"
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+                alt="صورة المنتج"
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
-              <div class="absolute inset-0 classic-masonry-medium-overlay group-hover:bg-opacity-80 transition-all duration-300"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="classic-masonry-medium-content text-center space-y-3">
-                      <h4 class="classic-masonry-medium-title text-xl font-bold">عطور رجالية</h4>
-                      <a class="classic-buy-now-button inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#men">
-                          <i class="fa-solid fa-male classic-buy-now-button-icon"></i>
-                          <span>تسوق الآن</span>
-                      </a>
-                  </div>
-              </div>
+            </div>
           </div>
-
-          <div class="classic-masonry-medium h-48 lg:h-64 rounded-2xl overflow-hidden relative group">
-              <img
-                  src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
-                  alt="عطور للنساء"
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div class="absolute inset-0 classic-masonry-medium-overlay group-hover:bg-opacity-80 transition-all duration-300"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="classic-masonry-medium-content text-center space-y-3">
-                      <h4 class="classic-masonry-medium-title text-xl font-bold">عطور نسائية</h4>
-                      <a class="classic-buy-now-button inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#women">
-                          <i class="fa-solid fa-female classic-buy-now-button-icon"></i>
-                          <span>تسوق الآن</span>
-                      </a>
-                  </div>
-              </div>
-          </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="text-center">
+          <a class="classic-buy-now-button inline-flex items-center gap-3 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
+            <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+            <span>شراء المنتج الآن</span>
+          </a>
+        </div>
       </div>
+    </section>
   </section>
+
 </section>

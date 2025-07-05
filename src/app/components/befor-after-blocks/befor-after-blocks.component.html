@@ -1,5 +1,7 @@
 <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-<section id="classic-before-after" class="classic-section">
+
+  <!-- Variation 1: Original Side-by-Side Layout -->
+  <section id="classic-before-after-1" class="classic-section">
     <!-- Section Header -->
     <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
       <h3 class="text-center classic-section-title">
@@ -10,11 +12,11 @@
       </p>
       <div class="w-24 h-1 classic-section-divider mx-auto rounded-full"></div>
     </div>
-  
+
     <div class="flex flex-col justify-center items-center gap-10">
       <!-- Before and After Images Container -->
       <div class="grid md:grid-cols-2 gap-12">
-  
+
         <!-- Before Column -->
         <div class="flex flex-col gap-3 justify-center items-center">
           <!-- Before Image -->
@@ -38,7 +40,7 @@
             </div>
             <div class="classic-overlay-before absolute inset-0"></div>
           </div>
-  
+
           <!-- Before Description -->
           <div class="mt-6 text-center">
             <h3 class="text-2xl font-bold classic-card-title mb-2">قبل الاستخدام</h3>
@@ -47,7 +49,7 @@
             </p>
           </div>
         </div>
-  
+
         <!-- After Column -->
         <div class="flex flex-col gap-3 justify-center items-center">
           <!-- After Image -->
@@ -71,7 +73,7 @@
             </div>
             <div class="classic-overlay-after absolute inset-0"></div>
           </div>
-  
+
           <!-- After Description -->
           <div class="mt-6 text-center">
             <h3 class="text-2xl font-bold classic-card-title mb-2">بعد الاستخدام</h3>
@@ -80,14 +82,351 @@
             </p>
           </div>
         </div>
-  
+
       </div>
-  
+
       <!-- Call to Action -->
       <a class="classic-buy-now-button" href="#classic-quantity-selection">
         <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
         <span>شراء المنتج الآن</span>
       </a>
     </div>
-  </section>  
+  </section>
+
+<!-- Variation 2: Slider/Comparison View -->
+<section id="classic-before-after-2" class="classic-section w-full py-16">
+  <!-- Section Header -->
+  <div class="classic-middle-title flex flex-col justify-center items-center gap-3 mb-10">
+    <h3 class="text-center classic-section-title text-3xl md:text-4xl font-bold">
+      نتائج مذهلة قبل وبعد الاستخدام
+    </h3>
+    <p class="text-xl text-center font-medium classic-section-description max-w-2xl">
+      اكتشف الفرق الكبير الذي يمكن أن يحدثه منتجنا في حياتك اليومية!
+    </p>
+    <div class="w-24 h-1 classic-section-divider mx-auto rounded-full bg-gray-300"></div>
+  </div>
+
+  <div class="flex flex-col justify-center items-center gap-14">
+    <!-- Single Image with Slider -->
+    <div class="relative w-full max-w-6xl lg:w-[80%] px-4">
+      <div class="classic-image-card relative overflow-hidden rounded-lg aspect-[16/9] md:aspect-[21/9] shadow-xl">
+        <!-- Before Image (Bottom Layer) -->
+        <img
+          class="absolute inset-0 w-full h-full object-cover"
+          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w-0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+          alt="صورة قبل الاستخدام"
+        >
+        <!-- After Image (Top Layer with clip) -->
+        <img
+          class="absolute inset-0 w-full h-full object-cover transition-all duration-300"
+          style="clip-path: inset(0 50% 0 0);"
+          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+          alt="صورة بعد الاستخدام"
+          id="after-image"
+        >
+
+        <!-- Center Divider Line -->
+        <div class="absolute top-0 bottom-0 left-1/2 w-1 bg-white shadow-lg transform -translate-x-1/2 z-10"></div>
+
+        <!-- Labels -->
+        <div class="classic-badge-before absolute top-6 right-6 z-20 px-4 py-2 rounded-full font-bold text-sm bg-black/50 text-white">
+          قبل
+        </div>
+        <div class="classic-badge-after absolute top-6 left-6 z-20 px-4 py-2 rounded-full font-bold text-sm bg-black/50 text-white">
+          بعد
+        </div>
+      </div>
+
+      <!-- Slider Control -->
+      <div class="mt-6">
+        <input 
+          type="range" 
+          min="0" 
+          max="100" 
+          value="50" 
+          class="w-full h-2 classic-primary-bg rounded-lg appearance-none cursor-pointer"
+          onInput="updateComparison(this.value)"
+        >
+        <div class="flex justify-between text-sm classic-delivery-subtitle mt-2">
+          <span>قبل الاستخدام</span>
+          <span>بعد الاستخدام</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center max-w-3xl px-4">
+      <p class="classic-card-description text-lg leading-relaxed">
+        قم بتحريك المؤشر لرؤية الفرق المذهل بين حالة البشرة قبل وبعد استخدام المنتج لمدة أسبوعين.
+      </p>
+    </div>
+
+    <!-- Call to Action -->
+    <a class="classic-buy-now-button flex items-center gap-3 text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-lg transition duration-300" href="#classic-quantity-selection">
+      <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+      <span>شراء المنتج الآن</span>
+    </a>
+  </div>
 </section>
+
+
+  <!-- Variation 3: Vertical Stack Layout -->
+  <section id="classic-before-after-3" class="classic-section">
+    <!-- Section Header -->
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3 class="text-center classic-section-title">
+        نتائج مذهلة قبل وبعد الاستخدام
+      </h3>
+      <p class="text-xl text-center font-medium classic-section-description">
+        اكتشف الفرق الكبير الذي يمكن أن يحدثه منتجنا في حياتك اليومية!
+      </p>
+      <div class="w-24 h-1 classic-section-divider mx-auto rounded-full"></div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center gap-8 max-w-md mx-auto">
+      <!-- Before Image -->
+      <div class="w-full">
+        <div class="classic-image-card relative overflow-hidden">
+          <div class="classic-badge-before absolute top-4 right-4 z-10 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+            قبل الاستخدام
+          </div>
+          <div class="aspect-square">
+            <img
+              class="w-full h-full object-cover"
+              src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+              alt="صورة قبل الاستخدام"
+            >
+          </div>
+          <div class="classic-overlay-before absolute inset-0"></div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="classic-card-description">
+            في هذه المرحلة، تعاني البشرة من الجفاف والتصبغات الواضحة.
+          </p>
+        </div>
+      </div>
+
+      <!-- Arrow Down -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-12 h-12 rounded-full classic-primary-bg flex items-center justify-center">
+          <i class="fas fa-arrow-down text-white text-xl"></i>
+        </div>
+        <span class="text-sm classic-delivery-subtitle font-medium">بعد أسبوعين</span>
+      </div>
+
+      <!-- After Image -->
+      <div class="w-full">
+        <div class="classic-image-card relative overflow-hidden">
+          <div class="classic-badge-after absolute top-4 right-4 z-10 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+            بعد الاستخدام
+          </div>
+          <div class="aspect-square">
+            <img
+              class="w-full h-full object-cover"
+              src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+              alt="صورة بعد الاستخدام"
+            >
+          </div>
+          <div class="classic-overlay-after absolute inset-0"></div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="classic-card-description">
+            بعد استخدام المنتج لمدة أسبوعين، ظهرت نتائج واضحة من حيث النضارة والنعومة.
+          </p>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <a class="classic-buy-now-button w-full" href="#classic-quantity-selection">
+        <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+        <span>شراء المنتج الآن</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Variation 4: Card-Based Layout with Stats -->
+  <section id="classic-before-after-4" class="classic-section">
+    <!-- Section Header -->
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3 class="text-center classic-section-title">
+        نتائج مذهلة قبل وبعد الاستخدام
+      </h3>
+      <p class="text-xl text-center font-medium classic-section-description">
+        اكتشف الفرق الكبير الذي يمكن أن يحدثه منتجنا في حياتك اليومية!
+      </p>
+      <div class="w-24 h-1 classic-section-divider mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- Before Card -->
+      <div class="classic-surface-variant rounded-3xl p-8 text-center">
+        <div class="classic-image-card relative overflow-hidden mb-6">
+          <div class="classic-badge-before absolute top-4 right-4 z-10 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+            قبل
+          </div>
+          <div class="aspect-[4/3]">
+            <img
+              class="w-full h-full object-cover"
+              src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+              alt="صورة قبل الاستخدام"
+            >
+          </div>
+          <div class="classic-overlay-before absolute inset-0"></div>
+        </div>
+        
+        <h3 class="text-2xl font-bold classic-card-title mb-4">قبل الاستخدام</h3>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="text-center">
+            <div class="text-3xl font-bold classic-error-icon">65%</div>
+            <div class="text-sm classic-delivery-subtitle">جفاف البشرة</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold classic-warning-icon">40%</div>
+            <div class="text-sm classic-delivery-subtitle">نضارة البشرة</div>
+          </div>
+        </div>
+        
+        <p class="classic-card-description">
+          في هذه المرحلة، تعاني البشرة من الجفاف والتصبغات الواضحة.
+        </p>
+      </div>
+
+      <!-- After Card -->
+      <div class="classic-surface-variant rounded-3xl p-8 text-center">
+        <div class="classic-image-card relative overflow-hidden mb-6">
+          <div class="classic-badge-after absolute top-4 right-4 z-10 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+            بعد
+          </div>
+          <div class="aspect-[4/3]">
+            <img
+              class="w-full h-full object-cover"
+              src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+              alt="صورة بعد الاستخدام"
+            >
+          </div>
+          <div class="classic-overlay-after absolute inset-0"></div>
+        </div>
+        
+        <h3 class="text-2xl font-bold classic-card-title mb-4">بعد الاستخدام</h3>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="text-center">
+            <div class="text-3xl font-bold classic-success-icon">15%</div>
+            <div class="text-sm classic-delivery-subtitle">جفاف البشرة</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold classic-primary-icon">95%</div>
+            <div class="text-sm classic-delivery-subtitle">نضارة البشرة</div>
+          </div>
+        </div>
+        
+        <p class="classic-card-description">
+          بعد استخدام المنتج لمدة أسبوعين، ظهرت نتائج واضحة من حيث النضارة والنعومة.
+        </p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-10">
+      <a class="classic-buy-now-button" href="#classic-quantity-selection">
+        <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+        <span>شراء المنتج الآن</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Variation 5: Timeline Layout -->
+  <section id="classic-before-after-5" class="classic-section w-full">
+    <!-- Section Header -->
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3 class="text-center classic-section-title">
+        نتائج مذهلة قبل وبعد الاستخدام
+      </h3>
+      <p class="text-xl text-center font-medium classic-section-description">
+        اكتشف الفرق الكبير الذي يمكن أن يحدثه منتجنا في حياتك اليومية!
+      </p>
+      <div class="w-24 h-1 classic-section-divider mx-auto rounded-full"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <!-- Timeline Line -->
+      <div class="absolute top-1/2 left-0 right-0 h-1 classic-outline-bg transform -translate-y-1/2 hidden md:block"></div>
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- Before -->
+        <div class="flex-1 text-center">
+          <div class="classic-image-card relative overflow-hidden max-w-sm mx-auto">
+            <div class="classic-badge-before absolute top-4 right-4 z-10 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+              اليوم الأول
+            </div>
+            <div class="aspect-[4/3]">
+              <img
+                class="w-full h-full object-cover"
+                src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+                alt="صورة قبل الاستخدام"
+              >
+            </div>
+            <div class="classic-overlay-before absolute inset-0"></div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold classic-card-title mb-2">قبل الاستخدام</h3>
+            <p class="classic-card-description text-sm">
+              بداية الرحلة - بشرة تحتاج للعناية
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Dots -->
+        <div class="flex md:flex-col items-center gap-4">
+          <div class="w-4 h-4 rounded-full classic-error-bg"></div>
+          <div class="w-2 h-2 rounded-full classic-outline-bg"></div>
+          <div class="w-2 h-2 rounded-full classic-outline-bg"></div>
+          <div class="w-4 h-4 rounded-full classic-success-bg"></div>
+        </div>
+
+        <!-- After -->
+        <div class="flex-1 text-center">
+          <div class="classic-image-card relative overflow-hidden max-w-sm mx-auto">
+            <div class="classic-badge-after absolute top-4 right-4 z-10 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+              اليوم الرابع عشر
+            </div>
+            <div class="aspect-[4/3]">
+              <img
+                class="w-full h-full object-cover"
+                src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+                alt="صورة بعد الاستخدام"
+              >
+            </div>
+            <div class="classic-overlay-after absolute inset-0"></div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold classic-card-title mb-2">بعد الاستخدام</h3>
+            <p class="classic-card-description text-sm">
+              نتائج مذهلة - بشرة متألقة وصحية
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-10">
+      <a class="classic-buy-now-button" href="#classic-quantity-selection">
+        <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+        <span>شراء المنتج الآن</span>
+      </a>
+    </div>
+  </section>
+
+</section>
+
+<script>
+function updateComparison(value) {
+  const afterImage = document.getElementById('after-image');
+  const clipValue = 100 - value;
+  afterImage.style.clipPath = `inset(0 ${clipValue}% 0 0)`;
+}
+</script>

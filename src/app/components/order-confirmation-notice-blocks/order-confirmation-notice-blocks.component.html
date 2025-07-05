@@ -1,12 +1,13 @@
-<section id="classic-order-confirmation-notice" class="w-full">
+<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+
+  <!-- Variation 1: Original Horizontal Layout -->
+  <section id="classic-order-confirmation-notice-1" class="w-full max-w-4xl">
     <div class="classic-order-confirmation-notice text-start md:text-center py-4 px-2 rounded-xl">
-      
       <p class="classic-order-confirmation-title mb-2">
         تأكيد استلام الطلب بنجاح
       </p>
-  
+      
       <div class="classic-order-confirmation-list flex flex-col justify-start items-start gap-3 md:flex-row md:justify-center md:items-center md:gap-8 text-sm">
-  
         <!-- Notice 1 -->
         <div class="flex items-center gap-2 md:gap-1">
           <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-8 h-8">
@@ -14,7 +15,7 @@
           </div>
           <span>طلبك مؤمَّن بالكامل</span>
         </div>
-  
+        
         <!-- Notice 2 -->
         <div class="flex items-center gap-2 md:gap-1">
           <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-8 h-8">
@@ -22,7 +23,7 @@
           </div>
           <span>سيتم الشحن خلال 24 ساعة</span>
         </div>
-  
+        
         <!-- Notice 3 -->
         <div class="flex items-center gap-2 md:gap-1">
           <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-8 h-8">
@@ -30,8 +31,249 @@
           </div>
           <span>سيتواصل معك أحد ممثلينا للتأكيد</span>
         </div>
-  
       </div>
     </div>
   </section>
-  
+
+  <!-- Variation 2: Card-Based Layout -->
+  <section id="classic-order-confirmation-notice-2" class="w-full max-w-5xl">
+    <div class="classic-order-confirmation-notice py-6 px-4 rounded-xl">
+      <p class="classic-order-confirmation-title mb-6 text-center text-xl font-semibold">
+        تأكيد استلام الطلب بنجاح
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Notice 1 Card -->
+        <div class="classic-surface-variant rounded-lg p-4 text-center hover:shadow-lg transition-all duration-300">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-12 h-12 mx-auto mb-3">
+            <i class="fa-solid fa-shield-check text-lg"></i>
+          </div>
+          <span class="text-sm font-medium">طلبك مؤمَّن بالكامل</span>
+        </div>
+        
+        <!-- Notice 2 Card -->
+        <div class="classic-surface-variant rounded-lg p-4 text-center hover:shadow-lg transition-all duration-300">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-12 h-12 mx-auto mb-3">
+            <i class="fa-solid fa-truck-fast text-lg"></i>
+          </div>
+          <span class="text-sm font-medium">سيتم الشحن خلال 24 ساعة</span>
+        </div>
+        
+        <!-- Notice 3 Card -->
+        <div class="classic-surface-variant rounded-lg p-4 text-center hover:shadow-lg transition-all duration-300">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-12 h-12 mx-auto mb-3">
+            <i class="fa-solid fa-phone-volume text-lg"></i>
+          </div>
+          <span class="text-sm font-medium">سيتواصل معك أحد ممثلينا للتأكيد</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 3: Vertical Stack Layout -->
+  <section id="classic-order-confirmation-notice-3" class="w-full max-w-md">
+    <div class="classic-order-confirmation-notice py-6 px-4 rounded-xl">
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 classic-success-bg rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-check text-2xl text-white"></i>
+        </div>
+        <p class="classic-order-confirmation-title text-lg font-bold">
+          تأكيد استلام الطلب بنجاح
+        </p>
+      </div>
+      
+      <div class="space-y-4">
+        <!-- Notice 1 -->
+        <div class="flex items-center gap-3 p-3 classic-surface-variant rounded-lg">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-10 h-10 flex-shrink-0">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <span class="text-sm">طلبك مؤمَّن بالكامل</span>
+        </div>
+        
+        <!-- Notice 2 -->
+        <div class="flex items-center gap-3 p-3 classic-surface-variant rounded-lg">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-10 h-10 flex-shrink-0">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <span class="text-sm">سيتم الشحن خلال 24 ساعة</span>
+        </div>
+        
+        <!-- Notice 3 -->
+        <div class="flex items-center gap-3 p-3 classic-surface-variant rounded-lg">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-10 h-10 flex-shrink-0">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <span class="text-sm">سيتواصل معك أحد ممثلينا للتأكيد</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 4: Timeline Layout -->
+  <section id="classic-order-confirmation-notice-4" class="w-full max-w-4xl">
+    <div class="classic-order-confirmation-notice py-6 px-4 rounded-xl">
+      <p class="classic-order-confirmation-title mb-8 text-center text-xl font-semibold">
+        تأكيد استلام الطلب بنجاح
+      </p>
+      
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-full h-0.5 classic-outline-bg hidden md:block"></div>
+        
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center relative z-10">
+            <div class="classic-bg w-12 h-12 rounded-full flex items-center justify-center mb-3">
+              <i class="fa-solid fa-shield-check"></i>
+            </div>
+            <span class="text-sm font-medium max-w-24">طلبك مؤمَّن بالكامل</span>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center relative z-10">
+            <div class="classic-bg w-12 h-12 rounded-full flex items-center justify-center mb-3">
+              <i class="fa-solid fa-truck-fast text-white"></i>
+            </div>
+            <span class="text-sm font-medium max-w-24">سيتم الشحن خلال 24 ساعة</span>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center relative z-10">
+            <div class="classic-bg w-12 h-12 rounded-full flex items-center justify-center mb-3">
+              <i class="fa-solid fa-phone-volume text-white"></i>
+            </div>
+            <span class="text-sm font-medium max-w-24">سيتواصل معك أحد ممثلينا للتأكيد</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 5: Badge-Style Layout -->
+  <section id="classic-order-confirmation-notice-5" class="w-full max-w-5xl">
+    <div class="classic-order-confirmation-notice py-6 px-4 rounded-xl">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-2 classic-bg text-white px-4 py-2 rounded-full mb-4">
+          <i class="fas fa-check-circle"></i>
+          <span class="font-semibold">تأكيد استلام الطلب بنجاح</span>
+        </div>
+      </div>
+      
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <!-- Badge 1 -->
+        <div class="inline-flex items-center gap-2 classic-surface-variant px-4 py-2 rounded-full">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-6 h-6">
+            <i class="fa-solid fa-shield-check text-xs"></i>
+          </div>
+          <span class="text-sm">طلبك مؤمَّن بالكامل</span>
+        </div>
+        
+        <!-- Badge 2 -->
+        <div class="inline-flex items-center gap-2 classic-surface-variant px-4 py-2 rounded-full">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-6 h-6">
+            <i class="fa-solid fa-truck-fast text-xs"></i>
+          </div>
+          <span class="text-sm">سيتم الشحن خلال 24 ساعة</span>
+        </div>
+        
+        <!-- Badge 3 -->
+        <div class="inline-flex items-center gap-2 classic-surface-variant px-4 py-2 rounded-full">
+          <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-6 h-6">
+            <i class="fa-solid fa-phone-volume text-xs"></i>
+          </div>
+          <span class="text-sm">سيتواصل معك أحد ممثلينا للتأكيد</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 6: Minimalist Layout -->
+  <section id="classic-order-confirmation-notice-6" class="w-full max-w-3xl">
+    <div class="classic-order-confirmation-notice py-4 px-6 rounded-xl border-r-4 border-green-500">
+      <div class="flex items-start gap-4">
+        <div class="classic-success-bg w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-check text-white"></i>
+        </div>
+        <div class="flex-1">
+          <p class="classic-order-confirmation-title font-bold mb-3">
+            تأكيد استلام الطلب بنجاح
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-shield-check classic-success-icon"></i>
+              <span>طلبك مؤمَّن بالكامل</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-truck-fast classic-warning-icon"></i>
+              <span>سيتم الشحن خلال 24 ساعة</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-phone-volume classic-primary-icon"></i>
+              <span>سيتواصل معك أحد ممثلينا للتأكيد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 7: Accordion-Style Layout -->
+  <section id="classic-order-confirmation-notice-7" class="w-full max-w-2xl">
+    <div class="classic-order-confirmation-notice py-6 px-4 rounded-xl">
+      <div class="text-center mb-6">
+        <div class="w-20 h-20 classic-success-bg rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+          <i class="fas fa-check text-3xl text-white"></i>
+        </div>
+        <p class="classic-order-confirmation-title text-2xl font-bold">
+          تأكيد استلام الطلب بنجاح
+        </p>
+      </div>
+      
+      <div class="space-y-2">
+        <!-- Expandable Item 1 -->
+        <details class="classic-surface-variant rounded-lg">
+          <summary class="flex items-center gap-3 p-4 cursor-pointer hover:bg-gray-50">
+            <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-8 h-8">
+              <i class="fa-solid fa-shield-check"></i>
+            </div>
+            <span class="text-sm font-medium">طلبك مؤمَّن بالكامل</span>
+            <i class="fas fa-chevron-down mr-auto transform transition-transform"></i>
+          </summary>
+          <div class="px-4 pb-4 text-xs classic-delivery-subtitle">
+            تم تأمين طلبك بالكامل وسيتم التعامل معه بسرية تامة
+          </div>
+        </details>
+        
+        <!-- Expandable Item 2 -->
+        <details class="classic-surface-variant rounded-lg">
+          <summary class="flex items-center gap-3 p-4 cursor-pointer hover:bg-gray-50">
+            <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-8 h-8">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <span class="text-sm font-medium">سيتم الشحن خلال 24 ساعة</span>
+            <i class="fas fa-chevron-down mr-auto transform transition-transform"></i>
+          </summary>
+          <div class="px-4 pb-4 text-xs classic-delivery-subtitle">
+            سيتم تجهيز وشحن طلبك خلال 24 ساعة من تأكيد الطلب
+          </div>
+        </details>
+        
+        <!-- Expandable Item 3 -->
+        <details class="classic-surface-variant rounded-lg">
+          <summary class="flex items-center gap-3 p-4 cursor-pointer hover:bg-gray-50">
+            <div class="classic-order-confirmation-icon flex justify-center items-center rounded-full w-8 h-8">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <span class="text-sm font-medium">سيتواصل معك أحد ممثلينا للتأكيد</span>
+            <i class="fas fa-chevron-down mr-auto transform transition-transform"></i>
+          </summary>
+          <div class="px-4 pb-4 text-xs classic-delivery-subtitle">
+            سيقوم أحد ممثلي خدمة العملاء بالتواصل معك لتأكيد تفاصيل الطلب
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</section>

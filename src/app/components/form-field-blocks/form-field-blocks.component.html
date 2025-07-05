@@ -1,84 +1,72 @@
 <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-<section id="classic-form-fields" class="classic-form w-full p-3">
+
+  <!-- Variation 1: Original Single Column Layout -->
+  <section id="classic-form-fields-1" class="classic-form w-full max-w-2xl p-6">
     <div class="mx-auto py-2 flex flex-col justify-center items-center gap-2">
       
       <!-- FORM HEADER -->
-      <div class="text-center">
-        <h5 class="classic-form-title" data-translate="form.completeOrder">
-          إكمال الطلب
-        </h5>
+      <div class="text-center mb-6">
+        <h5 class="classic-form-title">إكمال الطلب</h5>
       </div>
-  
+
       <!-- MAIN FORM -->
-      <form id="form-personal-payment-data" class="w-full">
+      <form id="form-personal-payment-data-1" class="w-full">
         <div class="mb-8">
           <!-- PERSONAL INFORMATION SECTION -->
-          <h2 class="classic-form-section-title mb-6" data-translate="form.personalInfo">
-            المعلومات الشخصية
-          </h2>
+          <h2 class="classic-form-section-title mb-6">المعلومات الشخصية</h2>
           <div class="space-y-4">
-  
+
             <!-- FULL NAME INPUT FIELD -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.fullName">
-                الاسم الكامل
-              </label>
+              <label class="classic-form-label block mb-2">الاسم الكامل</label>
               <input
                 type="text"
-                id="form-fullName"
+                id="form-fullName-1"
                 placeholder="أدخل اسمك الكامل"
                 class="classic-form-input text-right"
               />
-              <span id="form-fullName-error" class="classic-form-error"></span>
+              <span id="form-fullName-error-1" class="classic-form-error"></span>
             </div>
-  
+
             <!-- PHONE NUMBER INPUT FIELD -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.phoneNumber">
-                رقم الهاتف
-              </label>
+              <label class="classic-form-label block mb-2">رقم الهاتف</label>
               <input
                 type="tel"
-                id="form-phone"
+                id="form-phone-1"
                 placeholder="05xxxxxxxx"
                 class="classic-form-input text-right"
               />
-              <span id="form-phone-error" class="classic-form-error" style="display: none;"></span>
+              <span id="form-phone-error-1" class="classic-form-error" style="display: none;"></span>
             </div>
-  
+
             <!-- EMAIL INPUT FIELD -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.email">
-                البريد الإلكتروني (اختياري)
-              </label>
+              <label class="classic-form-label block mb-2">البريد الإلكتروني (اختياري)</label>
               <input
                 type="email"
-                id="form-email"
+                id="form-email-1"
                 placeholder="example@email.com"
                 class="classic-form-input text-right"
               />
-              <span id="form-email-error" class="classic-form-error" style="display: none;"></span>
+              <span id="form-email-error-1" class="classic-form-error" style="display: none;"></span>
             </div>
-  
+
             <!-- ADDRESS TEXTAREA FIELD -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.address">
-                العنوان الكامل
-              </label>
+              <label class="classic-form-label block mb-2">العنوان الكامل</label>
               <textarea
-                id="form-address"
+                id="form-address-1"
                 placeholder="الحي، المدينة، أقرب معلم"
                 class="classic-form-input text-right min-h-[80px] resize-y"
               ></textarea>
-              <span id="form-address-error" class="classic-form-error" style="display: none;"></span>
+              <span id="form-address-error-1" class="classic-form-error" style="display: none;"></span>
             </div>
-  
+
             <!-- CITY SELECTION DROPDOWN -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.city">
-                المدينة
-              </label>
-              <select id="form-city" class="classic-form-input text-right">
+              <label class="classic-form-label block mb-2">المدينة</label>
+              <select id="form-city-1" class="classic-form-input text-right">
                 <option value="">اختر المدينة</option>
                 <option value="riyadh">الرياض</option>
                 <option value="jeddah">جدة</option>
@@ -86,25 +74,23 @@
                 <option value="makkah">مكة المكرمة</option>
                 <option value="madinah">المدينة المنورة</option>
               </select>
-              <span id="form-city-error" class="classic-form-error" style="display: none;"></span>
+              <span id="form-city-error-1" class="classic-form-error" style="display: none;"></span>
             </div>
-  
+
             <!-- PAYMENT OPTIONS SECTION -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.paymentOptions">
-                طريقة الدفع
-              </label>
+              <label class="classic-form-label block mb-2">طريقة الدفع</label>
               <div class="space-y-3" role="radiogroup" aria-label="Payment Method">
                 <div class="classic-form-payment-option">
                   <input
                     type="radio"
-                    id="payment-cash"
-                    name="payment-option"
+                    id="payment-cash-1"
+                    name="payment-option-1"
                     value="الدفع عند الاستلام"
                     class="classic-form-radio"
                     checked
                   />
-                  <label for="payment-cash" class="classic-form-payment-option-content">
+                  <label for="payment-cash-1" class="classic-form-payment-option-content">
                     <div class="flex justify-between items-center">
                       <div class="flex-1 flex flex-col justify-start items-start gap-2">
                         <span class="classic-form-payment-option-label">الدفع عند الاستلام</span>
@@ -119,12 +105,12 @@
                 <div class="classic-form-payment-option">
                   <input
                     type="radio"
-                    id="payment-online"
-                    name="payment-option"
+                    id="payment-online-1"
+                    name="payment-option-1"
                     value="الدفع الإلكتروني"
                     class="classic-form-radio"
                   />
-                  <label for="payment-online" class="classic-form-payment-option-content">
+                  <label for="payment-online-1" class="classic-form-payment-option-content">
                     <div class="flex justify-between items-center">
                       <div class="flex-1 flex flex-col justify-start items-start gap-2">
                         <span class="classic-form-payment-option-label">الدفع الإلكتروني</span>
@@ -137,25 +123,23 @@
                   </label>
                 </div>
               </div>
-              <span id="form-payment-error" class="classic-form-error" style="display: none;"></span>
+              <span id="form-payment-error-1" class="classic-form-error" style="display: none;"></span>
             </div>
-  
+
             <!-- DELIVERY OPTIONS SECTION -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.deliveryOptions">
-                طريقة التوصيل
-              </label>
+              <label class="classic-form-label block mb-2">طريقة التوصيل</label>
               <div class="space-y-3" role="radiogroup" aria-label="Delivery Method">
                 <div class="classic-form-payment-option">
                   <input
                     type="radio"
-                    id="delivery-home"
-                    name="delivery-option"
+                    id="delivery-home-1"
+                    name="delivery-option-1"
                     value="توصيل للمنزل"
                     class="classic-form-radio"
                     checked
                   />
-                  <label for="delivery-home" class="classic-form-payment-option-content">
+                  <label for="delivery-home-1" class="classic-form-payment-option-content">
                     <div class="flex justify-between items-center">
                       <div class="flex-1 flex flex-col justify-start items-start gap-2">
                         <span class="classic-form-payment-option-label">توصيل للمنزل</span>
@@ -170,12 +154,12 @@
                 <div class="classic-form-payment-option">
                   <input
                     type="radio"
-                    id="delivery-store"
-                    name="delivery-option"
+                    id="delivery-store-1"
+                    name="delivery-option-1"
                     value="الاستلام من المتجر"
                     class="classic-form-radio"
                   />
-                  <label for="delivery-store" class="classic-form-payment-option-content">
+                  <label for="delivery-store-1" class="classic-form-payment-option-content">
                     <div class="flex justify-between items-center">
                       <div class="flex-1 flex flex-col justify-start items-start gap-2">
                         <span class="classic-form-payment-option-label">الاستلام من المتجر</span>
@@ -188,36 +172,879 @@
                   </label>
                 </div>
               </div>
-              <span id="form-delivery-error" class="classic-form-error" style="display: none;"></span>
+              <span id="form-delivery-error-1" class="classic-form-error" style="display: none;"></span>
             </div>
-  
+
             <!-- NOTES TEXTAREA FIELD -->
             <div>
-              <label class="classic-form-label block mb-2" data-translate="form.notes">
-                ملاحظات إضافية
-              </label>
+              <label class="classic-form-label block mb-2">ملاحظات إضافية</label>
               <textarea
-                id="form-notes"
+                id="form-notes-1"
                 placeholder="اكتب أي تفاصيل إضافية هنا..."
                 class="classic-form-input text-right min-h-[100px] resize-y"
               ></textarea>
-              <span id="form-notes-error" class="classic-form-error" style="display: none;"></span>
+              <span id="form-notes-error-1" class="classic-form-error" style="display: none;"></span>
             </div>
-  
+
           </div>
         </div>
-  
+
         <!-- SUBMIT BUTTON SECTION -->
         <div>
-            <button
-              type="button"
-              data-submit-order-button
-              class="classic-form-submit"
-            >
+          <button
+            type="button"
+            data-submit-order-button
+            class="classic-form-submit w-1/2 mx-auto block"
+          >
             تاكيد الدفع
-            </button>
-          </div>
+          </button>
+        </div>
       </form>
     </div>
   </section>
+
+  <!-- Variation 2: Two Column Layout -->
+  <section id="classic-form-fields-2" class="classic-form w-full max-w-6xl p-6">
+    <div class="mx-auto py-2 flex flex-col justify-center items-center gap-2">
+      
+      <!-- FORM HEADER -->
+      <div class="text-center mb-6">
+        <h5 class="classic-form-title">إكمال الطلب - تخطيط عمودين</h5>
+      </div>
+
+      <!-- MAIN FORM -->
+      <form id="form-personal-payment-data-2" class="w-full">
+        <div class="mb-8">
+          <!-- PERSONAL INFORMATION SECTION -->
+          <h2 class="classic-form-section-title mb-6">المعلومات الشخصية</h2>
+          
+          <!-- Two Column Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Left Column -->
+            <div class="space-y-4">
+              <!-- FULL NAME INPUT FIELD -->
+              <div>
+                <label class="classic-form-label block mb-2">الاسم الكامل</label>
+                <input
+                  type="text"
+                  id="form-fullName-2"
+                  placeholder="أدخل اسمك الكامل"
+                  class="classic-form-input text-right"
+                />
+                <span id="form-fullName-error-2" class="classic-form-error"></span>
+              </div>
+
+              <!-- PHONE NUMBER INPUT FIELD -->
+              <div>
+                <label class="classic-form-label block mb-2">رقم الهاتف</label>
+                <input
+                  type="tel"
+                  id="form-phone-2"
+                  placeholder="05xxxxxxxx"
+                  class="classic-form-input text-right"
+                />
+                <span id="form-phone-error-2" class="classic-form-error" style="display: none;"></span>
+              </div>
+
+              <!-- EMAIL INPUT FIELD -->
+              <div>
+                <label class="classic-form-label block mb-2">البريد الإلكتروني (اختياري)</label>
+                <input
+                  type="email"
+                  id="form-email-2"
+                  placeholder="example@email.com"
+                  class="classic-form-input text-right"
+                />
+                <span id="form-email-error-2" class="classic-form-error" style="display: none;"></span>
+              </div>
+
+              <!-- CITY SELECTION DROPDOWN -->
+              <div>
+                <label class="classic-form-label block mb-2">المدينة</label>
+                <select id="form-city-2" class="classic-form-input text-right">
+                  <option value="">اختر المدينة</option>
+                  <option value="riyadh">الرياض</option>
+                  <option value="jeddah">جدة</option>
+                  <option value="dammam">الدمام</option>
+                  <option value="makkah">مكة المكرمة</option>
+                  <option value="madinah">المدينة المنورة</option>
+                </select>
+                <span id="form-city-error-2" class="classic-form-error" style="display: none;"></span>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-4">
+              <!-- ADDRESS TEXTAREA FIELD -->
+              <div>
+                <label class="classic-form-label block mb-2">العنوان الكامل</label>
+                <textarea
+                  id="form-address-2"
+                  placeholder="الحي، المدينة، أقرب معلم"
+                  class="classic-form-input text-right min-h-[80px] resize-y"
+                ></textarea>
+                <span id="form-address-error-2" class="classic-form-error" style="display: none;"></span>
+              </div>
+
+              <!-- PAYMENT OPTIONS SECTION -->
+              <div>
+                <label class="classic-form-label block mb-2">طريقة الدفع</label>
+                <div class="space-y-3" role="radiogroup" aria-label="Payment Method">
+                  <div class="classic-form-payment-option">
+                    <input
+                      type="radio"
+                      id="payment-cash-2"
+                      name="payment-option-2"
+                      value="الدفع عند الاستلام"
+                      class="classic-form-radio"
+                      checked
+                    />
+                    <label for="payment-cash-2" class="classic-form-payment-option-content">
+                      <div class="flex justify-between items-center">
+                        <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                          <span class="classic-form-payment-option-label">الدفع عند الاستلام</span>
+                          <span class="classic-form-payment-option-description">ادفع عند استلام الطلب من المندوب.</span>
+                        </div>
+                        <div class="classic-form-radio-indicator">
+                          <div class="classic-form-radio-dot"></div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="classic-form-payment-option">
+                    <input
+                      type="radio"
+                      id="payment-online-2"
+                      name="payment-option-2"
+                      value="الدفع الإلكتروني"
+                      class="classic-form-radio"
+                    />
+                    <label for="payment-online-2" class="classic-form-payment-option-content">
+                      <div class="flex justify-between items-center">
+                        <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                          <span class="classic-form-payment-option-label">الدفع الإلكتروني</span>
+                          <span class="classic-form-payment-option-description">بطاقة مدى / فيزا / أبل باي</span>
+                        </div>
+                        <div class="classic-form-radio-indicator">
+                          <div class="classic-form-radio-dot"></div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <span id="form-payment-error-2" class="classic-form-error" style="display: none;"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Width Sections -->
+          <div class="mt-6 space-y-4">
+            <!-- DELIVERY OPTIONS SECTION -->
+            <div>
+              <label class="classic-form-label block mb-2">طريقة التوصيل</label>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3" role="radiogroup" aria-label="Delivery Method">
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-home-2"
+                    name="delivery-option-2"
+                    value="توصيل للمنزل"
+                    class="classic-form-radio"
+                    checked
+                  />
+                  <label for="delivery-home-2" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">توصيل للمنزل</span>
+                        <span class="classic-form-payment-option-description">يتم توصيل المنتج خلال 24-48 ساعة</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-store-2"
+                    name="delivery-option-2"
+                    value="الاستلام من المتجر"
+                    class="classic-form-radio"
+                  />
+                  <label for="delivery-store-2" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">الاستلام من المتجر</span>
+                        <span class="classic-form-payment-option-description">استلم المنتج مباشرة من أحد فروعنا</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span id="form-delivery-error-2" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- NOTES TEXTAREA FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">ملاحظات إضافية</label>
+              <textarea
+                id="form-notes-2"
+                placeholder="اكتب أي تفاصيل إضافية هنا..."
+                class="classic-form-input text-right min-h-[100px] resize-y"
+              ></textarea>
+              <span id="form-notes-error-2" class="classic-form-error" style="display: none;"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON SECTION -->
+        <div class="text-center">
+          <button
+            type="button"
+            data-submit-order-button
+            class="classic-form-submit w-1/2"
+          >
+            تاكيد الدفع
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
+
+  <!-- Variation 3: Step-by-Step Layout -->
+  <section id="classic-form-fields-3" class="classic-form w-full max-w-4xl p-6">
+    <div class="mx-auto py-2 flex flex-col justify-center items-center gap-2">
+      
+      <!-- FORM HEADER -->
+      <div class="text-center mb-6">
+        <h5 class="classic-form-title">إكمال الطلب - تخطيط متدرج</h5>
+        <!-- Step Indicators -->
+        <div class="flex justify-center items-center gap-4 mt-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full classic-primary-bg text-white flex items-center justify-center text-sm font-bold">1</div>
+            <span class="text-sm classic-form-label">البيانات الشخصية</span>
+          </div>
+          <div class="w-8 h-1 classic-outline-bg"></div>
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full classic-outline-bg text-gray-500 flex items-center justify-center text-sm font-bold">2</div>
+            <span class="text-sm classic-form-label opacity-50">الدفع والتوصيل</span>
+          </div>
+          <div class="w-8 h-1 classic-outline-bg"></div>
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full classic-outline-bg text-gray-500 flex items-center justify-center text-sm font-bold">3</div>
+            <span class="text-sm classic-form-label opacity-50">التأكيد</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN FORM -->
+      <form id="form-personal-payment-data-3" class="w-full">
+        <!-- Step 1: Personal Information -->
+        <div id="step-1" class="mb-8">
+          <h2 class="classic-form-section-title mb-6 text-center">الخطوة الأولى: المعلومات الشخصية</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- FULL NAME INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">الاسم الكامل</label>
+              <input
+                type="text"
+                id="form-fullName-3"
+                placeholder="أدخل اسمك الكامل"
+                class="classic-form-input text-right"
+              />
+              <span id="form-fullName-error-3" class="classic-form-error"></span>
+            </div>
+
+            <!-- PHONE NUMBER INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">رقم الهاتف</label>
+              <input
+                type="tel"
+                id="form-phone-3"
+                placeholder="05xxxxxxxx"
+                class="classic-form-input text-right"
+              />
+              <span id="form-phone-error-3" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- EMAIL INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">البريد الإلكتروني (اختياري)</label>
+              <input
+                type="email"
+                id="form-email-3"
+                placeholder="example@email.com"
+                class="classic-form-input text-right"
+              />
+              <span id="form-email-error-3" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- CITY SELECTION DROPDOWN -->
+            <div>
+              <label class="classic-form-label block mb-2">المدينة</label>
+              <select id="form-city-3" class="classic-form-input text-right">
+                <option value="">اختر المدينة</option>
+                <option value="riyadh">الرياض</option>
+                <option value="jeddah">جدة</option>
+                <option value="dammam">الدمام</option>
+                <option value="makkah">مكة المكرمة</option>
+                <option value="madinah">المدينة المنورة</option>
+              </select>
+              <span id="form-city-error-3" class="classic-form-error" style="display: none;"></span>
+            </div>
+          </div>
+
+          <!-- ADDRESS TEXTAREA FIELD -->
+          <div class="mt-4">
+            <label class="classic-form-label block mb-2">العنوان الكامل</label>
+            <textarea
+              id="form-address-3"
+              placeholder="الحي، المدينة، أقرب معلم"
+              class="classic-form-input text-right min-h-[80px] resize-y"
+            ></textarea>
+            <span id="form-address-error-3" class="classic-form-error" style="display: none;"></span>
+          </div>
+        </div>
+
+        <!-- Step 2: Payment and Delivery -->
+        <div id="step-2" class="mb-8">
+          <h2 class="classic-form-section-title mb-6 text-center">الخطوة الثانية: الدفع والتوصيل</h2>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- PAYMENT OPTIONS SECTION -->
+            <div>
+              <label class="classic-form-label block mb-4 text-center font-bold">طريقة الدفع</label>
+              <div class="space-y-3" role="radiogroup" aria-label="Payment Method">
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="payment-cash-3"
+                    name="payment-option-3"
+                    value="الدفع عند الاستلام"
+                    class="classic-form-radio"
+                    checked
+                  />
+                  <label for="payment-cash-3" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">الدفع عند الاستلام</span>
+                        <span class="classic-form-payment-option-description">ادفع عند استلام الطلب من المندوب.</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="payment-online-3"
+                    name="payment-option-3"
+                    value="الدفع الإلكتروني"
+                    class="classic-form-radio"
+                  />
+                  <label for="payment-online-3" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">الدفع الإلكتروني</span>
+                        <span class="classic-form-payment-option-description">بطاقة مدى / فيزا / أبل باي</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span id="form-payment-error-3" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- DELIVERY OPTIONS SECTION -->
+            <div>
+              <label class="classic-form-label block mb-4 text-center font-bold">طريقة التوصيل</label>
+              <div class="space-y-3" role="radiogroup" aria-label="Delivery Method">
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-home-3"
+                    name="delivery-option-3"
+                    value="توصيل للمنزل"
+                    class="classic-form-radio"
+                    checked
+                  />
+                  <label for="delivery-home-3" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">توصيل للمنزل</span>
+                        <span class="classic-form-payment-option-description">يتم توصيل المنتج خلال 24-48 ساعة</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-store-3"
+                    name="delivery-option-3"
+                    value="الاستلام من المتجر"
+                    class="classic-form-radio"
+                  />
+                  <label for="delivery-store-3" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">الاستلام من المتجر</span>
+                        <span class="classic-form-payment-option-description">استلم المنتج مباشرة من أحد فروعنا</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span id="form-delivery-error-3" class="classic-form-error" style="display: none;"></span>
+            </div>
+          </div>
+
+          <!-- NOTES TEXTAREA FIELD -->
+          <div class="mt-6">
+            <label class="classic-form-label block mb-2">ملاحظات إضافية</label>
+            <textarea
+              id="form-notes-3"
+              placeholder="اكتب أي تفاصيل إضافية هنا..."
+              class="classic-form-input text-right min-h-[100px] resize-y"
+            ></textarea>
+            <span id="form-notes-error-3" class="classic-form-error" style="display: none;"></span>
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON SECTION -->
+        <div class="text-center">
+          <button
+            type="button"
+            data-submit-order-button
+            class="classic-form-submit w-1/2"
+          >
+            تاكيد الدفع
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Variation 4: Card-Based Layout -->
+  <section id="classic-form-fields-4" class="classic-form w-full max-w-5xl p-6">
+    <div class="mx-auto py-2 flex flex-col justify-center items-center gap-2">
+      
+      <!-- FORM HEADER -->
+      <div class="text-center mb-8">
+        <h5 class="classic-form-title">إكمال الطلب - تخطيط البطاقات</h5>
+      </div>
+
+      <!-- MAIN FORM -->
+      <form id="form-personal-payment-data-4" class="w-full">
+        
+        <!-- Personal Information Card -->
+        <div class="classic-surface-variant rounded-2xl p-6 mb-6">
+          <h2 class="classic-form-section-title mb-6 flex items-center gap-3">
+            <i class="fas fa-user classic-primary-icon"></i>
+            المعلومات الشخصية
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- FULL NAME INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">الاسم الكامل</label>
+              <input
+                type="text"
+                id="form-fullName-4"
+                placeholder="أدخل اسمك الكامل"
+                class="classic-form-input text-right"
+              />
+              <span id="form-fullName-error-4" class="classic-form-error"></span>
+            </div>
+
+            <!-- PHONE NUMBER INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">رقم الهاتف</label>
+              <input
+                type="tel"
+                id="form-phone-4"
+                placeholder="05xxxxxxxx"
+                class="classic-form-input text-right"
+              />
+              <span id="form-phone-error-4" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- EMAIL INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">البريد الإلكتروني (اختياري)</label>
+              <input
+                type="email"
+                id="form-email-4"
+                placeholder="example@email.com"
+                class="classic-form-input text-right"
+              />
+              <span id="form-email-error-4" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- CITY SELECTION DROPDOWN -->
+            <div>
+              <label class="classic-form-label block mb-2">المدينة</label>
+              <select id="form-city-4" class="classic-form-input text-right">
+                <option value="">اختر المدينة</option>
+                <option value="riyadh">الرياض</option>
+                <option value="jeddah">جدة</option>
+                <option value="dammam">الدمام</option>
+                <option value="makkah">مكة المكرمة</option>
+                <option value="madinah">المدينة المنورة</option>
+              </select>
+              <span id="form-city-error-4" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- ADDRESS TEXTAREA FIELD -->
+            <div class="md:col-span-2">
+              <label class="classic-form-label block mb-2">العنوان الكامل</label>
+              <textarea
+                id="form-address-4"
+                placeholder="الحي، المدينة، أقرب معلم"
+                class="classic-form-input text-right min-h-[80px] resize-y"
+              ></textarea>
+              <span id="form-address-error-4" class="classic-form-error" style="display: none;"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment & Delivery Card -->
+        <div class="classic-surface-variant rounded-2xl p-6 mb-6">
+          <h2 class="classic-form-section-title mb-6 flex items-center gap-3">
+            <i class="fas fa-credit-card classic-secondary-icon"></i>
+            الدفع والتوصيل
+          </h2>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- PAYMENT OPTIONS SECTION -->
+            <div>
+              <label class="classic-form-label block mb-4 font-bold">طريقة الدفع</label>
+              <div class="space-y-3" role="radiogroup" aria-label="Payment Method">
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="payment-cash-4"
+                    name="payment-option-4"
+                    value="الدفع عند الاستلام"
+                    class="classic-form-radio"
+                    checked
+                  />
+                  <label for="payment-cash-4" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">الدفع عند الاستلام</span>
+                        <span class="classic-form-payment-option-description">ادفع عند استلام الطلب من المندوب.</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="payment-online-4"
+                    name="payment-option-4"
+                    value="الدفع الإلكتروني"
+                    class="classic-form-radio"
+                  />
+                  <label for="payment-online-4" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">الدفع الإلكتروني</span>
+                        <span class="classic-form-payment-option-description">بطاقة مدى / فيزا / أبل باي</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span id="form-payment-error-4" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- DELIVERY OPTIONS SECTION -->
+            <div>
+              <label class="classic-form-label block mb-4 font-bold">طريقة التوصيل</label>
+              <div class="space-y-3" role="radiogroup" aria-label="Delivery Method">
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-home-4"
+                    name="delivery-option-4"
+                    value="توصيل للمنزل"
+                    class="classic-form-radio"
+                    checked
+                  />
+                  <label for="delivery-home-4" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">توصيل للمنزل</span>
+                        <span class="classic-form-payment-option-description">يتم توصيل المنتج خلال 24-48 ساعة</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-store-4"
+                    name="delivery-option-4"
+                    value="الاستلام من المتجر"
+                    class="classic-form-radio"
+                  />
+                  <label for="delivery-store-4" class="classic-form-payment-option-content">
+                    <div class="flex justify-between items-center">
+                      <div class="flex-1 flex flex-col justify-start items-start gap-2">
+                        <span class="classic-form-payment-option-label">الاستلام من المتجر</span>
+                        <span class="classic-form-payment-option-description">استلم المنتج مباشرة من أحد فروعنا</span>
+                      </div>
+                      <div class="classic-form-radio-indicator">
+                        <div class="classic-form-radio-dot"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span id="form-delivery-error-4" class="classic-form-error" style="display: none;"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notes Card -->
+        <div class="classic-surface-variant rounded-2xl p-6 mb-6">
+          <h2 class="classic-form-section-title mb-4 flex items-center gap-3">
+            <i class="fas fa-sticky-note classic-warning-icon"></i>
+            ملاحظات إضافية
+          </h2>
+          <textarea
+            id="form-notes-4"
+            placeholder="اكتب أي تفاصيل إضافية هنا..."
+            class="classic-form-input text-right min-h-[100px] resize-y"
+          ></textarea>
+          <span id="form-notes-error-4" class="classic-form-error" style="display: none;"></span>
+        </div>
+
+        <!-- SUBMIT BUTTON SECTION -->
+        <div class="text-center">
+          <button
+            type="button"
+            data-submit-order-button
+            class="classic-form-submit w-1/2"
+          >
+            تاكيد الدفع
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Variation 5: Compact Horizontal Layout -->
+  <section id="classic-form-fields-5" class="classic-form w-full max-w-7xl p-6">
+    <div class="mx-auto py-2 flex flex-col justify-center items-center gap-2">
+      
+      <!-- FORM HEADER -->
+      <div class="text-center mb-6">
+        <h5 class="classic-form-title">إكمال الطلب - تخطيط أفقي مضغوط</h5>
+      </div>
+
+      <!-- MAIN FORM -->
+      <form id="form-personal-payment-data-5" class="w-full">
+        <div class="mb-8">
+          <!-- PERSONAL INFORMATION SECTION -->
+          <h2 class="classic-form-section-title mb-6">المعلومات الشخصية</h2>
+          
+          <!-- Compact Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <!-- FULL NAME INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">الاسم الكامل</label>
+              <input
+                type="text"
+                id="form-fullName-5"
+                placeholder="أدخل اسمك الكامل"
+                class="classic-form-input text-right"
+              />
+              <span id="form-fullName-error-5" class="classic-form-error"></span>
+            </div>
+
+            <!-- PHONE NUMBER INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">رقم الهاتف</label>
+              <input
+                type="tel"
+                id="form-phone-5"
+                placeholder="05xxxxxxxx"
+                class="classic-form-input text-right"
+              />
+              <span id="form-phone-error-5" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- EMAIL INPUT FIELD -->
+            <div>
+              <label class="classic-form-label block mb-2">البريد الإلكتروني</label>
+              <input
+                type="email"
+                id="form-email-5"
+                placeholder="example@email.com"
+                class="classic-form-input text-right"
+              />
+              <span id="form-email-error-5" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- CITY SELECTION DROPDOWN -->
+            <div>
+              <label class="classic-form-label block mb-2">المدينة</label>
+              <select id="form-city-5" class="classic-form-input text-right">
+                <option value="">اختر المدينة</option>
+                <option value="riyadh">الرياض</option>
+                <option value="jeddah">جدة</option>
+                <option value="dammam">الدمام</option>
+                <option value="makkah">مكة المكرمة</option>
+                <option value="madinah">المدينة المنورة</option>
+              </select>
+              <span id="form-city-error-5" class="classic-form-error" style="display: none;"></span>
+            </div>
+          </div>
+
+          <!-- ADDRESS TEXTAREA FIELD -->
+          <div class="mb-6">
+            <label class="classic-form-label block mb-2">العنوان الكامل</label>
+            <textarea
+              id="form-address-5"
+              placeholder="الحي، المدينة، أقرب معلم"
+              class="classic-form-input text-right min-h-[80px] resize-y"
+            ></textarea>
+            <span id="form-address-error-5" class="classic-form-error" style="display: none;"></span>
+          </div>
+
+          <!-- Payment and Delivery in one row -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
+            <!-- PAYMENT OPTIONS SECTION -->
+            <div>
+              <label class="classic-form-label block mb-4 font-bold">طريقة الدفع</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Payment Method">
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="payment-cash-5"
+                    name="payment-option-5"
+                    value="الدفع عند الاستلام"
+                    class="classic-form-radio"
+                    checked
+                  />
+                  <label for="payment-cash-5" class="classic-form-payment-option-content">
+                    <div class="text-center">
+                      <span class="classic-form-payment-option-label block">الدفع عند الاستلام</span>
+                      <span class="classic-form-payment-option-description text-xs">ادفع عند الاستلام</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="payment-online-5"
+                    name="payment-option-5"
+                    value="الدفع الإلكتروني"
+                    class="classic-form-radio"
+                  />
+                  <label for="payment-online-5" class="classic-form-payment-option-content">
+                    <div class="text-center">
+                      <span class="classic-form-payment-option-label block">الدفع الإلكتروني</span>
+                      <span class="classic-form-payment-option-description text-xs">بطاقة مدى / فيزا</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span id="form-payment-error-5" class="classic-form-error" style="display: none;"></span>
+            </div>
+
+            <!-- DELIVERY OPTIONS SECTION -->
+            <div>
+              <label class="classic-form-label block mb-4 font-bold">طريقة التوصيل</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Delivery Method">
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-home-5"
+                    name="delivery-option-5"
+                    value="توصيل للمنزل"
+                    class="classic-form-radio"
+                    checked
+                  />
+                  <label for="delivery-home-5" class="classic-form-payment-option-content">
+                    <div class="text-center">
+                      <span class="classic-form-payment-option-label block">توصيل للمنزل</span>
+                      <span class="classic-form-payment-option-description text-xs">خلال 24-48 ساعة</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="classic-form-payment-option">
+                  <input
+                    type="radio"
+                    id="delivery-store-5"
+                    name="delivery-option-5"
+                    value="الاستلام من المتجر"
+                    class="classic-form-radio"
+                  />
+                  <label for="delivery-store-5" class="classic-form-payment-option-content">
+                    <div class="text-center">
+                      <span class="classic-form-payment-option-label block">الاستلام من المتجر</span>
+                      <span class="classic-form-payment-option-description text-xs">من أحد فروعنا</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span id="form-delivery-error-5" class="classic-form-error" style="display: none;"></span>
+            </div>
+          </div>
+
+          <!-- NOTES TEXTAREA FIELD -->
+          <div class="mb-6">
+            <label class="classic-form-label block mb-2">ملاحظات إضافية</label>
+            <textarea
+              id="form-notes-5"
+              placeholder="اكتب أي تفاصيل إضافية هنا..."
+              class="classic-form-input text-right min-h-[80px] resize-y"
+            ></textarea>
+            <span id="form-notes-error-5" class="classic-form-error" style="display: none;"></span>
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON SECTION -->
+        <div class="text-center">
+          <button
+            type="button"
+            data-submit-order-button
+            class="classic-form-submit w-1/2"
+          >
+            تاكيد الدفع
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</section>

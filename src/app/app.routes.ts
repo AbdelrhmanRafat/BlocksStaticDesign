@@ -17,13 +17,13 @@ import { ProductUsageBlocksComponent } from './components/product-usage-blocks/p
 import { RatesBlocksComponent } from './components/rates-blocks/rates-blocks.component';
 import { ReviewsBlocksComponent } from './components/reviews-blocks/reviews-blocks.component';
 import { TodayOrdersBlocksComponent } from './components/today-orders-blocks/today-orders-blocks.component';
-import { ButtonWithLinkBlocksComponent } from './components/button-with-link-blocks/button-with-link-blocks';
-import { CouponBlocksComponent } from './components/coupon-blocks/coupon-blocks';
-import { FakeVisitorsBlocksComponent } from './components/fake-visitors-blocks/fake-visitors-blocks';
-import { GridImagesGalleryBlocksComponent } from './components/grid-images-gallery-blocks/grid-images-gallery-blocks';
-import { LogosCarouselBlocksComponent } from './components/logos-carousel-blocks/logos-carousel-blocks';
-import { TodayStatisticsBlocksComponent } from './components/today-statistics-blocks/today-statistics-blocks';
-import { TextBarBlocksComponent } from './components/text-bar-blocks/text-bar-blocks';
+import { CouponBlocks } from './components/coupon-blocks/coupon-blocks';
+import { ButtonWithLinkBlocks } from './components/button-with-link-blocks/button-with-link-blocks';
+import { FakeVisitorsBlocks } from './components/fake-visitors-blocks/fake-visitors-blocks';
+import { GridImagesGalleryBlocks } from './components/grid-images-gallery-blocks/grid-images-gallery-blocks';
+import { LogosCarouselBlocks } from './components/logos-carousel-blocks/logos-carousel-blocks';
+import { TextBarBlocks } from './components/text-bar-blocks/text-bar-blocks';
+import { TodayStatisticsBlocks } from './components/today-statistics-blocks/today-statistics-blocks';
 
 export const routes: Routes = [
     {
@@ -48,13 +48,13 @@ export const routes: Routes = [
             { path: 'rates-blocks', component: RatesBlocksComponent },
             { path: 'reviews-blocks', component: ReviewsBlocksComponent },
             { path: 'today-orders-blocks', component: TodayOrdersBlocksComponent },
-            { path: 'button-with-link-blocks', component: ButtonWithLinkBlocksComponent },
-            { path: 'coupon-blocks', component: CouponBlocksComponent },
-            { path: 'fake-visitors-blocks', component: FakeVisitorsBlocksComponent },
-            { path: 'grid-images-gallery-blocks', component: GridImagesGalleryBlocksComponent },
-            { path: 'logos-carousel-blocks', component: LogosCarouselBlocksComponent },
-            { path: 'today-statistics-blocks', component: TodayStatisticsBlocksComponent },
-            { path: 'text-bar-blocks', component: TextBarBlocksComponent }
+            { path: 'button-with-link-blocks', component: ButtonWithLinkBlocks },
+            { path: 'coupon-blocks', component: CouponBlocks },
+            { path: 'fake-visitors-blocks', component: FakeVisitorsBlocks },
+            { path: 'grid-images-gallery-blocks', component: GridImagesGalleryBlocks },
+            { path: 'logos-carousel-blocks', component: LogosCarouselBlocks },
+            { path: 'today-statistics-blocks', component: TodayStatisticsBlocks },
+            { path: 'text-bar-blocks', component: TextBarBlocks }
         ]
     },
     // You can add other top-level routes here if needed, for example, a 404 page.

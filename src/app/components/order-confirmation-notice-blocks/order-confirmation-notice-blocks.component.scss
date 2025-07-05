@@ -17,3 +17,26 @@
     background-color: var(--classic-color-info);
     color: var(--classic-color-on-info);
 }
+/* Additional styles for variations */
+details[open] summary i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.classic-surface-variant:hover {
+  animation: slideIn 0.3s ease-out;
+}
+.classic-bg {
+    background-color: var(--classic-color-primary);
+    color : var(--classic-color-on-primary)
+}

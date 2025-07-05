@@ -1,4 +1,4 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 
 interface Faq {
@@ -8,7 +8,7 @@ interface Faq {
 
 @Component({
   selector: 'app-faq-blocks',
-  imports : [NgFor,NgClass],
+  imports : [NgFor,NgClass,NgIf],
   templateUrl: './faq-blocks.component.html',
   styleUrls: ['./faq-blocks.component.scss']
 })
@@ -44,4 +44,8 @@ export class FaqBlocksComponent {
   toggle(index: number): void {
     this.openIndex = this.openIndex === index ? null : index;
   }
+  getShortTitle(question: string): string {
+  const words = question.split(' ');
+  return words.length > 3 ? words.slice(0, 3).join(' ') + '...' : question;
+}
 }

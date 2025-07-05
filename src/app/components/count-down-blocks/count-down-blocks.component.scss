@@ -1,3 +1,4 @@
+/* Original countdown styles */
 .classic-countdown-block {
     background-color: var(--classic-color-surface-variant);
     color: var(--classic-color-primary-dark);
@@ -5,8 +6,41 @@
     box-shadow: var(--classic-section-shadow);
     transition: all 0.3s ease;
 }
+.classic-countdown-label {
+    color: var(--classic-color-on-surface-variant);
+}
+.classic-countdown-number {
+    color: var(--classic-color-primary);
+}
 
 .classic-countdown-block:hover {
     box-shadow: var(--classic-section-shadow);
     transform: scale(1.05);
+}
+
+/* Additional styles for variations */
+.classic-countdown-circle {
+    border-color: var(--classic-color-outline);
+    box-shadow: var(--classic-section-shadow);
+    transition: all 0.3s ease;
+}
+
+.classic-countdown-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card-container:hover {
+    transform: perspective(1000px) rotateY(10deg);
+    transition: transform 0.3s ease;
+}
+
+/* Pulse animation for urgent countdown */
+@keyframes pulse-urgent {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.pulse-urgent {
+    animation: pulse-urgent 1s infinite;
 }

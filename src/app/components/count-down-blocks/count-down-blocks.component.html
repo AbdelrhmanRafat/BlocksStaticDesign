@@ -1,43 +1,219 @@
 <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-<!-- Elegant Countdown Timer with proper spacing for fixed header -->
-<section id="classic-countdown" class="classic-section">
+
+  <!-- Variation 1: Original Elegant Design -->
+  <section id="classic-countdown-1" class="classic-section">
     <div class="classic-countdown-container px-6 text-center">
       <div class="classic-middle-title">
-        <h2 data-translate="countdown.offerEndsIn">
-          ينتهي العرض خلال
-        </h2>
+        <h2>ينتهي العرض خلال</h2>
       </div>
-  
-      <div
-        class="classic-countdown-display flex justify-center gap-4 sm:gap-8 items-center my-7"
-        id="countdown"
-        data-time="5125"
-      >
+      
+      <div class="classic-countdown-display flex justify-center gap-4 sm:gap-8 items-center my-7">
         <!-- Hours display block -->
         <div class="classic-countdown-block rounded-2xl p-5 min-w-20 border-2 flex flex-col justify-center items-center">
-          <div class="classic-countdown-number text-4xl font-extrabold" id="hours">01</div>
-          <div class="classic-countdown-label text-sm font-serif" data-translate="countdown.hours">
-            ساعات
-          </div>
+          <div class="classic-countdown-number text-4xl font-extrabold" id="hours-1">01</div>
+          <div class="classic-countdown-label text-sm font-serif">ساعات</div>
         </div>
-  
+        
         <!-- Minutes display block -->
         <div class="classic-countdown-block rounded-2xl p-5 min-w-20 border-2 flex flex-col justify-center items-center">
-          <div class="classic-countdown-number text-4xl font-extrabold" id="minutes">25</div>
-          <div class="classic-countdown-label text-sm font-serif" data-translate="countdown.minutes">
-            دقائق
-          </div>
+          <div class="classic-countdown-number text-4xl font-extrabold" id="minutes-1">25</div>
+          <div class="classic-countdown-label text-sm font-serif">دقائق</div>
         </div>
-  
+        
         <!-- Seconds display block -->
         <div class="classic-countdown-block rounded-2xl p-5 min-w-20 border-2 flex flex-col justify-center items-center">
-          <div class="classic-countdown-number text-4xl font-extrabold" id="seconds">45</div>
-          <div class="classic-countdown-label text-sm font-serif" data-translate="countdown.seconds">
-            ثواني
+          <div class="classic-countdown-number text-4xl font-extrabold" id="seconds-1">45</div>
+          <div class="classic-countdown-label text-sm font-serif">ثواني</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 2: Circular Design -->
+  <section id="classic-countdown-2" class="classic-section">
+    <div class="classic-countdown-container px-6 text-center">
+      <div class="classic-middle-title">
+        <h2>ينتهي العرض خلال</h2>
+      </div>
+      
+      <div class="classic-countdown-display flex justify-center gap-6 sm:gap-10 items-center my-7">
+        <!-- Hours display circle -->
+        <div class="classic-countdown-circle w-24 h-24 rounded-full border-4 classic-primary-bg flex flex-col justify-center items-center relative overflow-hidden">
+          <div class="classic-countdown-number text-2xl font-extrabold text-white" id="hours-2">01</div>
+          <div class="classic-countdown-label text-xs text-white font-medium">ساعات</div>
+        </div>
+        
+        <div class="text-2xl classic-primary-icon font-bold">:</div>
+        
+        <!-- Minutes display circle -->
+        <div class="classic-countdown-circle w-24 h-24 rounded-full border-4 classic-secondary-bg flex flex-col justify-center items-center relative overflow-hidden">
+          <div class="classic-countdown-number text-2xl font-extrabold text-white" id="minutes-2">25</div>
+          <div class="classic-countdown-label text-xs text-white font-medium">دقائق</div>
+        </div>
+        
+        <div class="text-2xl classic-secondary-icon font-bold">:</div>
+        
+        <!-- Seconds display circle -->
+        <div class="classic-countdown-circle w-24 h-24 rounded-full border-4 classic-error-bg flex flex-col justify-center items-center relative overflow-hidden">
+          <div class="classic-countdown-number text-2xl font-extrabold text-white" id="seconds-2">45</div>
+          <div class="classic-countdown-label text-xs text-white font-medium">ثواني</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 3: Minimal Digital Style -->
+  <section id="classic-countdown-3" class="classic-section">
+    <div class="classic-countdown-container px-6 text-center">
+      <div class="classic-middle-title">
+        <h2>ينتهي العرض خلال</h2>
+      </div>
+      
+      <div class="classic-countdown-display my-7">
+        <div class="classic-surface-variant rounded-3xl p-8 inline-block">
+          <div class="flex items-center justify-center gap-3 text-5xl font-mono font-black classic-primary-icon">
+            <span id="hours-3">01</span>
+            <span class="animate-pulse">:</span>
+            <span id="minutes-3">25</span>
+            <span class="animate-pulse">:</span>
+            <span id="seconds-3">45</span>
+          </div>
+          <div class="flex justify-center gap-12 mt-4">
+            <span class="text-sm classic-delivery-subtitle">ساعات</span>
+            <span class="text-sm classic-delivery-subtitle">دقائق</span>
+            <span class="text-sm classic-delivery-subtitle">ثواني</span>
           </div>
         </div>
       </div>
     </div>
-  </section>  
-  
+  </section>
+
+  <!-- Variation 4: Stacked Card Style -->
+  <section id="classic-countdown-4" class="classic-section">
+    <div class="classic-countdown-container px-6 text-center">
+      <div class="classic-middle-title">
+        <h2>ينتهي العرض خلال</h2>
+      </div>
+      
+      <div class="classic-countdown-display grid grid-cols-1 sm:grid-cols-3 gap-6 my-7 max-w-md mx-auto">
+        <!-- Hours card -->
+        <div class="classic-surface-variant rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+          <div class="classic-countdown-number text-5xl font-black classic-primary-icon mb-2" id="hours-4">01</div>
+          <div class="classic-countdown-label text-base font-semibold classic-delivery-title">ساعات</div>
+          <div class="w-full h-1 classic-primary-bg rounded-full mt-3"></div>
+        </div>
+        
+        <!-- Minutes card -->
+        <div class="classic-surface-variant rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+          <div class="classic-countdown-number text-5xl font-black classic-secondary-icon mb-2" id="minutes-4">25</div>
+          <div class="classic-countdown-label text-base font-semibold classic-delivery-title">دقائق</div>
+          <div class="w-full h-1 classic-secondary-bg rounded-full mt-3"></div>
+        </div>
+        
+        <!-- Seconds card -->
+        <div class="classic-surface-variant rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+          <div class="classic-countdown-number text-5xl font-black classic-error-icon mb-2" id="seconds-4">45</div>
+          <div class="classic-countdown-label text-base font-semibold classic-delivery-title">ثواني</div>
+          <div class="w-full h-1 classic-error-bg rounded-full mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 5: Gradient Boxes -->
+  <section id="classic-countdown-5" class="classic-section">
+    <div class="classic-countdown-container px-6 text-center">
+      <div class="classic-middle-title">
+        <h2>ينتهي العرض خلال</h2>
+      </div>
+      
+      <div class="classic-countdown-display flex justify-center gap-4 items-center my-7">
+        <!-- Hours gradient box -->
+        <div class="classic-primary-bg rounded-2xl p-6 min-w-24 text-center shadow-lg transform hover:rotate-3 transition-all duration-300">
+          <div class="classic-countdown-number text-4xl font-black text-white mb-1" id="hours-5">01</div>
+          <div class="classic-countdown-label text-xs text-white opacity-90 font-medium">ساعات</div>
+        </div>
+        
+        <!-- Minutes gradient box -->
+        <div class="classic-secondary-bg rounded-2xl p-6 min-w-24 text-center shadow-lg transform hover:-rotate-2 transition-all duration-300">
+          <div class="classic-countdown-number text-4xl font-black text-white mb-1" id="minutes-5">25</div>
+          <div class="classic-countdown-label text-xs text-white opacity-90 font-medium">دقائق</div>
+        </div>
+        
+        <!-- Seconds gradient box -->
+        <div class="classic-warning-bg rounded-2xl p-6 min-w-24 text-center shadow-lg transform hover:rotate-2 transition-all duration-300">
+          <div class="classic-countdown-number text-4xl font-black text-white mb-1" id="seconds-5">45</div>
+          <div class="classic-countdown-label text-xs text-white opacity-90 font-medium">ثواني</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 6: Minimal Inline Style -->
+  <section id="classic-countdown-6" class="classic-section">
+    <div class="classic-countdown-container px-6 text-center">
+      <div class="classic-middle-title">
+        <h2>ينتهي العرض خلال</h2>
+      </div>
+      
+      <div class="classic-countdown-display my-7">
+        <div class="inline-flex items-center gap-6 classic-surface-variant rounded-full px-8 py-6">
+          <div class="flex items-baseline gap-2">
+            <span class="classic-countdown-number text-3xl font-bold classic-primary-icon" id="hours-6">01</span>
+            <span class="classic-countdown-label text-sm classic-delivery-subtitle">ساعة</span>
+          </div>
+          
+          <div class="w-1 h-8 classic-outline-bg rounded-full"></div>
+          
+          <div class="flex items-baseline gap-2">
+            <span class="classic-countdown-number text-3xl font-bold classic-secondary-icon" id="minutes-6">25</span>
+            <span class="classic-countdown-label text-sm classic-delivery-subtitle">دقيقة</span>
+          </div>
+          
+          <div class="w-1 h-8 classic-outline-bg rounded-full"></div>
+          
+          <div class="flex items-baseline gap-2">
+            <span class="classic-countdown-number text-3xl font-bold classic-error-icon" id="seconds-6">45</span>
+            <span class="classic-countdown-label text-sm classic-delivery-subtitle">ثانية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 7: Flip Card Style -->
+  <section id="classic-countdown-7" class="classic-section">
+    <div class="classic-countdown-container px-6 text-center">
+      <div class="classic-middle-title">
+        <h2>ينتهي العرض خلال</h2>
+      </div>
+      
+      <div class="classic-countdown-display flex justify-center gap-6 items-center my-7">
+        <!-- Hours flip card -->
+        <div class="flip-card-container relative">
+          <div class="classic-surface-variant rounded-lg overflow-hidden shadow-lg border-2 classic-border">
+            <div class="classic-countdown-number text-4xl font-black classic-primary-icon p-4 bg-white" id="hours-7">01</div>
+            <div class="classic-countdown-label text-sm classic-primary-bg text-white py-2 px-4">ساعات</div>
+          </div>
+        </div>
+        
+        <!-- Minutes flip card -->
+        <div class="flip-card-container relative">
+          <div class="classic-surface-variant rounded-lg overflow-hidden shadow-lg border-2 classic-border">
+            <div class="classic-countdown-number text-4xl font-black classic-secondary-icon p-4 bg-white" id="minutes-7">25</div>
+            <div class="classic-countdown-label text-sm classic-secondary-bg text-white py-2 px-4">دقائق</div>
+          </div>
+        </div>
+        
+        <!-- Seconds flip card -->
+        <div class="flip-card-container relative">
+          <div class="classic-surface-variant rounded-lg overflow-hidden shadow-lg border-2 classic-border">
+            <div class="classic-countdown-number text-4xl font-black classic-error-icon p-4 bg-white" id="seconds-7">45</div>
+            <div class="classic-countdown-label text-sm classic-error-bg text-white py-2 px-4">ثواني</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </section>
