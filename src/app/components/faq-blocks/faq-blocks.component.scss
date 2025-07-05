@@ -1,48 +1,207 @@
 /* === Enhanced Classic FAQ Component Styles === */
 /* Only colors using CSS variables, everything else uses Tailwind */
 
-/* FAQ Item Colors */
+/* === Original FAQ Styles (Variation 1) === */
 .classic-faq-item {
-    background-color: var(--classic-color-surface);
-    border-color: var(--classic-color-outline-variant);
-  }
+  background-color: var(--classic-color-surface);
+  border-color: var(--classic-color-outline-variant);
+}
+
+.classic-faq-question:hover {
+  background-color: var(--classic-color-surface-variant);
+}
+
+.classic-faq-question:focus {
+  --tw-ring-color: var(--classic-color-primary);
+}
+
+.classic-faq-question-text {
+  color: var(--classic-color-on-surface);
+}
+
+.classic-faq-icon {
+  color: var(--classic-color-on-surface-variant);
+}
+
+.classic-faq-answer-content {
+  color: var(--classic-color-on-surface-variant);
+  border-color: var(--classic-color-outline-variant);
+}
+
+.classic-primary-icon {
+  color: var(--classic-color-primary);
+}
+
+.classic-faq-item:hover .classic-faq-icon {
+  color: var(--classic-color-primary);
+}
+
+.classic-faq-item:hover {
+  box-shadow: var(--classic-section-shadow);
+}
+
+/* === Common Color Classes for All Variations === */
+.classic-surface {
+  background-color: var(--classic-color-surface);
+}
+
+.classic-surface-variant {
+  background-color: var(--classic-color-surface-variant);
+}
+
+.classic-primary-bg {
+  background-color: var(--classic-color-primary);
+}
+
+.classic-border {
+  border-color: var(--classic-color-outline-variant);
+}
+
+.classic-text-variant {
+  color: var(--classic-color-on-surface-variant);
+}
+
+.classic-text-primary {
+  color: var(--classic-color-primary);
+}
+
+.classic-delivery-title {
+  color: var(--classic-color-on-surface);
+}
+
+.classic-outline-variant {
+  background-color: var(--classic-color-outline-variant);
+}
+
+/* === Variation 2: Modern Card Layout === */
+.faq-card-v2 {
+  cursor: pointer;
   
-  /* Question Button Colors */
-  .classic-faq-question:hover {
+  &:hover {
+    box-shadow: var(--classic-section-shadow);
+    border-color: var(--classic-color-primary);
+  }
+}
+
+/* === Variation 3: Split Layout === */
+.faq-question-v3 {
+  &:hover:not(.classic-primary-bg) {
     background-color: var(--classic-color-surface-variant);
   }
-  
-  .classic-faq-question:focus {
-    --tw-ring-color: var(--classic-color-primary);
+}
+
+/* === Variation 4: Timeline Style === */
+.faq-timeline-item {
+  .classic-surface {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: var(--classic-section-shadow);
+      transform: translateX(-4px);
+    }
+  }
+}
+
+/* === Variation 5: Carousel Style === */
+.classic-outline-variant {
+  background-color: var(--classic-color-outline-variant);
+}
+
+/* Hover effects for navigation buttons */
+.hover\:classic-primary-bg:hover {
+  background-color: var(--classic-color-primary);
+}
+
+/* === Variation 6: Searchable List === */
+.faq-minimal-item {
+  .classic-surface {
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: var(--classic-color-surface-variant);
+    }
+  }
+}
+
+/* Search input focus styles */
+input:focus {
+  --tw-ring-color: var(--classic-color-primary);
+  border-color: var(--classic-color-primary);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .faq-timeline-item {
+    .classic-surface:hover {
+      transform: none;
+    }
   }
   
-  /* Question Text Color */
-  .classic-faq-question-text {
-    color: var(--classic-color-on-surface);
+  .faq-card-v2:hover {
+    transform: translateY(-1px);
   }
-  
-  /* FAQ Icon Color */
+}
+
+/* === Motion Preferences === */
+@media (prefers-reduced-motion: reduce) {
+  .faq-card-v2,
+  .faq-question-v3,
+  .faq-timeline-item .classic-surface,
+  .faq-minimal-item .classic-surface,
+  .classic-faq-item,
   .classic-faq-icon {
-    color: var(--classic-color-on-surface-variant);
+    transition: none;
+    animation: none;
   }
   
-  /* Answer Content Colors */
-  .classic-faq-answer-content {
-    color: var(--classic-color-on-surface-variant);
-    border-color: var(--classic-color-outline-variant);
-  }
-  
-  /* Primary Icon Color */
-  .classic-primary-icon {
-    color: var(--classic-color-primary);
-  }
-  
-  /* Active/Hover State Colors */
-  .classic-faq-item:hover .classic-faq-icon {
-    color: var(--classic-color-primary);
-  }
-  
-  /* Shadow using CSS variable */
+  .faq-card-v2:hover,
+  .faq-timeline-item .classic-surface:hover,
   .classic-faq-item:hover {
-    box-shadow: var(--classic-section-shadow);
+    transform: none;
   }
+}
+
+/* === Loading States === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-card-v2,
+.faq-question-v3,
+.faq-timeline-item,
+.faq-minimal-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* === Accessibility === */
+.faq-card-v2:focus,
+.faq-question-v3:focus,
+.faq-minimal-item button:focus {
+  outline: 2px solid var(--classic-color-primary);
+  outline-offset: 2px;
+}
+
+/* === Custom Scrollbar for Long Content === */
+.classic-faq-answer-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.classic-faq-answer-content::-webkit-scrollbar-track {
+  background: var(--classic-color-surface-variant);
+}
+
+.classic-faq-answer-content::-webkit-scrollbar-thumb {
+  background: var(--classic-color-outline-variant);
+  border-radius: 2px;
+}
+
+.classic-faq-answer-content::-webkit-scrollbar-thumb:hover {
+  background: var(--classic-color-primary);
+}

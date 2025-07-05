@@ -1,80 +1,361 @@
 <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section id="classic-product-usage" class="classic-section w-full">
-        <!-- Header -->
-        <div class="classic-section-header">
-          <i class="fa-solid fa-play-circle"></i>
-          <h5>كيفية استخدام المنتج</h5>
+
+  <!-- Variation 1: Original Grid Layout -->
+  <section id="classic-product-usage-1" class="classic-section w-full">
+    <!-- Header -->
+    <div class="classic-section-header">
+      <i class="fa-solid fa-play-circle"></i>
+      <h5>كيفية استخدام المنتج</h5>
+    </div>
+    
+    <!-- Video Grid -->
+    <div class="grid grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-3">
+      
+      <!-- Video 1 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="classic-usage-video relative">
+          <iframe
+            class="classic-usage-iframe w-full h-[300px] lg:h-[620px]"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="طريقة استخدام المنتج - الجزء الأول"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="classic-usage-content p-3">
+          <h3 class="classic-usage-title font-medium text-base mb-1">
+            طريقة الاستخدام الأساسية
+          </h3>
+          <p class="classic-usage-subtitle text-sm mb-2">
+            تعرّف على الخطوات الأساسية لاستخدام المنتج بشكل صحيح.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Video 2 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="classic-usage-video relative">
+          <iframe
+            class="classic-usage-iframe w-full h-[300px] lg:h-[620px]"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            title="طريقة استخدام المنتج - الجزء الثاني"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="classic-usage-content p-3">
+          <h3 class="classic-usage-title font-medium text-base mb-1">
+            نصائح الاستخدام المتقدم
+          </h3>
+          <p class="classic-usage-subtitle text-sm mb-2">
+            اكتشف ميزات متقدمة ونصائح للاستفادة القصوى من المنتج.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Video 3 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="classic-usage-video relative">
+          <iframe
+            class="classic-usage-iframe w-full h-[300px] lg:h-[620px]"
+            src="https://www.youtube.com/embed/kJQP7kiw5Fk"
+            title="طريقة استخدام المنتج - الجزء الثالث"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="classic-usage-content p-3">
+          <h3 class="classic-usage-title font-medium text-base mb-1">
+            الأسئلة الشائعة
+          </h3>
+          <p class="classic-usage-subtitle text-sm mb-2">
+            إجابات على أكثر الأسئلة شيوعًا حول استخدام المنتج.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Variation 2: Featured Video with Thumbnails -->
+  <section id="classic-product-usage-2" class="classic-section w-full">
+    <!-- Header -->
+    <div class="classic-section-header">
+      <i class="fa-solid fa-play-circle"></i>
+      <h5>كيفية استخدام المنتج</h5>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Featured Video -->
+      <div class="lg:col-span-2">
+        <div class="classic-usage-card overflow-hidden">
+          <div class="classic-usage-video relative">
+            <iframe
+              class="classic-usage-iframe w-full h-[400px] lg:h-[500px]"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="طريقة استخدام المنتج - الجزء الأول"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content p-6">
+            <h3 class="classic-usage-title font-bold text-xl mb-3">
+              طريقة الاستخدام الأساسية
+            </h3>
+            <p class="classic-usage-subtitle text-base leading-relaxed">
+              تعرّف على الخطوات الأساسية لاستخدام المنتج بشكل صحيح.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video Thumbnails -->
+      <div class="space-y-4">
+        <div class="classic-usage-card overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300">
+          <div class="classic-usage-video relative">
+            <iframe
+              class="classic-usage-iframe w-full h-[120px]"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              title="طريقة استخدام المنتج - الجزء الثاني"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content p-3">
+            <h4 class="classic-usage-title font-medium text-sm mb-1">
+              نصائح الاستخدام المتقدم
+            </h4>
+            <p class="classic-usage-subtitle text-xs">
+              اكتشف ميزات متقدمة ونصائح للاستفادة القصوى من المنتج.
+            </p>
+          </div>
         </div>
         
-        <!-- Video Grid -->
-        <div class="grid grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-3">
-      
-          <!-- Video 1 -->
-          <div class="classic-usage-card overflow-hidden">
-            <div class="classic-usage-video relative">
-              <iframe
-                class="classic-usage-iframe w-full h-[300px] lg:h-[620px]"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="طريقة استخدام المنتج - الجزء الأول"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <div class="classic-usage-content p-3">
-              <h3 class="classic-usage-title font-medium text-base mb-1">
+        <div class="classic-usage-card overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300">
+          <div class="classic-usage-video relative">
+            <iframe
+              class="classic-usage-iframe w-full h-[120px]"
+              src="https://www.youtube.com/embed/kJQP7kiw5Fk"
+              title="طريقة استخدام المنتج - الجزء الثالث"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content p-3">
+            <h4 class="classic-usage-title font-medium text-sm mb-1">
+              الأسئلة الشائعة
+            </h4>
+            <p class="classic-usage-subtitle text-xs">
+              إجابات على أكثر الأسئلة شيوعًا حول استخدام المنتج.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 3: Stacked Layout -->
+  <section id="classic-product-usage-3" class="classic-section w-full ">
+    <!-- Header -->
+    <div class="classic-section-header">
+      <i class="fa-solid fa-play-circle"></i>
+      <h5>كيفية استخدام المنتج</h5>
+    </div>
+    
+    <div class="space-y-8">
+      <!-- Video 1 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <div class="classic-usage-video relative">
+            <iframe
+              class="classic-usage-iframe w-full h-[250px] lg:h-[300px]"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="طريقة استخدام المنتج - الجزء الأول"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content p-6 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full classic-primary-bg text-white flex items-center justify-center text-sm font-bold">1</div>
+              <h3 class="classic-usage-title font-bold text-lg">
                 طريقة الاستخدام الأساسية
               </h3>
-              <p class="classic-usage-subtitle text-sm mb-2">
-                تعرّف على الخطوات الأساسية لاستخدام المنتج بشكل صحيح.
-              </p>
             </div>
+            <p class="classic-usage-subtitle text-base leading-relaxed">
+              تعرّف على الخطوات الأساسية لاستخدام المنتج بشكل صحيح.
+            </p>
           </div>
+        </div>
+      </div>
       
-          <!-- Video 2 -->
-          <div class="classic-usage-card overflow-hidden">
-            <div class="classic-usage-video relative">
-              <iframe
-                class="classic-usage-iframe w-full h-[300px] lg:h-[620px]"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                title="طريقة استخدام المنتج - الجزء الثاني"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <div class="classic-usage-content p-3">
-              <h3 class="classic-usage-title font-medium text-base mb-1">
+      <!-- Video 2 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <div class="classic-usage-content p-6 flex flex-col justify-center lg:order-1">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full classic-secondary-bg text-white flex items-center justify-center text-sm font-bold">2</div>
+              <h3 class="classic-usage-title font-bold text-lg">
                 نصائح الاستخدام المتقدم
               </h3>
-              <p class="classic-usage-subtitle text-sm mb-2">
-                اكتشف ميزات متقدمة ونصائح للاستفادة القصوى من المنتج.
-              </p>
             </div>
+            <p class="classic-usage-subtitle text-base leading-relaxed">
+              اكتشف ميزات متقدمة ونصائح للاستفادة القصوى من المنتج.
+            </p>
           </div>
+          <div class="classic-usage-video relative lg:order-2">
+            <iframe
+              class="classic-usage-iframe w-full h-[250px] lg:h-[300px]"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              title="طريقة استخدام المنتج - الجزء الثاني"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
       
-          <!-- Video 3 -->
-          <div class="classic-usage-card overflow-hidden">
-            <div class="classic-usage-video relative">
-              <iframe
-                class="classic-usage-iframe w-full h-[300px] lg:h-[620px]"
-                src="https://www.youtube.com/embed/kJQP7kiw5Fk"
-                title="طريقة استخدام المنتج - الجزء الثالث"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <div class="classic-usage-content p-3">
-              <h3 class="classic-usage-title font-medium text-base mb-1">
+      <!-- Video 3 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <div class="classic-usage-video relative">
+            <iframe
+              class="classic-usage-iframe w-full h-[250px] lg:h-[300px]"
+              src="https://www.youtube.com/embed/kJQP7kiw5Fk"
+              title="طريقة استخدام المنتج - الجزء الثالث"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content p-6 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full classic-success-bg text-white flex items-center justify-center text-sm font-bold">3</div>
+              <h3 class="classic-usage-title font-bold text-lg">
                 الأسئلة الشائعة
               </h3>
-              <p class="classic-usage-subtitle text-sm mb-2">
-                إجابات على أكثر الأسئلة شيوعًا حول استخدام المنتج.
-              </p>
             </div>
+            <p class="classic-usage-subtitle text-base leading-relaxed">
+              إجابات على أكثر الأسئلة شيوعًا حول استخدام المنتج.
+            </p>
           </div>
-      
         </div>
-      </section>      
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 4: Compact List Style -->
+  <section id="classic-product-usage-4" class="classic-section w-full ">
+    <!-- Header -->
+    <div class="classic-section-header">
+      <i class="fa-solid fa-play-circle"></i>
+      <h5>كيفية استخدام المنتج</h5>
+    </div>
+    
+    <div class="space-y-4">
+      <!-- Video 1 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="flex gap-4 p-4">
+          <div class="classic-usage-video relative flex-shrink-0">
+            <iframe
+              class="classic-usage-iframe w-32 h-24 rounded-lg"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="طريقة استخدام المنتج - الجزء الأول"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content flex-1">
+            <h3 class="classic-usage-title font-bold text-base mb-2">
+              طريقة الاستخدام الأساسية
+            </h3>
+            <p class="classic-usage-subtitle text-sm leading-relaxed">
+              تعرّف على الخطوات الأساسية لاستخدام المنتج بشكل صحيح.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video 2 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="flex gap-4 p-4">
+          <div class="classic-usage-video relative flex-shrink-0">
+            <iframe
+              class="classic-usage-iframe w-32 h-24 rounded-lg"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              title="طريقة استخدام المنتج - الجزء الثاني"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content flex-1">
+            <h3 class="classic-usage-title font-bold text-base mb-2">
+              نصائح الاستخدام المتقدم
+            </h3>
+            <p class="classic-usage-subtitle text-sm leading-relaxed">
+              اكتشف ميزات متقدمة ونصائح للاستفادة القصوى من المنتج.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video 3 -->
+      <div class="classic-usage-card overflow-hidden">
+        <div class="flex gap-4 p-4">
+          <div class="classic-usage-video relative flex-shrink-0">
+            <iframe
+              class="classic-usage-iframe w-32 h-24 rounded-lg"
+              src="https://www.youtube.com/embed/kJQP7kiw5Fk"
+              title="طريقة استخدام المنتج - الجزء الثالث"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="classic-usage-content flex-1">
+            <h3 class="classic-usage-title font-bold text-base mb-2">
+              الأسئلة الشائعة
+            </h3>
+            <p class="classic-usage-subtitle text-sm leading-relaxed">
+              إجابات على أكثر الأسئلة شيوعًا حول استخدام المنتج.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 </section>
+
+<style>
+/* === Classic Product Usage Component === */
+.classic-usage-card {
+    background-color: var(--classic-color-surface-container);
+    box-shadow: var(--classic-section-shadow);
+    border-radius: var(--classic-section-radius);
+    transition: transform 0.2s ease;
+}
+
+.classic-usage-card:hover {
+    transform: scale(1.05);
+}
+
+.classic-usage-title {
+    color: var(--classic-color-on-surface);
+}
+
+.classic-usage-subtitle {
+    color: var(--classic-color-on-surface-variant);
+}
+</style>

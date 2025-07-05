@@ -29,14 +29,10 @@ export class NavbarComponent implements OnInit {
     { path: '/product-usage-blocks', label: 'Product Usage' },
     { path: '/rates-blocks', label: 'Rates Display' },
     { path: '/reviews-blocks', label: 'Reviews' },
-    { path: '/today-orders-blocks', label: 'Today\'s Orders' },
-    { path: '/button-with-link-blocks', label: 'Button With Link' },
     { path: '/coupon-blocks', label: 'Coupon' },
-    { path: '/fake-visitors-blocks', label: 'Fake Visitors' },
     { path: '/grid-images-gallery-blocks', label: 'Grid Images Gallery' },
     { path: '/logos-carousel-blocks', label: 'Logos Carousel' },
     { path: '/today-statistics-blocks', label: 'Today Statistics' },
-    { path: '/text-bar-blocks', label: 'Text Bar' }
   ];
 
   ngOnInit() {

@@ -1,0 +1,257 @@
+/* Gallery Variations Component Styles */
+
+/* Common Classes */
+.classic-surface {
+  background-color: var(--classic-color-surface);
+}
+
+.classic-surface-variant {
+  background-color: var(--classic-color-surface-variant);
+}
+
+.classic-border {
+  border-color: var(--classic-color-outline-variant);
+}
+
+.classic-text-variant {
+  color: var(--classic-color-on-surface-variant);
+}
+
+.classic-text-primary {
+  color: var(--classic-color-primary);
+}
+
+.classic-delivery-title {
+  color: var(--classic-color-on-surface);
+}
+
+.classic-primary-bg {
+  background-color: var(--classic-color-primary);
+}
+
+/* === Variation 1: Original Grid Design === */
+.gallery-item-v1 {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* === Variation 2: Circular Cards === */
+.gallery-item-v2 {
+  .classic-border {
+    border-color: var(--classic-color-outline-variant);
+  }
+  
+  &:hover .classic-border {
+    border-color: var(--classic-color-primary);
+  }
+}
+
+/* === Variation 3: Card Style with Labels === */
+.gallery-item-v3 {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* === Variation 4: Hexagon Style === */
+.hexagon-gallery-shape {
+  width: 120px;
+  height: 104px;
+  position: relative;
+}
+
+.hexagon-gallery-inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--classic-color-surface);
+  border: 3px solid var(--classic-color-outline-variant);
+  border-radius: 12px;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.gallery-item-v4:hover .hexagon-gallery-inner {
+  border-color: var(--classic-color-primary);
+}
+
+.hexagon-gallery-image {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+  transform: rotate(-45deg);
+  border-radius: 8px;
+}
+
+/* === Variation 5: Masonry Style === */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1rem;
+  
+  @media (min-width: 640px) {
+    column-count: 2;
+  }
+  
+  @media (min-width: 768px) {
+    column-count: 3;
+  }
+  
+  @media (min-width: 1024px) {
+    column-count: 4;
+  }
+}
+
+.gallery-item-v5 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+
+.masonry-item-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.masonry-item-2 {
+  aspect-ratio: 3 / 4;
+}
+
+.masonry-item-3 {
+  aspect-ratio: 4 / 3;
+}
+
+/* === Variation 6: Minimal List Style === */
+.gallery-item-v6 {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateX(8px);
+  }
+}
+
+/* === Variation 7: Polaroid Style === */
+.polaroid-card {
+  transition: transform 0.3s ease;
+  
+  &:nth-child(odd) {
+    transform: rotate(2deg);
+  }
+  
+  &:nth-child(even) {
+    transform: rotate(-1deg);
+  }
+  
+  &:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+}
+
+.font-handwriting {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .hexagon-gallery-shape {
+    width: 100px;
+    height: 87px;
+  }
+  
+  .masonry-grid {
+    column-count: 2;
+  }
+  
+  .gallery-item-v2 .classic-border {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hexagon-gallery-shape {
+    width: 80px;
+    height: 69px;
+  }
+  
+  .masonry-grid {
+    column-count: 1;
+  }
+  
+  .gallery-item-v2 .classic-border {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .gallery-item-v6 .flex {
+    gap: 0.75rem;
+  }
+  
+  .gallery-item-v6 .w-20 {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+/* Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item-v1,
+  .gallery-item-v2,
+  .gallery-item-v3,
+  .gallery-item-v4,
+  .gallery-item-v5,
+  .gallery-item-v6,
+  .gallery-item-v7,
+  .polaroid-card,
+  .hexagon-gallery-inner {
+    transition: none;
+    animation: none;
+  }
+  
+  .polaroid-card {
+    &:nth-child(odd),
+    &:nth-child(even) {
+      transform: rotate(0deg);
+    }
+    
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+/* Loading States */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+img[src=""] {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: var(--classic-color-surface-variant);
+}
+
+/* Accessibility Improvements */
+.gallery-item-v1,
+.gallery-item-v2,
+.gallery-item-v3,
+.gallery-item-v4,
+.gallery-item-v5,
+.gallery-item-v6,
+.gallery-item-v7 {
+  &:focus {
+    outline: 2px solid var(--classic-color-primary);
+    outline-offset: 2px;
+  }
+}

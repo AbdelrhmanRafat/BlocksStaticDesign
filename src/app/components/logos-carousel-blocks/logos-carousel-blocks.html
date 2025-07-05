@@ -1,1 +1,199 @@
-<p>logos-carousel-blocks works!</p>
+<!-- logos-carousel-blocks.component.html -->
+<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+
+  <!-- Variation 1: Original Circular Design -->
+  <section id="carousel-variation-1" class="classic-section w-full">
+    <div class="classic-section-header text-center mb-8">
+      <h3 class="classic-middle-title">Variation 1: Original Circular Design</h3>
+    </div>
+    
+    <owl-carousel-o [options]="customOptions" class="partners-carousel-v1">
+      @for (partner of partners; track $index) {
+        <ng-template carouselSlide>
+          <div class="flex flex-col items-center justify-center p-4">
+            <div class="partner-logo-container-v1">
+              <div class="w-32 h-32 mb-4 classic-logo-card rounded-full overflow-hidden shadow-lg">
+                <img 
+                  [src]="partner.logo" 
+                  [alt]="partner.alt"
+                  class="object-contain w-full h-full p-4 transition-opacity duration-300"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                  (load)="onImageLoad($event)"
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="text-sm font-medium classic-text-variant">
+                  {{ partner.name }}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </section>
+
+  <!-- Variation 2: Minimal Square Cards -->
+  <section id="carousel-variation-2" class="classic-section w-full">
+    <div class="classic-section-header text-center mb-8">
+      <h3 class="classic-middle-title">Variation 2: Minimal Square Cards</h3>
+    </div>
+    
+    <owl-carousel-o [options]="customOptions" class="partners-carousel-v2">
+      @for (partner of partners; track $index) {
+        <ng-template carouselSlide>
+          <div class="flex items-center justify-center p-2">
+            <div class="minimal-logo-container">
+              <div class="w-28 h-28 classic-logo-card-minimal rounded-lg overflow-hidden">
+                <img 
+                  [src]="partner.logo" 
+                  [alt]="partner.alt"
+                  class="object-contain w-full h-full p-3 transition-opacity duration-300"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                  (load)="onImageLoad($event)"
+                />
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </section>
+
+  <!-- Variation 3: Hexagon Design -->
+  <section id="carousel-variation-3" class="classic-section w-full">
+    <div class="classic-section-header text-center mb-8">
+      <h3 class="classic-middle-title">Variation 3: Hexagon Design</h3>
+    </div>
+    
+    <owl-carousel-o [options]="customOptions" class="partners-carousel-v3">
+      @for (partner of partners; track $index) {
+        <ng-template carouselSlide>
+          <div class="flex items-center justify-center p-4">
+            <div class="hexagon-logo-container">
+              <div class="hexagon-shape">
+                <div class="hexagon-inner">
+                  <img 
+                    [src]="partner.logo" 
+                    [alt]="partner.alt"
+                    class="hexagon-image"
+                    loading="lazy"
+                    (error)="onImageError($event)"
+                    (load)="onImageLoad($event)"
+                  />
+                </div>
+              </div>
+              <div class="text-center mt-3">
+                <h4 class="text-xs font-medium classic-text-variant">
+                  {{ partner.name }}
+                </h4>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </section>
+
+
+  <!-- Variation 5: Stacked Card Style -->
+  <section id="carousel-variation-5" class="classic-section w-full">
+    <div class="classic-section-header text-center mb-8">
+      <h3 class="classic-middle-title">Variation 5: Stacked Card Style</h3>
+    </div>
+    
+    <owl-carousel-o [options]="customOptions" class="partners-carousel-v5">
+      @for (partner of partners; track $index) {
+        <ng-template carouselSlide>
+          <div class="flex items-center justify-center p-4">
+            <div class="stacked-logo-container">
+              <div class="classic-surface-variant rounded-2xl p-6 text-center">
+                <div class="w-24 h-24 mx-auto mb-4 classic-logo-card-stacked rounded-xl overflow-hidden">
+                  <img 
+                    [src]="partner.logo" 
+                    [alt]="partner.alt"
+                    class="object-contain w-full h-full p-3"
+                    loading="lazy"
+                    (error)="onImageError($event)"
+                    (load)="onImageLoad($event)"
+                  />
+                </div>
+                <h4 class="text-sm font-semibold classic-delivery-title">{{ partner.name }}</h4>
+                <div class="w-full h-1 classic-primary-bg rounded-full mt-3"></div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </section>
+
+  <!-- Variation 6: Minimal Inline Style -->
+  <section id="carousel-variation-6" class="classic-section w-full">
+    <div class="classic-section-header text-center mb-8">
+      <h3 class="classic-middle-title">Variation 6: Minimal Inline Style</h3>
+    </div>
+    
+    <owl-carousel-o [options]="customOptions" class="partners-carousel-v6">
+      @for (partner of partners; track $index) {
+        <ng-template carouselSlide>
+          <div class="flex items-center justify-center p-2">
+            <div class="inline-logo-container">
+              <div class="classic-surface-variant rounded-full px-6 py-4 flex items-center gap-3">
+                <div class="w-12 h-12 classic-logo-card-inline rounded-full overflow-hidden">
+                  <img 
+                    [src]="partner.logo" 
+                    [alt]="partner.alt"
+                    class="object-contain w-full h-full p-2"
+                    loading="lazy"
+                    (error)="onImageError($event)"
+                    (load)="onImageLoad($event)"
+                  />
+                </div>
+                <span class="text-sm font-medium classic-delivery-subtitle">{{ partner.name }}</span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </section>
+
+  <!-- Variation 7: Flip Card Style -->
+  <section id="carousel-variation-7" class="classic-section w-full">
+    <div class="classic-section-header text-center mb-8">
+      <h3 class="classic-middle-title">Variation 7: Flip Card Style</h3>
+    </div>
+    
+    <owl-carousel-o [options]="customOptions" class="partners-carousel-v7">
+      @for (partner of partners; track $index) {
+        <ng-template carouselSlide>
+          <div class="flex items-center justify-center p-3">
+            <div class="flip-card-container">
+              <div class="classic-surface-variant rounded-lg overflow-hidden shadow-lg border-2 classic-border">
+                <div class="p-6 bg-white text-center">
+                  <div class="w-20 h-20 mx-auto mb-3 classic-logo-card-flip rounded-lg overflow-hidden">
+                    <img 
+                      [src]="partner.logo" 
+                      [alt]="partner.alt"
+                      class="object-contain w-full h-full p-2"
+                      loading="lazy"
+                      (error)="onImageError($event)"
+                      (load)="onImageLoad($event)"
+                    />
+                  </div>
+                </div>
+                <div class="classic-primary-bg text-white py-3 px-4 text-center">
+                  <span class="text-sm font-medium">{{ partner.name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </section>
+
+</section>

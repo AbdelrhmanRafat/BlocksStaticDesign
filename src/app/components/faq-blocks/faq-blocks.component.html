@@ -1,6 +1,6 @@
-<!-- Angular FAQ Component Variations -->
+<!-- Angular FAQ Component Variations - Improved Designs -->
 
-<!-- Variation 1: Original Accordion Layout -->
+<!-- Variation 1: Original Accordion Layout (Keep as is) -->
 <section class="classic-section max-w-4xl mx-auto">
   <!-- Header -->
   <div class="classic-section-header">
@@ -43,271 +43,266 @@
   </div>
 </section>
 
-<!-- Variation 2: Card-Based FAQ Layout -->
-<section class="classic-section max-w-4xl mx-auto mt-12">
+<!-- Variation 2: Modern Card Layout with Icons -->
+<section class="classic-section max-w-6xl mx-auto mt-12">
   <!-- Header -->
-  <div class="classic-section-header">
-    <i [class]="icon" class="text-3xl classic-secondary-icon"></i>
-    <h5 class="classic-middle-title">{{ title }} - تصميم البطاقات</h5>
+  <div class="classic-section-header text-center mb-8">
+    <i [class]="icon" class="text-3xl classic-primary-icon"></i>
+    <h5 class="classic-middle-title">{{ title }} - Modern Cards</h5>
   </div>
 
   <!-- FAQ Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <div
       *ngFor="let faq of faqs; let i = index"
-      class="classic-surface-variant rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
-      [ngClass]="{ 'md:col-span-2': i === faqs.length - 1 && faqs.length % 2 !== 0 }"
+      class="faq-card-v2 classic-surface rounded-2xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
+      (click)="selectFaq(i)"
     >
-      <div class="flex items-start gap-4">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-             [ngClass]="{
-               'classic-primary-bg': i === 0,
-               'classic-secondary-bg': i === 1,
-               'classic-error-bg': i === 2,
-               'classic-warning-bg': i === 3,
-               'classic-success-bg': i === 4
-             }">
-          <i class="text-white text-sm"
-             [ngClass]="{
-               'fas fa-credit-card': i === 0,
-               'fas fa-undo': i === 1,
-               'fas fa-truck': i === 2,
-               'fas fa-dollar-sign': i === 3,
-               'fas fa-search': i === 4
-             }"></i>
+      <!-- Icon Header -->
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 rounded-xl classic-primary-bg flex items-center justify-center">
+          <i class="fas fa-question text-white"></i>
         </div>
         <div class="flex-1">
-          <h3 class="classic-delivery-title font-semibold text-lg mb-3">
-            {{ faq.question }}
-          </h3>
-          <p class="classic-delivery-subtitle text-sm leading-relaxed">
-            {{ faq.answer }}
-          </p>
+          <span class="text-xs classic-text-variant uppercase tracking-wide">سؤال {{ i + 1 }}</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Variation 3: Tab-Style FAQ Layout -->
-<section class="classic-section max-w-4xl mx-auto mt-12">
-  <!-- Header -->
-  <div class="classic-section-header">
-    <i [class]="icon" class="text-3xl classic-tertiary-icon"></i>
-    <h5 class="classic-middle-title">{{ title }} - تصميم التبويبات</h5>
-  </div>
-
-  <!-- Tab Navigation -->
-  <div class="flex flex-wrap gap-2 mb-6 classic-surface-variant rounded-2xl p-2">
-    <button
-      *ngFor="let faq of faqs; let i = index"
-      (click)="openIndex = i"
-      class="flex-1 p-3 rounded-xl font-medium text-xs md:text-sm transition-all duration-300"
-      [ngClass]="{
-        'classic-primary-bg text-white': openIndex === i,
-        'hover:bg-gray-100': openIndex !== i
-      }"
-    >
-      {{ getShortTitle(faq.question) }}
-    </button>
-  </div>
-
-  <!-- Tab Content -->
-  <div class="tab-content">
-    <div
-      *ngFor="let faq of faqs; let i = index"
-      class="classic-surface-variant rounded-2xl p-8"
-      [ngClass]="{ 'hidden': openIndex !== i }"
-    >
-      <div class="flex items-start gap-6">
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0"
-             [ngClass]="{
-               'classic-primary-bg': i === 0,
-               'classic-secondary-bg': i === 1,
-               'classic-error-bg': i === 2,
-               'classic-warning-bg': i === 3,
-               'classic-success-bg': i === 4
-             }">
-          <i class="text-white text-2xl"
-             [ngClass]="{
-               'fas fa-credit-card': i === 0,
-               'fas fa-undo': i === 1,
-               'fas fa-truck': i === 2,
-               'fas fa-dollar-sign': i === 3,
-               'fas fa-search': i === 4
-             }"></i>
-        </div>
-        <div class="flex-1">
-          <h3 class="classic-delivery-title font-bold text-2xl mb-4">
-            {{ faq.question }}
-          </h3>
-          <p class="classic-delivery-subtitle text-base leading-relaxed">
-            {{ faq.answer }}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Variation 4: Simple List Layout -->
-<section class="classic-section max-w-4xl mx-auto mt-12">
-  <!-- Header -->
-  <div class="classic-section-header">
-    <i [class]="icon" class="text-3xl classic-warning-icon"></i>
-    <h5 class="classic-middle-title">{{ title }} - قائمة مرقمة</h5>
-  </div>
-
-  <!-- FAQ List -->
-  <div class="flex flex-col gap-8">
-    <div
-      *ngFor="let faq of faqs; let i = index"
-      class="border-r-4 classic-border pr-6"
-    >
-      <h3 class="classic-delivery-title font-bold text-xl mb-3 flex items-center gap-3">
-        <span class="w-8 h-8 rounded-full text-white text-sm flex items-center justify-center"
-              [ngClass]="{
-                'classic-primary-bg': i === 0,
-                'classic-secondary-bg': i === 1,
-                'classic-error-bg': i === 2,
-                'classic-warning-bg': i === 3,
-                'classic-success-bg': i === 4
-              }">
-          {{ i + 1 }}
-        </span>
+      
+      <!-- Question -->
+      <h3 class="classic-delivery-title font-semibold text-lg mb-3 leading-tight">
         {{ faq.question }}
       </h3>
-      <p class="classic-delivery-subtitle text-base leading-relaxed mr-11">
-        {{ faq.answer }}
+      
+      <!-- Short Answer Preview -->
+      <p class="classic-text-variant text-sm leading-relaxed mb-4">
+        {{ getShortAnswer(faq.answer) }}...
       </p>
+      
+      <!-- Read More Button -->
+      <div class="flex items-center gap-2 classic-text-primary text-sm font-medium">
+        <span>اقرأ المزيد</span>
+        <i class="fas fa-arrow-left text-xs"></i>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Variation 5: Interactive Card Selection Layout -->
-<section class="classic-section max-w-4xl mx-auto mt-12">
+<!-- Variation 3: Split Layout Design -->
+<section class="classic-section max-w-6xl mx-auto mt-12">
   <!-- Header -->
-  <div class="classic-section-header">
-    <i [class]="icon" class="text-3xl classic-info-icon"></i>
-    <h5 class="classic-middle-title">{{ title }} - تصميم تفاعلي</h5>
+  <div class="classic-section-header text-center mb-8">
+    <i [class]="icon" class="text-3xl classic-primary-icon"></i>
+    <h5 class="classic-middle-title">{{ title }} - Split Layout</h5>
   </div>
 
-  <!-- FAQ Selection Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
-    <button
-      *ngFor="let faq of faqs; let i = index"
-      (click)="openIndex = i"
-      class="classic-surface-variant rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center"
-      [ngClass]="{ 'ring-2 ring-blue-500': openIndex === i }"
-    >
-      <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center"
-           [ngClass]="{
-             'classic-primary-bg': i === 0,
-             'classic-secondary-bg': i === 1,
-             'classic-error-bg': i === 2,
-             'classic-warning-bg': i === 3,
-             'classic-success-bg': i === 4
-           }">
-        <i class="text-white"
-           [ngClass]="{
-             'fas fa-credit-card': i === 0,
-             'fas fa-undo': i === 1,
-             'fas fa-truck': i === 2,
-             'fas fa-dollar-sign': i === 3,
-             'fas fa-search': i === 4
-           }"></i>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Questions List -->
+    <div class="space-y-3">
+      <h3 class="classic-delivery-title font-bold text-xl mb-6">الأسئلة الشائعة</h3>
+      <div
+        *ngFor="let faq of faqs; let i = index"
+        class="faq-question-v3 p-4 rounded-xl cursor-pointer transition-all duration-300"
+        [ngClass]="{ 'classic-primary-bg': selectedFaqIndex === i, 'classic-surface-variant': selectedFaqIndex !== i }"
+        (click)="selectedFaqIndex = i"
+      >
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold"
+               [ngClass]="{ 'bg-white classic-text-primary': selectedFaqIndex === i, 'classic-primary-bg text-white': selectedFaqIndex !== i }">
+            {{ i + 1 }}
+          </div>
+          <p class="font-medium"
+             [ngClass]="{ 'text-white': selectedFaqIndex === i, 'classic-delivery-title': selectedFaqIndex !== i }">
+            {{ faq.question }}
+          </p>
+        </div>
       </div>
-      <h3 class="classic-delivery-title font-semibold text-sm">
-        {{ getShortTitle(faq.question) }}
-      </h3>
-    </button>
-  </div>
+    </div>
 
-  <!-- Selected FAQ Display -->
-  <div
-    *ngIf="openIndex !== null"
-    class="classic-surface-variant rounded-2xl p-8 transition-all duration-300"
-  >
-    <div class="flex items-start gap-6">
-      <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0"
-           [ngClass]="{
-             'classic-primary-bg': openIndex === 0,
-             'classic-secondary-bg': openIndex === 1,
-             'classic-error-bg': openIndex === 2,
-             'classic-warning-bg': openIndex === 3,
-             'classic-success-bg': openIndex === 4
-           }">
-        <i class="text-white text-2xl"
-           [ngClass]="{
-             'fas fa-credit-card': openIndex === 0,
-             'fas fa-undo': openIndex === 1,
-             'fas fa-truck': openIndex === 2,
-             'fas fa-dollar-sign': openIndex === 3,
-             'fas fa-search': openIndex === 4
-           }"></i>
-      </div>
-      <div class="flex-1">
-        <h3 class="classic-delivery-title font-bold text-2xl mb-4">
-          {{ faqs[openIndex].question }}
-        </h3>
-        <p class="classic-delivery-subtitle text-base leading-relaxed">
-          {{ faqs[openIndex].answer }}
+    <!-- Answer Display -->
+    <div class="classic-surface rounded-2xl p-8">
+      <div *ngIf="selectedFaqIndex !== null; else noSelection">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-xl classic-primary-bg flex items-center justify-center">
+            <i class="fas fa-lightbulb text-white"></i>
+          </div>
+          <div>
+            <span class="text-xs classic-text-variant uppercase tracking-wide">الإجابة</span>
+            <h3 class="classic-delivery-title font-bold text-xl mt-1">
+              {{ faqs[selectedFaqIndex].question }}
+            </h3>
+          </div>
+        </div>
+        <p class="classic-text-variant text-base leading-relaxed">
+          {{ faqs[selectedFaqIndex].answer }}
         </p>
       </div>
-    </div>
-  </div>
-
-  <!-- Default message when nothing is selected -->
-  <div
-    *ngIf="openIndex === null"
-    class="classic-surface-variant rounded-2xl p-8 text-center"
-  >
-    <div class="classic-delivery-subtitle text-lg">
-      اختر سؤالاً لعرض الإجابة
+      <ng-template #noSelection>
+        <div class="text-center py-12">
+          <i class="fas fa-hand-pointer text-4xl classic-text-variant mb-4"></i>
+          <p class="classic-text-variant text-lg">اختر سؤالاً لعرض الإجابة</p>
+        </div>
+      </ng-template>
     </div>
   </div>
 </section>
 
-<!-- Variation 6: Minimal Toggle Layout -->
+<!-- Variation 4: Timeline Style Layout -->
 <section class="classic-section max-w-4xl mx-auto mt-12">
   <!-- Header -->
-  <div class="classic-section-header">
-    <i [class]="icon" class="text-3xl classic-success-icon"></i>
-    <h5 class="classic-middle-title">{{ title }} - تصميم بسيط</h5>
+  <div class="classic-section-header text-center mb-8">
+    <i [class]="icon" class="text-3xl classic-primary-icon"></i>
+    <h5 class="classic-middle-title">{{ title }} - Timeline Style</h5>
   </div>
 
-  <!-- FAQ Items -->
-  <div class="flex flex-col gap-2">
+  <!-- FAQ Timeline -->
+  <div class="relative">
+    <!-- Timeline Line -->
+    <div class="absolute right-6 top-0 bottom-0 w-0.5 classic-primary-bg opacity-30"></div>
+    
+    <div class="space-y-8">
+      <div
+        *ngFor="let faq of faqs; let i = index"
+        class="faq-timeline-item relative"
+      >
+        <!-- Timeline Dot -->
+        <div class="absolute right-4 w-4 h-4 rounded-full classic-primary-bg border-4 classic-surface border-solid"></div>
+        
+        <!-- Content -->
+        <div class="mr-16 classic-surface rounded-2xl p-6 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg classic-surface-variant flex items-center justify-center">
+              <span class="text-sm font-bold classic-text-primary">{{ i + 1 }}</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="classic-delivery-title font-semibold text-lg mb-3">
+                {{ faq.question }}
+              </h3>
+              <p class="classic-text-variant leading-relaxed">
+                {{ faq.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Variation 5: Carousel Style -->
+<section class="classic-section max-w-4xl mx-auto mt-12">
+  <!-- Header -->
+  <div class="classic-section-header text-center mb-8">
+    <i [class]="icon" class="text-3xl classic-primary-icon"></i>
+    <h5 class="classic-middle-title">{{ title }} - Carousel Style</h5>
+  </div>
+
+  <!-- FAQ Carousel -->
+  <div class="relative classic-surface rounded-2xl p-8">
+    <!-- Current FAQ -->
+    <div *ngIf="currentFaqIndex !== null" class="text-center">
+      <div class="w-16 h-16 rounded-2xl classic-primary-bg flex items-center justify-center mx-auto mb-6">
+        <span class="text-white text-xl font-bold">{{ currentFaqIndex + 1 }}</span>
+      </div>
+      
+      <h3 class="classic-delivery-title font-bold text-2xl mb-6">
+        {{ faqs[currentFaqIndex].question }}
+      </h3>
+      
+      <p class="classic-text-variant text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+        {{ faqs[currentFaqIndex].answer }}
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex items-center justify-between">
+      <button
+        (click)="previousFaq()"
+        class="w-12 h-12 rounded-full classic-surface-variant flex items-center justify-center classic-text-primary hover:classic-primary-bg hover:text-white transition-all duration-300"
+        [disabled]="currentFaqIndex === 0"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots Indicator -->
+      <div class="flex gap-2">
+        <button
+          *ngFor="let faq of faqs; let i = index"
+          (click)="currentFaqIndex = i"
+          class="w-3 h-3 rounded-full transition-all duration-300"
+          [ngClass]="{ 'classic-primary-bg': currentFaqIndex === i, 'classic-outline-variant': currentFaqIndex !== i }"
+        ></button>
+      </div>
+
+      <button
+        (click)="nextFaq()"
+        class="w-12 h-12 rounded-full classic-surface-variant flex items-center justify-center classic-text-primary hover:classic-primary-bg hover:text-white transition-all duration-300"
+        [disabled]="currentFaqIndex === faqs.length - 1"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Variation 6: Minimal Toggle with Search -->
+<section class="classic-section max-w-4xl mx-auto mt-12">
+  <!-- Header -->
+  <div class="classic-section-header text-center mb-8">
+    <i [class]="icon" class="text-3xl classic-primary-icon"></i>
+    <h5 class="classic-middle-title">{{ title }} - Searchable List</h5>
+  </div>
+
+  <!-- Search Box -->
+  <div class="mb-8">
+    <div class="relative max-w-md mx-auto">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="ابحث في الأسئلة الشائعة..."
+        class="w-full p-4 pr-12 classic-surface rounded-xl border classic-border focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 classic-text-variant"></i>
+    </div>
+  </div>
+
+  <!-- Filtered FAQ Items -->
+  <div class="space-y-1">
     <div
-      *ngFor="let faq of faqs; let i = index"
-      class="border-b border-gray-200 last:border-b-0"
+      *ngFor="let faq of getFilteredFaqs(); let i = index"
+      class="faq-minimal-item"
     >
       <!-- Question Button -->
       <button
-        (click)="toggle(i)"
-        class="w-full py-6 flex items-center justify-between bg-transparent border-none cursor-pointer text-left focus:outline-none group"
+        (click)="toggleMinimal(i)"
+        class="w-full p-6 flex items-center justify-between classic-surface rounded-xl hover:classic-surface-variant transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
-        <h3 class="classic-delivery-title font-semibold text-lg flex-1 group-hover:text-blue-600 transition-colors duration-200">
+        <h3 class="classic-delivery-title font-medium text-lg text-right flex-1">
           {{ faq.question }}
         </h3>
-        <div class="flex items-center gap-3">
-          <span class="text-sm classic-delivery-subtitle">
-            {{ openIndex === i ? 'إخفاء' : 'عرض' }}
+        <div class="flex items-center gap-3 mr-4">
+          <span class="text-sm classic-text-variant">
+            {{ openMinimalIndex === i ? 'إخفاء' : 'عرض' }}
           </span>
-          <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"
-             [ngClass]="{ 'rotate-180': openIndex === i }"></i>
+          <i class="fas fa-chevron-down classic-text-variant transition-transform duration-300"
+             [ngClass]="{ 'rotate-180': openMinimalIndex === i }"></i>
         </div>
       </button>
 
       <!-- Answer Content -->
       <div
         class="overflow-hidden transition-all duration-300 ease-out"
-        [style.maxHeight]="openIndex === i ? '200px' : '0px'"
+        [style.maxHeight]="openMinimalIndex === i ? '300px' : '0px'"
       >
-        <div class="pb-6 classic-delivery-subtitle text-base leading-relaxed">
+        <div class="px-6 pb-6 classic-text-variant leading-relaxed">
           {{ faq.answer }}
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- No Results -->
+  <div *ngIf="getFilteredFaqs().length === 0" class="text-center py-12">
+    <i class="fas fa-search text-4xl classic-text-variant mb-4"></i>
+    <p class="classic-text-variant text-lg">لم يتم العثور على نتائج</p>
   </div>
 </section>

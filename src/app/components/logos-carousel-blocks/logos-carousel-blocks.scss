@@ -1,0 +1,310 @@
+/* Partners Carousel Component Styles - Multiple Variations */
+
+/* Common Text Color Classes */
+.classic-text-variant {
+  color: var(--classic-color-on-surface-variant);
+}
+
+.classic-text-primary {
+  color: var(--classic-color-primary);
+}
+
+.classic-primary-icon {
+  color: var(--classic-color-primary);
+}
+
+/* Common Background Classes */
+.classic-primary-bg {
+  background-color: var(--classic-color-primary);
+}
+
+.classic-surface-variant {
+  background-color: var(--classic-color-surface-variant);
+}
+
+.classic-border {
+  border-color: var(--classic-color-outline-variant);
+}
+
+.classic-delivery-title {
+  color: var(--classic-color-on-surface);
+}
+
+.classic-delivery-subtitle {
+  color: var(--classic-color-on-surface-variant);
+}
+
+/* === Variation 1: Original Circular Design === */
+.classic-logo-card {
+  background-color: var(--classic-color-surface);
+  border: 4px solid var(--classic-color-outline-variant);
+}
+
+.partner-logo-container-v1 img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.partner-logo-container-v1 img.loaded {
+  opacity: 1;
+}
+
+/* === Variation 2: Minimal Square Cards === */
+.classic-logo-card-minimal {
+  background-color: var(--classic-color-surface);
+  border: 1px solid var(--classic-color-outline-variant);
+}
+
+.minimal-logo-container img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.minimal-logo-container img.loaded {
+  opacity: 1;
+}
+
+/* === Variation 3: Hexagon Design === */
+.hexagon-shape {
+  width: 120px;
+  height: 104px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hexagon-inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--classic-color-surface);
+  border: 3px solid var(--classic-color-outline-variant);
+  border-radius: 12px;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hexagon-image {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hexagon-image.loaded {
+  opacity: 1;
+}
+
+/* === Variation 4: Gradient Card Style === */
+.gradient-logo-container img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-logo-container img.loaded {
+  opacity: 1;
+}
+
+/* === Variation 5: Stacked Card Style === */
+.classic-logo-card-stacked {
+  background-color: var(--classic-color-surface);
+  border: 2px solid var(--classic-color-outline-variant);
+}
+
+.stacked-logo-container img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stacked-logo-container img.loaded {
+  opacity: 1;
+}
+
+/* === Variation 6: Minimal Inline Style === */
+.classic-logo-card-inline {
+  background-color: var(--classic-color-surface);
+  border: 1px solid var(--classic-color-outline-variant);
+}
+
+.inline-logo-container img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.inline-logo-container img.loaded {
+  opacity: 1;
+}
+
+/* === Variation 7: Flip Card Style === */
+.classic-logo-card-flip {
+  background-color: var(--classic-color-surface-variant);
+  border: 1px solid var(--classic-color-outline-variant);
+}
+
+.flip-card-container img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.flip-card-container img.loaded {
+  opacity: 1;
+}
+
+/* === Common Owl Carousel Styling for All Variations === */
+:host ::ng-deep {
+  [class*="partners-carousel-v"] {
+    .owl-carousel {
+      .owl-stage-outer {
+        overflow: hidden;
+        border-radius: var(--classic-section-radius);
+      }
+
+      .owl-item {
+        outline: none;
+        transition: transform 0.3s ease;
+      }
+
+      /* Dots Styling */
+      .owl-dots {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 0;
+
+        .owl-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: var(--classic-color-outline);
+          margin: 0 6px;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          outline: none;
+
+          &:hover {
+            background-color: var(--classic-color-primary-light);
+            transform: scale(1.1);
+          }
+
+          &.active {
+            background: linear-gradient(45deg, 
+              var(--classic-color-primary), 
+              var(--classic-color-secondary)
+            );
+            width: 32px;
+            border-radius: 6px;
+            transform: scale(1.1);
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      /* Navigation */
+      .owl-nav {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hexagon adjustments for mobile */
+  .hexagon-shape {
+    width: 100px;
+    height: 87px;
+  }
+
+  /* Gradient cards adjustments */
+  .gradient-logo-container .w-36 {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  :host ::ng-deep [class*="partners-carousel-v"] {
+    .owl-carousel .owl-dots {
+      margin-top: 1.5rem;
+
+      .owl-dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+
+        &.active {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further mobile adjustments */
+  .hexagon-shape {
+    width: 80px;
+    height: 69px;
+  }
+
+  .gradient-logo-container .w-36 {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  :host ::ng-deep [class*="partners-carousel-v"] {
+    .owl-carousel .owl-dots {
+      margin-top: 1rem;
+
+      .owl-dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+
+        &.active {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .partner-logo-container-v1,
+  .minimal-logo-container,
+  .hexagon-logo-container,
+  .gradient-logo-container,
+  .stacked-logo-container,
+  .inline-logo-container,
+  .flip-card-container,
+  .classic-logo-card,
+  .classic-logo-card-minimal,
+  .hexagon-inner,
+  :host ::ng-deep [class*="partners-carousel-v"] .owl-carousel .owl-dots .owl-dot {
+    transition: none;
+    animation: none;
+  }
+
+  :host ::ng-deep [class*="partners-carousel-v"] .owl-carousel .owl-stage {
+    transition: none !important;
+  }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+[class*="logo-container"] img:not(.loaded) {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

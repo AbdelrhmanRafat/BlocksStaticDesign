@@ -1,119 +1,377 @@
 <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section id="classic-product-preview" class="w-full classic-section">
-        <!-- Header -->
-        <div class="classic-section-header">
-          <i class="fa-solid fa-video"></i>
-          <h5>استعراض المنتج بالفيديو</h5>
-        </div>
+
+  <!-- Variation 1: Original Split Layout -->
+  <section id="classic-product-preview-1" class="w-full classic-section">
+    <!-- Header -->
+    <div class="classic-section-header">
+      <i class="fa-solid fa-video"></i>
+      <h5>استعراض المنتج بالفيديو</h5>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
       
-        <!-- Main Content -->
-        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
+      <!-- Video Section -->
+      <div class="w-full lg:w-3/5 order-2 lg:order-1">
+        <div class="classic-product-video-container classic-product-video-height border-4 overflow-hidden relative">
+          <iframe
+            class="w-full h-full rounded-[inherit]"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="classic-product-video-title absolute bottom-9 right-2 text-3xl font-bold z-10">
+            <p>فيديو توضيحي للمنتج</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="w-full lg:w-2/5 order-1 lg:order-2">
+        <div class="classic-product-features-container h-full flex flex-col rounded-xl p-6">
           
-          <!-- Video Section -->
-          <div class="w-full lg:w-3/5 order-2 lg:order-1">
-            <div class="classic-product-video-container classic-product-video-height border-4 overflow-hidden relative">
-              <iframe
-                class="w-full h-full rounded-[inherit]"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-              <div class="classic-product-video-title absolute bottom-9 right-2 text-3xl font-bold z-10">
-                <p>فيديو توضيحي للمنتج</p>
+          <!-- Features Header -->
+          <div class="classic-product-features-header border-b pb-3">
+            <div class="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center sm:gap-4">
+              <h2 class="classic-product-features-title text-2xl font-bold">
+                أبرز المميزات
+              </h2>
+              <div class="classic-product-views-badge flex-shrink-0 py-1 px-4 rounded-2xl flex items-center gap-2 text-lg max-w-full">
+                <div class="flex-shrink-0">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <span class="truncate">تمت المشاهدة ١٢٬٣٤٥ مرة</span>
               </div>
             </div>
           </div>
-      
-          <!-- Features Section -->
-          <div class="w-full lg:w-2/5 order-1 lg:order-2">
-            <div class="classic-product-features-container h-full flex flex-col rounded-xl p-6">
+
+          <!-- Feature List -->
+          <div class="flex-1 py-6">
+            <div class="space-y-6 lg:space-y-8">
               
-              <!-- Features Header -->
-              <div class="classic-product-features-header border-b pb-3">
-                <div class="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center sm:gap-4">
-                  <h2 class="classic-product-features-title text-2xl font-bold">
-                    أبرز المميزات
-                  </h2>
-                  <div class="classic-product-views-badge flex-shrink-0 py-1 px-4 rounded-2xl flex items-center gap-2 text-lg max-w-full">
-                    <div class="flex-shrink-0">
-                      <i class="fa-solid fa-eye"></i>
-                    </div>
-                    <span class="truncate">تمت المشاهدة ١٢٬٣٤٥ مرة</span>
+              <!-- Feature 1 -->
+              <div class="classic-product-feature-item flex items-start gap-3">
+                <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="classic-product-feature-content flex-1 min-w-0 text-right">
+                  <div class="classic-product-feature-title font-semibold leading-snug">جودة عالية</div>
+                  <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
+                    مواد تصنيع ممتازة تضمن الاستخدام طويل الأمد.
                   </div>
                 </div>
               </div>
-      
-              <!-- Feature List -->
-              <div class="flex-1 py-6">
-                <div class="space-y-6 lg:space-y-8">
-                  
-                  <!-- Feature 1 -->
-                  <div class="classic-product-feature-item flex items-start gap-3">
-                    <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    <div class="classic-product-feature-content flex-1 min-w-0 text-right">
-                      <div class="classic-product-feature-title font-semibold leading-snug">جودة عالية</div>
-                      <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
-                        مواد تصنيع ممتازة تضمن الاستخدام طويل الأمد.
-                      </div>
-                    </div>
+
+              <!-- Feature 2 -->
+              <div class="classic-product-feature-item flex items-start gap-3">
+                <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="classic-product-feature-content flex-1 min-w-0 text-right">
+                  <div class="classic-product-feature-title font-semibold leading-snug">سهولة الاستخدام</div>
+                  <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
+                    تصميم بسيط يجعل المنتج مناسب للجميع.
                   </div>
-      
-                  <!-- Feature 2 -->
-                  <div class="classic-product-feature-item flex items-start gap-3">
-                    <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    <div class="classic-product-feature-content flex-1 min-w-0 text-right">
-                      <div class="classic-product-feature-title font-semibold leading-snug">سهولة الاستخدام</div>
-                      <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
-                        تصميم بسيط يجعل المنتج مناسب للجميع.
-                      </div>
-                    </div>
-                  </div>
-      
-                  <!-- Feature 3 -->
-                  <div class="classic-product-feature-item flex items-start gap-3">
-                    <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    <div class="classic-product-feature-content flex-1 min-w-0 text-right">
-                      <div class="classic-product-feature-title font-semibold leading-snug">تصميم أنيق</div>
-                      <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
-                        مظهر جذاب يتماشى مع ذوقك العصري.
-                      </div>
-                    </div>
-                  </div>
-      
-                  <!-- Feature 4 -->
-                  <div class="classic-product-feature-item flex items-start gap-3">
-                    <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    <div class="classic-product-feature-content flex-1 min-w-0 text-right">
-                      <div class="classic-product-feature-title font-semibold leading-snug">ضمان شامل</div>
-                      <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
-                        يشمل المنتج ضمانًا لمدة عام ضد عيوب الصناعة.
-                      </div>
-                    </div>
-                  </div>
-      
                 </div>
               </div>
-      
-              <!-- Buy Now Button -->
-              <div class="mt-auto pt-4 border-t border-current/10">
-                <a class="classic-buy-now-button" href="#classic-quantity-selection">
-                  <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
-                  <span>شراء المنتج الآن</span>
-                </a>
+
+              <!-- Feature 3 -->
+              <div class="classic-product-feature-item flex items-start gap-3">
+                <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="classic-product-feature-content flex-1 min-w-0 text-right">
+                  <div class="classic-product-feature-title font-semibold leading-snug">تصميم أنيق</div>
+                  <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
+                    مظهر جذاب يتماشى مع ذوقك العصري.
+                  </div>
+                </div>
               </div>
-      
+
+              <!-- Feature 4 -->
+              <div class="classic-product-feature-item flex items-start gap-3">
+                <div class="classic-product-feature-icon rounded-full p-2 flex-shrink-0 flex items-center justify-center mt-0.5">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="classic-product-feature-content flex-1 min-w-0 text-right">
+                  <div class="classic-product-feature-title font-semibold leading-snug">ضمان شامل</div>
+                  <div class="classic-product-feature-subtitle text-sm leading-snug mt-1">
+                    يشمل المنتج ضمانًا لمدة عام ضد عيوب الصناعة.
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-      
+
+          <!-- Buy Now Button -->
+          <div class="mt-auto pt-4 border-t border-current/10">
+            <a class="classic-buy-now-button" href="#classic-quantity-selection">
+              <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+              <span>شراء المنتج الآن</span>
+            </a>
+          </div>
+
         </div>
-      </section>      
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Variation 2: Full Width Video with Bottom Features -->
+  <section id="classic-product-preview-2" class="w-full classic-section">
+    <!-- Header -->
+    <div class="classic-section-header">
+      <i class="fa-solid fa-video"></i>
+      <h5>استعراض المنتج بالفيديو</h5>
+    </div>
+
+    <!-- Full Width Video -->
+    <div class="mb-8">
+      <div class="classic-product-video-container h-[400px] lg:h-[600px] border-4 overflow-hidden relative">
+        <iframe
+          class="w-full h-full rounded-[inherit]"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="classic-product-video-title absolute bottom-9 right-2 text-3xl font-bold z-10">
+          <p>فيديو توضيحي للمنتج</p>
+        </div>
+        <div class="classic-product-views-badge absolute top-4 left-4 py-2 px-4 rounded-2xl flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-eye"></i>
+          <span>تمت المشاهدة ١٢٬٣٤٥ مرة</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Feature 1 -->
+      <div class="classic-product-features-container p-6 text-center">
+        <div class="classic-product-feature-icon rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+          <i class="fa-solid fa-circle-check text-xl"></i>
+        </div>
+        <div class="classic-product-feature-title font-bold text-lg mb-2">جودة عالية</div>
+        <div class="classic-product-feature-subtitle text-sm">
+          مواد تصنيع ممتازة تضمن الاستخدام طويل الأمد.
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="classic-product-features-container p-6 text-center">
+        <div class="classic-product-feature-icon rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+          <i class="fa-solid fa-circle-check text-xl"></i>
+        </div>
+        <div class="classic-product-feature-title font-bold text-lg mb-2">سهولة الاستخدام</div>
+        <div class="classic-product-feature-subtitle text-sm">
+          تصميم بسيط يجعل المنتج مناسب للجميع.
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="classic-product-features-container p-6 text-center">
+        <div class="classic-product-feature-icon rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+          <i class="fa-solid fa-circle-check text-xl"></i>
+        </div>
+        <div class="classic-product-feature-title font-bold text-lg mb-2">تصميم أنيق</div>
+        <div class="classic-product-feature-subtitle text-sm">
+          مظهر جذاب يتماشى مع ذوقك العصري.
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="classic-product-features-container p-6 text-center">
+        <div class="classic-product-feature-icon rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+          <i class="fa-solid fa-circle-check text-xl"></i>
+        </div>
+        <div class="classic-product-feature-title font-bold text-lg mb-2">ضمان شامل</div>
+        <div class="classic-product-feature-subtitle text-sm">
+          يشمل المنتج ضمانًا لمدة عام ضد عيوب الصناعة.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-8">
+      <a class="classic-buy-now-button inline-flex" href="#classic-quantity-selection">
+        <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+        <span>شراء المنتج الآن</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Variation 3: Compact Side by Side -->
+  <section id="classic-product-preview-4" class="w-full classic-section">
+    <!-- Header -->
+    <div class="classic-section-header">
+      <i class="fa-solid fa-video"></i>
+      <h5>استعراض المنتج بالفيديو</h5>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Video Section -->
+      <div class="classic-product-video-container h-[350px] border-4 overflow-hidden relative">
+        <iframe
+          class="w-full h-full rounded-[inherit]"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="classic-product-video-title absolute bottom-4 right-4 text-xl font-bold z-10">
+          <p>فيديو توضيحي للمنتج</p>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="classic-product-features-container flex flex-col p-6">
+        
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="classic-product-features-title text-xl font-bold">أبرز المميزات</h2>
+          <div class="classic-product-views-badge py-1 px-3 rounded-xl text-xs">
+            <i class="fa-solid fa-eye"></i>
+            <span>١٢٬٣٤٥</span>
+          </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          
+          <div class="flex items-start gap-2">
+            <div class="classic-product-feature-icon rounded-full p-1 flex-shrink-0 mt-1">
+              <i class="fa-solid fa-circle-check text-xs"></i>
+            </div>
+            <div>
+              <div class="classic-product-feature-title font-semibold text-sm">جودة عالية</div>
+              <div class="classic-product-feature-subtitle text-xs mt-1">
+                مواد تصنيع ممتازة تضمن الاستخدام طويل الأمد.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <div class="classic-product-feature-icon rounded-full p-1 flex-shrink-0 mt-1">
+              <i class="fa-solid fa-circle-check text-xs"></i>
+            </div>
+            <div>
+              <div class="classic-product-feature-title font-semibold text-sm">سهولة الاستخدام</div>
+              <div class="classic-product-feature-subtitle text-xs mt-1">
+                تصميم بسيط يجعل المنتج مناسب للجميع.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <div class="classic-product-feature-icon rounded-full p-1 flex-shrink-0 mt-1">
+              <i class="fa-solid fa-circle-check text-xs"></i>
+            </div>
+            <div>
+              <div class="classic-product-feature-title font-semibold text-sm">تصميم أنيق</div>
+              <div class="classic-product-feature-subtitle text-xs mt-1">
+                مظهر جذاب يتماشى مع ذوقك العصري.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <div class="classic-product-feature-icon rounded-full p-1 flex-shrink-0 mt-1">
+              <i class="fa-solid fa-circle-check text-xs"></i>
+            </div>
+            <div>
+              <div class="classic-product-feature-title font-semibold text-sm">ضمان شامل</div>
+              <div class="classic-product-feature-subtitle text-xs mt-1">
+                يشمل المنتج ضمانًا لمدة عام ضد عيوب الصناعة.
+              </div>
+            </div>
+          </div>
+
+        </div>
+       <div class="flex-1"></div>
+        <!-- CTA Button -->
+        <a class="classic-buy-now-button w-full" href="#classic-quantity-selection">
+          <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+          <span>شراء المنتج الآن</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
 </section>
+
+<style>
+/* === Classic Product Preview Component === */
+.classic-product-video-container {
+    border-color: var(--classic-color-primary);
+    border-radius: var(--classic-section-radius);
+    box-shadow: var(--classic-section-shadow);
+}
+
+.classic-product-video-title {
+    color: var(--classic-color-on-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.classic-product-features-container {
+    background-color: var(--classic-color-surface-container-high);
+    border-radius: var(--classic-section-radius);
+    padding: var(--classic-section-padding);
+}
+
+.classic-product-features-header {
+    border-bottom-color: var(--classic-color-outline);
+    color: var(--classic-color-on-surface);
+}
+
+.classic-product-features-title {
+    color: var(--classic-color-on-surface);
+}
+
+.classic-product-views-badge {
+    background-color: var(--classic-color-surface-variant);
+    color: var(--classic-color-on-surface-variant);
+}
+
+.classic-product-feature-icon {
+    background-color: var(--classic-color-primary);
+    color: var(--classic-color-on-primary);
+}
+
+.classic-product-feature-content {
+    color: var(--classic-color-on-surface);
+}
+
+.classic-product-feature-title {
+    color: var(--classic-color-on-surface);
+}
+
+.classic-product-feature-subtitle {
+    color: var(--classic-color-on-surface-variant);
+}
+
+.classic-product-video-height {
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    .classic-product-video-height {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .classic-product-video-height {
+        height: 100%;
+        min-height: 450px;
+    }
+}
+</style>

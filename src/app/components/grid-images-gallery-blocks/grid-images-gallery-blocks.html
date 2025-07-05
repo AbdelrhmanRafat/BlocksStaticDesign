@@ -1,1 +1,216 @@
-<p>grid-images-gallery-blocks works!</p>
+<!-- Gallery Variations Component HTML -->
+<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-8">
+
+  <!-- Variation 1: Original Grid Design -->
+  <section id="gallery-variation-1" class="classic-section w-full py-12 md:py-16 lg:py-20">
+    <div class="classic-section-header">
+      <i [class]="galleryData.data.icon"></i>
+      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - Grid Style</h3>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center gap-10">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        @for (item of galleryData.data.items; track trackByImage($index, item)) {
+          <div class="gallery-item-v1 cursor-pointer" (click)="onImageClick(item, $index)">
+            <div class="relative overflow-hidden rounded-2xl shadow-lg classic-surface">
+              <div class="aspect-square">
+                <img 
+                  [src]="item.image" 
+                  [alt]="item.label"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                />
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 2: Circular Cards -->
+  <section id="gallery-variation-2" class="classic-section w-full py-12 md:py-16 lg:py-20">
+    <div class="classic-section-header">
+      <i [class]="galleryData.data.icon"></i>
+      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - Circular Style</h3>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center gap-10">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
+        @for (item of galleryData.data.items; track trackByImage($index, item)) {
+          <div class="gallery-item-v2 cursor-pointer text-center" (click)="onImageClick(item, $index)">
+            <div class="relative overflow-hidden rounded-full shadow-lg classic-surface border-4 classic-border w-32 h-32 mx-auto mb-3">
+              <img 
+                [src]="item.image" 
+                [alt]="item.label"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                (error)="onImageError($event)"
+              />
+            </div>
+            <p class="text-sm classic-text-variant">{{ item.label }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 3: Card Style with Labels -->
+  <section id="gallery-variation-3" class="classic-section w-full py-12 md:py-16 lg:py-20">
+    <div class="classic-section-header">
+      <i [class]="galleryData.data.icon"></i>
+      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - Card Style</h3>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center gap-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        @for (item of galleryData.data.items; track trackByImage($index, item)) {
+          <div class="gallery-item-v3 cursor-pointer" (click)="onImageClick(item, $index)">
+            <div class="classic-surface-variant rounded-2xl overflow-hidden shadow-lg">
+              <div class="aspect-square">
+                <img 
+                  [src]="item.image" 
+                  [alt]="item.label"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                />
+              </div>
+              <div class="p-4">
+                <h4 class="text-sm font-medium classic-delivery-title">{{ item.label }}</h4>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 4: Hexagon Style -->
+  <section id="gallery-variation-4" class="classic-section w-full py-12 md:py-16 lg:py-20">
+    <div class="classic-section-header">
+      <i [class]="galleryData.data.icon"></i>
+      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - Hexagon Style</h3>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center gap-10">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        @for (item of galleryData.data.items; track trackByImage($index, item)) {
+          <div class="gallery-item-v4 cursor-pointer text-center" (click)="onImageClick(item, $index)">
+            <div class="hexagon-gallery-shape mx-auto mb-3">
+              <div class="hexagon-gallery-inner">
+                <img 
+                  [src]="item.image" 
+                  [alt]="item.label"
+                  class="hexagon-gallery-image"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                />
+              </div>
+            </div>
+            <p class="text-xs classic-text-variant">{{ item.label }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 5: Masonry Style -->
+  <section id="gallery-variation-5" class="classic-section w-full py-12 md:py-16 lg:py-20">
+    <div class="classic-section-header">
+      <i [class]="galleryData.data.icon"></i>
+      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - Masonry Style</h3>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center gap-10">
+      <div class="masonry-grid">
+        @for (item of galleryData.data.items; track trackByImage($index, item)) {
+          <div class="gallery-item-v5 cursor-pointer" (click)="onImageClick(item, $index)">
+            <div class="relative overflow-hidden rounded-2xl shadow-lg classic-surface">
+              <div [class]="'masonry-item-' + ($index % 3 + 1)">
+                <img 
+                  [src]="item.image" 
+                  [alt]="item.label"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                />
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 classic-primary-bg bg-opacity-80 text-white p-3">
+                <p class="text-sm font-medium">{{ item.label }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 6: Minimal List Style -->
+  <section id="gallery-variation-6" class="classic-section w-full py-12 md:py-16 lg:py-20">
+    <div class="classic-section-header">
+      <i [class]="galleryData.data.icon"></i>
+      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - List Style</h3>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center gap-10">
+      <div class="w-full max-w-4xl space-y-4">
+        @for (item of galleryData.data.items; track trackByImage($index, item)) {
+          <div class="gallery-item-v6 cursor-pointer" (click)="onImageClick(item, $index)">
+            <div class="classic-surface-variant rounded-2xl p-4 flex items-center gap-4">
+              <div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 classic-surface">
+                <img 
+                  [src]="item.image" 
+                  [alt]="item.label"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                />
+              </div>
+              <div class="flex-1">
+                <h4 class="text-lg font-medium classic-delivery-title">{{ item.label }}</h4>
+                <p class="text-sm classic-text-variant">صورة رقم {{ $index + 1 }}</p>
+              </div>
+              <div class="flex-shrink-0">
+                <i class="fa-solid fa-chevron-right classic-text-primary"></i>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 7: Polaroid Style -->
+  <section id="gallery-variation-7" class="classic-section w-full py-12 md:py-16 lg:py-20">
+    <div class="classic-section-header">
+      <i [class]="galleryData.data.icon"></i>
+      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - Polaroid Style</h3>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center gap-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        @for (item of galleryData.data.items; track trackByImage($index, item)) {
+          <div class="gallery-item-v7 cursor-pointer" (click)="onImageClick(item, $index)">
+            <div class="polaroid-card classic-surface rounded-lg shadow-lg p-4 transform rotate-1">
+              <div class="aspect-square rounded-lg overflow-hidden mb-4">
+                <img 
+                  [src]="item.image" 
+                  [alt]="item.label"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  (error)="onImageError($event)"
+                />
+              </div>
+              <div class="text-center">
+                <p class="text-sm classic-delivery-title font-handwriting">{{ item.label }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+</section>

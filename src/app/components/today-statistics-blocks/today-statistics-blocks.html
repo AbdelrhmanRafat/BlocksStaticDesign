@@ -1,1 +1,300 @@
-<p>today-statistics-blocks works!</p>
+<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+
+  <!-- Variation 1: Original Minimal Design -->
+  <section id="classic-today-statistics-1" class="classic-section w-full">
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3>إحصائيات اليوم</h3>
+      <div class="w-24 h-1 classic-divider mx-auto rounded-full"></div>
+    </div>
+    <div class="classic-statistics-minimal-container py-12">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 lg:gap-20">
+        <!-- Counter 1: Orders -->
+        <div class="classic-counter-minimal-item flex-1 max-w-xs text-center relative">
+          <div class="classic-theme-today-order-count p-0 flex justify-center items-center gap-4 text-6xl md:text-7xl lg:text-8xl font-black leading-none">
+            <span>+</span>
+            <h5 class="classic-order-counter">100</h5>
+          </div>
+          <div class="classic-counter-minimal-label text-2xl font-bold mt-4 leading-relaxed">
+            طلبات
+          </div>
+          <div class="classic-divider hidden md:block absolute top-1/2 -translate-y-1/2 h-20 w-[3px] rounded-full left-[-2.5rem]"></div>
+        </div>
+
+        <!-- Counter 2: Customers -->
+        <div class="classic-counter-minimal-item flex-1 max-w-xs text-center relative">
+          <div class="classic-theme-today-order-count p-0 flex justify-center items-center gap-4 text-6xl md:text-7xl lg:text-8xl font-black leading-none">
+            <span>+</span>
+            <h5 class="classic-order-counter">100</h5>
+          </div>
+          <div class="classic-counter-minimal-label text-2xl font-bold mt-4 leading-relaxed">
+            عميل
+          </div>
+          <div class="classic-divider hidden md:block absolute top-1/2 -translate-y-1/2 h-20 w-[3px] rounded-full left-[-2.5rem]"></div>
+        </div>
+
+        <!-- Counter 3: Visits -->
+        <div class="classic-counter-minimal-item flex-1 max-w-xs text-center relative">
+          <div class="classic-theme-today-order-count p-0 flex justify-center items-center gap-4 text-6xl md:text-7xl lg:text-8xl font-black leading-none">
+            <span>+</span>
+            <h5 class="classic-order-counter">350</h5>
+          </div>
+          <div class="classic-counter-minimal-label text-2xl font-bold mt-4 leading-relaxed">
+            زيارة
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 2: Card-Based Design -->
+  <section id="classic-today-statistics-2" class="classic-section w-full">
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3>إحصائيات اليوم</h3>
+      <div class="w-24 h-1 classic-divider mx-auto rounded-full"></div>
+    </div>
+    <div class="py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Counter 1: Orders -->
+        <div class="classic-surface-variant rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+          <div class="w-16 h-16 classic-primary-bg rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-shopping-cart text-2xl text-white"></i>
+          </div>
+          <div class="text-5xl font-black classic-order-counter mb-3">+100</div>
+          <div class="classic-counter-minimal-label text-xl font-bold">طلبات</div>
+        </div>
+
+        <!-- Counter 2: Customers -->
+        <div class="classic-surface-variant rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+          <div class="w-16 h-16 classic-secondary-bg rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-user text-2xl text-white"></i>
+          </div>
+          <div class="text-5xl font-black classic-order-counter mb-3">+100</div>
+          <div class="classic-counter-minimal-label text-xl font-bold">عميل</div>
+        </div>
+
+        <!-- Counter 3: Visits -->
+        <div class="classic-surface-variant rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+          <div class="w-16 h-16 classic-warning-bg rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-users text-2xl text-white"></i>
+          </div>
+          <div class="text-5xl font-black classic-order-counter mb-3">+350</div>
+          <div class="classic-counter-minimal-label text-xl font-bold">زيارة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 3: Horizontal Progress Style -->
+  <section id="classic-today-statistics-3" class="classic-section w-full">
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3>إحصائيات اليوم</h3>
+      <div class="w-24 h-1 classic-divider mx-auto rounded-full"></div>
+    </div>
+    <div class="py-12">
+      <div class="space-y-8">
+        <!-- Counter 1: Orders -->
+        <div class="flex items-center gap-6">
+          <div class="w-16 h-16 classic-primary-bg rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-shopping-cart text-xl text-white"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between items-center mb-2">
+              <span class="classic-counter-minimal-label text-lg font-bold">طلبات</span>
+              <span class="text-3xl font-black classic-order-counter">+100</span>
+            </div>
+            <div class="w-full h-2 classic-surface-variant rounded-full">
+              <div class="h-2 classic-primary-bg rounded-full" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Counter 2: Customers -->
+        <div class="flex items-center gap-6">
+          <div class="w-16 h-16 classic-secondary-bg rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-user text-xl text-white"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between items-center mb-2">
+              <span class="classic-counter-minimal-label text-lg font-bold">عميل</span>
+              <span class="text-3xl font-black classic-order-counter">+100</span>
+            </div>
+            <div class="w-full h-2 classic-surface-variant rounded-full">
+              <div class="h-2 classic-secondary-bg rounded-full" style="width: 60%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Counter 3: Visits -->
+        <div class="flex items-center gap-6">
+          <div class="w-16 h-16 classic-warning-bg rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-users text-xl text-white"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between items-center mb-2">
+              <span class="classic-counter-minimal-label text-lg font-bold">زيارة</span>
+              <span class="text-3xl font-black classic-order-counter">+350</span>
+            </div>
+            <div class="w-full h-2 classic-surface-variant rounded-full">
+              <div class="h-2 classic-warning-bg rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 4: Circular Design -->
+  <section id="classic-today-statistics-4" class="classic-section w-full">
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3>إحصائيات اليوم</h3>
+      <div class="w-24 h-1 classic-divider mx-auto rounded-full"></div>
+    </div>
+    <div class="py-12">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+        <!-- Counter 1: Orders -->
+        <div class="text-center">
+          <div class="relative w-32 h-32 mx-auto mb-4">
+            <div class="w-32 h-32 rounded-full classic-primary-bg flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-2xl font-black text-white">+100</div>
+                <i class="fa-solid fa-shopping-cart text-white mt-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="classic-counter-minimal-label text-xl font-bold">طلبات</div>
+        </div>
+
+        <!-- Counter 2: Customers -->
+        <div class="text-center">
+          <div class="relative w-32 h-32 mx-auto mb-4">
+            <div class="w-32 h-32 rounded-full classic-secondary-bg flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-2xl font-black text-white">+100</div>
+                <i class="fa-solid fa-user text-white mt-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="classic-counter-minimal-label text-xl font-bold">عميل</div>
+        </div>
+
+        <!-- Counter 3: Visits -->
+        <div class="text-center">
+          <div class="relative w-32 h-32 mx-auto mb-4">
+            <div class="w-32 h-32 rounded-full classic-warning-bg flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-2xl font-black text-white">+350</div>
+                <i class="fa-solid fa-users text-white mt-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="classic-counter-minimal-label text-xl font-bold">زيارة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 5: Compact Badge Style -->
+  <section id="classic-today-statistics-5" class="classic-section w-full">
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3>إحصائيات اليوم</h3>
+      <div class="w-24 h-1 classic-divider mx-auto rounded-full"></div>
+    </div>
+    <div class="py-8">
+      <div class="flex flex-wrap justify-center items-center gap-6">
+        <!-- Counter 1: Orders -->
+        <div class="classic-surface-variant rounded-full px-6 py-4 flex items-center gap-4 min-w-fit">
+          <div class="w-10 h-10 classic-primary-bg rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-shopping-cart text-white text-sm"></i>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-black classic-order-counter">+100</div>
+            <div class="classic-counter-minimal-label text-sm font-bold">طلبات</div>
+          </div>
+        </div>
+
+        <!-- Counter 2: Customers -->
+        <div class="classic-surface-variant rounded-full px-6 py-4 flex items-center gap-4 min-w-fit">
+          <div class="w-10 h-10 classic-secondary-bg rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-user text-white text-sm"></i>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-black classic-order-counter">+100</div>
+            <div class="classic-counter-minimal-label text-sm font-bold">عميل</div>
+          </div>
+        </div>
+
+        <!-- Counter 3: Visits -->
+        <div class="classic-surface-variant rounded-full px-6 py-4 flex items-center gap-4 min-w-fit">
+          <div class="w-10 h-10 classic-warning-bg rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-users text-white text-sm"></i>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-black classic-order-counter">+350</div>
+            <div class="classic-counter-minimal-label text-sm font-bold">زيارة</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variation 6: Vertical Stack Layout -->
+  <section id="classic-today-statistics-6" class="classic-section w-full">
+    <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
+      <h3>إحصائيات اليوم</h3>
+      <div class="w-24 h-1 classic-divider mx-auto rounded-full"></div>
+    </div>
+    <div class="py-12 max-w-md mx-auto">
+      <div class="space-y-6">
+        <!-- Counter 1: Orders -->
+        <div class="classic-surface-variant rounded-2xl p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 classic-primary-bg rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-shopping-cart text-white"></i>
+              </div>
+              <div>
+                <div class="classic-counter-minimal-label text-lg font-bold">طلبات</div>
+                <div class="text-xs classic-delivery-subtitle">طلبات اليوم</div>
+              </div>
+            </div>
+            <div class="text-3xl font-black classic-order-counter">+100</div>
+          </div>
+        </div>
+
+        <!-- Counter 2: Customers -->
+        <div class="classic-surface-variant rounded-2xl p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 classic-secondary-bg rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-user text-white"></i>
+              </div>
+              <div>
+                <div class="classic-counter-minimal-label text-lg font-bold">عميل</div>
+                <div class="text-xs classic-delivery-subtitle">عملاء جدد</div>
+              </div>
+            </div>
+            <div class="text-3xl font-black classic-order-counter">+100</div>
+          </div>
+        </div>
+
+        <!-- Counter 3: Visits -->
+        <div class="classic-surface-variant rounded-2xl p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 classic-warning-bg rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-users text-white"></i>
+              </div>
+              <div>
+                <div class="classic-counter-minimal-label text-lg font-bold">زيارة</div>
+                <div class="text-xs classic-delivery-subtitle">زيارات اليوم</div>
+              </div>
+            </div>
+            <div class="text-3xl font-black classic-order-counter">+350</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
