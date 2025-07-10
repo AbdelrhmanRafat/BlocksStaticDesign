@@ -1,27 +1,80 @@
-/* === Classic Footer Component === */
-.classic-footer {
-    border-top-color: var(--classic-color-outline);
-}
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
 
-.classic-footer-title {
-    color: var(--classic-color-on-surface);
-}
+    .footer-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+        overflow: hidden;
+    }
 
-.classic-footer-link {
-    color: var(--classic-color-on-surface);
-    transition: color 0.2s ease;
-}
+    .footer-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
 
-.classic-footer-link:hover {
-    color: var(--classic-color-primary);
-}
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
 
-.classic-footer-social-link {
-    color: var(--classic-color-on-surface);
-    transition: all 0.2s ease;
-}
+    .social-icon:hover {
+        transform: translateY(-2px);
+    }
 
-.classic-footer-social-link:hover {
-    color: var(--classic-color-primary);
-    transform: scale(1.1);
-}
+    .gradient-footer {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .dark-footer {
+        background: #1f2937;
+        color: white;
+    }
+
+    .bordered-footer {
+        border: 2px solid var(--classic-color-outline);
+    }
+
+    .card-footer {
+        background: var(--classic-color-surface);
+        border-radius: 16px;
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .minimal-footer {
+        background: transparent;
+        border-top: 1px solid var(--classic-color-outline);
+    }
+
+    .corporate-footer {
+        background: #f8fafc;
+        border-top: 4px solid var(--classic-color-primary);
+    }
+
+    .modern-footer {
+        background: linear-gradient(45deg, #1e293b, #334155);
+        color: white;
+    }
+
+    .section-title {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem 2rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }

@@ -1,0 +1,102 @@
+/* Custom Options Specific Styles */
+.classic-bundle-options-container {
+    margin-top: 1rem;
+  }
+  
+  .classic-bundle-options-container-panel {
+    background-color: var(--classic-color-surface);
+    border: 1px solid var(--classic-color-outline-variant);
+    border-radius: var(--classic-section-radius);
+    box-shadow: var(--classic-section-shadow);
+  }
+  
+  .classic-bundle-options-container-header {
+    color: var(--classic-color-on-surface);
+    direction: rtl;
+  }
+  
+  .classic-bundle-options-container-selection-indicator {
+    background-color: var(--classic-color-surface-container);
+    color: var(--classic-color-on-surface-variant);
+    border: 1px solid var(--classic-color-outline-variant);
+    direction: rtl;
+  }
+  
+  .classic-bundle-options-container-selection-title {
+    color: var(--classic-color-on-surface);
+    direction: rtl;
+  }
+  
+  /* Color Options Styles */
+  .classic-bundle-options-container-color-option {
+    &.selected {
+      transform: scale(1.05);
+    }
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .classic-bundle-options-container-color-swatch {
+    border-color: var(--classic-color-outline);
+    transition: all 0.2s ease;
+  
+    &.selected-swatch {
+      border-color: var(--classic-color-primary);
+      border-width: 3px;
+      box-shadow: 0 0 0 2px var(--classic-color-primary-light);
+    }
+  }
+  
+  .classic-bundle-options-container-color-name {
+    color: var(--classic-color-on-surface-variant);
+    direction: rtl;
+  }
+  
+  /* Size Options Styles */
+  .classic-bundle-options-container-size-option {
+    background-color: var(--classic-color-surface);
+    border-color: var(--classic-color-outline);
+    color: var(--classic-color-on-surface-variant);
+    transition: all 0.2s ease;
+  
+    &:hover {
+      background-color: var(--classic-color-surface-container);
+      border-color: var(--classic-color-primary);
+      color: var(--classic-color-on-surface);
+      transform: translateY(-1px);
+    }
+  
+    &.selected {
+      background-color: var(--classic-color-primary);
+      border-color: var(--classic-color-primary);
+      color: var(--classic-color-on-primary);
+      font-weight: 600;
+    }
+  
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  /* RTL Support */
+  .select-option-section {
+    direction: rtl;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .classic-bundle-options-container-panel {
+      padding: 1rem;
+    }
+    
+    .classic-bundle-options-container-color-swatch {
+      width: 2rem;
+      height: 2rem;
+    }
+    
+    .classic-bundle-options-container-color-name {
+      font-size: 0.75rem;
+    }
+  }

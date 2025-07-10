@@ -1,7 +1,7 @@
 <!-- Angular FAQ Component Variations - Improved Designs -->
 
 <!-- Variation 1: Original Accordion Layout (Keep as is) -->
-<section class="classic-section max-w-4xl mx-auto">
+<section class="classic-section w-full">
   <!-- Header -->
   <div class="classic-section-header">
     <i [class]="icon" class="text-3xl classic-primary-icon"></i>
@@ -17,13 +17,13 @@
       <!-- Question Button -->
       <button
         (click)="toggle(i)"
-        class="classic-faq-question w-full p-6 flex items-center justify-between bg-transparent border-none cursor-pointer text-left hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200"
+        class="classic-faq-question w-full p-6 flex items-center justify-between bg-transparent border-none cursor-pointer  hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200"
       >
-        <p class="classic-faq-question-text font-medium flex-1">
+        <p class="classic-faq-question-text font-medium">
           {{ faq.question }}
         </p>
         <span
-          class="classic-faq-icon text-xl font-light transition-transform duration-300 ease-in-out flex-shrink-0 w-6 h-6 flex items-center justify-center ml-4"
+          class="classic-faq-icon text-xl font-light transition-transform duration-300 ease-in-out flex-shrink-0 w-6 h-6 flex items-center justify-between ml-4"
           [ngClass]="{ 'rotate-45': openIndex === i, 'rotate-0': openIndex !== i }"
         >
           +
@@ -44,7 +44,7 @@
 </section>
 
 <!-- Variation 2: Modern Card Layout with Icons -->
-<section class="classic-section max-w-6xl mx-auto mt-12">
+<section class="classic-section w-full mt-12">
   <!-- Header -->
   <div class="classic-section-header text-center mb-8">
     <i [class]="icon" class="text-3xl classic-primary-icon"></i>
@@ -56,7 +56,6 @@
     <div
       *ngFor="let faq of faqs; let i = index"
       class="faq-card-v2 classic-surface rounded-2xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
-      (click)="selectFaq(i)"
     >
       <!-- Icon Header -->
       <div class="flex items-center gap-4 mb-4">
@@ -75,30 +74,23 @@
       
       <!-- Short Answer Preview -->
       <p class="classic-text-variant text-sm leading-relaxed mb-4">
-        {{ getShortAnswer(faq.answer) }}...
+        {{faq.answer }}
       </p>
-      
-      <!-- Read More Button -->
-      <div class="flex items-center gap-2 classic-text-primary text-sm font-medium">
-        <span>اقرأ المزيد</span>
-        <i class="fas fa-arrow-left text-xs"></i>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- Variation 3: Split Layout Design -->
-<section class="classic-section max-w-6xl mx-auto mt-12">
+<section class="classic-section w-full">
   <!-- Header -->
-  <div class="classic-section-header text-center mb-8">
-    <i [class]="icon" class="text-3xl classic-primary-icon"></i>
-    <h5 class="classic-middle-title">{{ title }} - Split Layout</h5>
+  <div class="classic-section-header">
+    <i [class]="icon"></i>
+    <h5>{{ title }} - Split Layout</h5>
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     <!-- Questions List -->
     <div class="space-y-3">
-      <h3 class="classic-delivery-title font-bold text-xl mb-6">الأسئلة الشائعة</h3>
       <div
         *ngFor="let faq of faqs; let i = index"
         class="faq-question-v3 p-4 rounded-xl cursor-pointer transition-all duration-300"
@@ -147,7 +139,7 @@
 </section>
 
 <!-- Variation 4: Timeline Style Layout -->
-<section class="classic-section max-w-4xl mx-auto mt-12">
+<section class="classic-section w-full mt-12">
   <!-- Header -->
   <div class="classic-section-header text-center mb-8">
     <i [class]="icon" class="text-3xl classic-primary-icon"></i>
@@ -189,7 +181,7 @@
 </section>
 
 <!-- Variation 5: Carousel Style -->
-<section class="classic-section max-w-4xl mx-auto mt-12">
+<section class="classic-section w-full mt-12">
   <!-- Header -->
   <div class="classic-section-header text-center mb-8">
     <i [class]="icon" class="text-3xl classic-primary-icon"></i>
@@ -245,25 +237,13 @@
 </section>
 
 <!-- Variation 6: Minimal Toggle with Search -->
-<section class="classic-section max-w-4xl mx-auto mt-12">
+<section class="classic-section w-full mt-12">
   <!-- Header -->
   <div class="classic-section-header text-center mb-8">
     <i [class]="icon" class="text-3xl classic-primary-icon"></i>
     <h5 class="classic-middle-title">{{ title }} - Searchable List</h5>
   </div>
 
-  <!-- Search Box -->
-  <div class="mb-8">
-    <div class="relative max-w-md mx-auto">
-      <input
-        type="text"
-        [(ngModel)]="searchTerm"
-        placeholder="ابحث في الأسئلة الشائعة..."
-        class="w-full p-4 pr-12 classic-surface rounded-xl border classic-border focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 classic-text-variant"></i>
-    </div>
-  </div>
 
   <!-- Filtered FAQ Items -->
   <div class="space-y-1">

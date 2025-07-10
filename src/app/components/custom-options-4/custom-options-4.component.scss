@@ -1,0 +1,261 @@
+/* Custom Options Variation 4 - Minimal Step-by-Step Layout */
+.classic-bundle-options-container-v4 {
+    margin-top: 1rem;
+    direction: rtl;
+  }
+  
+  .classic-bundle-options-container-panel-v4 {
+    background: var(--classic-color-surface);
+    border: 1px solid var(--classic-color-outline-variant);
+    border-radius: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  
+    &:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .classic-bundle-options-container-header-v4 {
+    color: var(--classic-color-primary);
+  }
+  
+  /* Step Progress Styles */
+  .step-progress {
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.4;
+      transition: all 0.3s ease;
+  
+      &.active, &.completed {
+        opacity: 1;
+      }
+  
+      &.completed .step-circle {
+        background-color: var(--classic-color-success);
+        border-color: var(--classic-color-success);
+        color: var(--classic-color-on-success);
+      }
+  
+      &.active .step-circle {
+        background-color: var(--classic-color-primary);
+        border-color: var(--classic-color-primary);
+        color: var(--classic-color-on-primary);
+        box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.2);
+      }
+    }
+  
+    .step-circle {
+      width: 3rem;
+      height: 3rem;
+      border: 3px solid var(--classic-color-outline);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.125rem;
+      background-color: var(--classic-color-surface);
+      color: var(--classic-color-on-surface-variant);
+      transition: all 0.3s ease;
+    }
+  
+    .step-label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--classic-color-on-surface-variant);
+    }
+  
+    .step-connector {
+      width: 4rem;
+      height: 3px;
+      background-color: var(--classic-color-outline-variant);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+  
+      &.active {
+        background-color: var(--classic-color-primary);
+      }
+    }
+  }
+  
+  /* Selection Summary */
+  .selection-summary {
+    background: linear-gradient(135deg, var(--classic-color-success-light), var(--classic-color-success));
+    color: var(--classic-color-on-success);
+    border: 2px solid var(--classic-color-success);
+  
+    .summary-color, .summary-size {
+      color: var(--classic-color-on-success);
+    }
+  
+    .reset-btn {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: var(--classic-color-on-success);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.2s ease;
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-1px);
+      }
+    }
+  }
+  
+  /* Color Selection Step */
+  .color-selection-step {
+    .color-option-v4 {
+      .color-card {
+        border-color: var(--classic-color-outline-variant);
+        background-color: var(--classic-color-surface);
+        transition: all 0.3s ease;
+      }
+  
+      &:hover .color-card {
+        border-color: var(--classic-color-primary);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+  
+      &.selected-v4 .color-card {
+        border-color: var(--classic-color-primary);
+        background: linear-gradient(135deg, var(--classic-color-surface), var(--classic-color-surface-variant));
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(30, 64, 175, 0.2);
+      }
+  
+      .color-swatch-v4 {
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+  
+      &.selected-v4 .color-swatch-v4 {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  
+  /* Size Selection Step */
+  .size-selection-step {
+    .size-option-v4 {
+      .size-card {
+        border-color: var(--classic-color-outline-variant);
+        background-color: var(--classic-color-surface);
+        transition: all 0.3s ease;
+        opacity: 0.6;
+      }
+  
+      &.available .size-card {
+        opacity: 1;
+      }
+  
+      &.available:hover .size-card {
+        border-color: var(--classic-color-secondary);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+  
+      &.selected-v4 .size-card {
+        border-color: var(--classic-color-secondary);
+        background: linear-gradient(135deg, var(--classic-color-secondary-light), var(--classic-color-secondary));
+        color: var(--classic-color-on-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(8, 145, 178, 0.3);
+      }
+  
+      .size-badge {
+        background-color: var(--classic-color-surface-container);
+        color: var(--classic-color-on-surface);
+        transition: all 0.3s ease;
+      }
+  
+      &.selected-v4 .size-badge {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--classic-color-on-secondary);
+      }
+  
+      &:not(.available) {
+        cursor: not-allowed;
+      }
+    }
+  
+    .back-btn {
+      background-color: var(--classic-color-surface-container);
+      color: var(--classic-color-on-surface);
+      border: 1px solid var(--classic-color-outline);
+      transition: all 0.2s ease;
+  
+      &:hover {
+        background-color: var(--classic-color-outline);
+        transform: translateY(-1px);
+      }
+    }
+  }
+  
+  /* Selection animations */
+  .selected-v4 {
+    animation: selectPulse 0.6s ease-out;
+  }
+  
+  @keyframes selectPulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .classic-bundle-options-container-panel-v4 {
+      padding: 1.5rem;
+    }
+  
+    .step-progress {
+      .step-connector {
+        width: 2rem;
+      }
+  
+      .step-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+      }
+  
+      .step-label {
+        font-size: 0.75rem;
+      }
+    }
+  
+    .grid.md\:grid-cols-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .grid.md\:grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  
+    .grid.lg\:grid-cols-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .color-selection-step .color-option-v4 .color-swatch-v4 {
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .size-selection-step .size-option-v4 .size-badge {
+      width: 3rem;
+      height: 3rem;
+    }
+  }

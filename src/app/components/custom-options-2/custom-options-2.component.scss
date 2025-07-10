@@ -1,0 +1,179 @@
+/* Custom Options Variation 2 - Horizontal Layout */
+.classic-bundle-options-container-v2 {
+    margin-top: 1rem;
+  }
+  
+  .classic-bundle-options-container-panel-v2 {
+    background: linear-gradient(135deg, var(--classic-color-surface) 0%, var(--classic-color-surface-variant) 100%);
+    border: 2px solid var(--classic-color-outline-variant);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+  .classic-bundle-options-container-header-v2 {
+    color: var(--classic-color-primary);
+    direction: rtl;
+  }
+  
+  .classic-bundle-options-container-selection-indicator-v2 {
+    background-color: var(--classic-color-primary);
+    color: var(--classic-color-on-primary);
+    border: none;
+    direction: rtl;
+    font-weight: 500;
+  }
+  
+  .classic-bundle-options-container-selection-title-v2 {
+    color: var(--classic-color-secondary);
+    direction: rtl;
+    position: relative;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--classic-color-secondary);
+      border-radius: 2px;
+    }
+  }
+  
+  /* Color Options Styles V2 */
+  .classic-bundle-options-container-color-option-v2 {
+    &.selected-v2 {
+      transform: scale(1.1);
+    }
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .classic-bundle-options-container-color-swatch-v2 {
+    border-color: var(--classic-color-outline);
+    transition: all 0.3s ease;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, var(--classic-color-primary), var(--classic-color-secondary));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+  
+    &.selected-swatch-v2 {
+      border-color: var(--classic-color-primary);
+      border-width: 4px;
+      
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .classic-bundle-options-container-color-name-v2 {
+    color: var(--classic-color-on-surface);
+    direction: rtl;
+    font-weight: 500;
+  }
+  
+  /* Size Options Styles V2 */
+  .classic-bundle-options-container-size-option-v2 {
+    background-color: var(--classic-color-surface);
+    border-color: var(--classic-color-secondary);
+    color: var(--classic-color-secondary);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s ease;
+    }
+  
+    &:hover {
+      background-color: var(--classic-color-secondary-light);
+      border-color: var(--classic-color-secondary-light);
+      color: var(--classic-color-on-secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  
+      &::before {
+        left: 100%;
+      }
+    }
+  
+    &.selected-v2 {
+      background: linear-gradient(135deg, var(--classic-color-secondary), var(--classic-color-secondary-dark));
+      border-color: var(--classic-color-secondary-dark);
+      color: var(--classic-color-on-secondary);
+      font-weight: 700;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  /* RTL Support */
+  .select-option-section-v2 {
+    direction: rtl;
+  }
+  
+  /* Animation for selection */
+  .selected-v2 {
+    animation: selectionPulse 0.6s ease-out;
+  }
+  
+  @keyframes selectionPulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .classic-bundle-options-container-panel-v2 {
+      padding: 1.5rem;
+    }
+    
+    .classic-bundle-options-container-color-swatch-v2 {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    
+    .classic-bundle-options-container-color-name-v2 {
+      font-size: 0.75rem;
+    }
+  
+    .classic-bundle-options-container-size-option-v2 {
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+    }
+  }

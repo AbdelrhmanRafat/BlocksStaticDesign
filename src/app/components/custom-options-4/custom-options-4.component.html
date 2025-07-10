@@ -1,0 +1,131 @@
+<!-- Variation 4: Minimal step-by-step layout -->
+<div id="classic-bundle-options-container-v4" class="classic-bundle-options-container-v4">
+    <div *ngFor="let itemIndex of getItemNumbers()" class="classic-bundle-options-container-panel-v4 p-8 border mb-8">
+      
+      <!-- Progress Steps -->
+      <div class="step-progress mb-8">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="step-item" [class.active]="getCurrentStep(itemIndex) === 'color'" [class.completed]="getCurrentStep(itemIndex) === 'size' || getCurrentStep(itemIndex) === 'complete'">
+            <div class="step-circle">1</div>
+            <span class="step-label">اللون</span>
+          </div>
+          <div class="step-connector" [class.active]="getCurrentStep(itemIndex) === 'size' || getCurrentStep(itemIndex) === 'complete'"></div>
+          <div class="step-item" [class.active]="getCurrentStep(itemIndex) === 'size'" [class.completed]="getCurrentStep(itemIndex) === 'complete'">
+            <div class="step-circle">2</div>
+            <span class="step-label">المقاس</span>
+          </div>
+          <div class="step-connector" [class.active]="getCurrentStep(itemIndex) === 'complete'"></div>
+          <div class="step-item" [class.active]="getCurrentStep(itemIndex) === 'complete'">
+            <div class="step-circle">
+              <svg *ngIf="getCurrentStep(itemIndex) === 'complete'" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span *ngIf="getCurrentStep(itemIndex) !== 'complete'">3</span>
+            </div>
+            <span class="step-label">مكتمل</span>
+          </div>
+        </div>
+  
+        <div class="text-center">
+          <h3 class="classic-bundle-options-container-header-v4 font-bold text-2xl mb-2">
+            {{ getTranslation("dynamicPanel.selectOptionsForProduct") }} {{ itemIndex }}
+          </h3>
+          <p class="text-gray-600 text-lg">
+            <span *ngIf="getCurrentStep(itemIndex) === 'color'">اختر اللون المفضل لديك</span>
+            <span *ngIf="getCurrentStep(itemIndex) === 'size'">اختر المقاس المناسب</span>
+            <span *ngIf="getCurrentStep(itemIndex) === 'complete'">تم اكتمال الاختيار بنجاح!</span>
+          </p>
+        </div>
+      </div>
+  
+      <!-- Selection Summary (shown when complete) -->
+      <div *ngIf="isSelectionComplete(itemIndex)" class="selection-summary mb-6 p-6 rounded-2xl">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-6">
+            <div class="summary-color flex items-center gap-3">
+              <div 
+                class="w-8 h-8 rounded-full border-3"
+                [style.background-color]="getSelectedColorData(itemIndex)?.hex"
+                [style.border-color]="getSelectedColorData(itemIndex)?.border"
+              ></div>
+              <div>
+                <div class="font-semibold text-lg">{{ getSelectedColorData(itemIndex)?.value }}</div>
+                <div class="text-sm text-gray-600">اللون المختار</div>
+              </div>
+            </div>
+            <div class="summary-size">
+              <div class="font-semibold text-lg">{{ getSelectedSizeData(itemIndex)?.value }}</div>
+              <div class="text-sm text-gray-600">{{ getSelectedSizeData(itemIndex)?.description }}</div>
+            </div>
+          </div>
+          <button 
+            class="reset-btn py-2 px-4 rounded-lg text-sm font-medium"
+            (click)="resetSelection(itemIndex)"
+          >
+            إعادة الاختيار
+          </button>
+        </div>
+      </div>
+  
+      <!-- Color Selection Step -->
+      <div *ngIf="getCurrentStep(itemIndex) === 'color'" class="color-selection-step">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div
+            *ngFor="let option of customOptions.color; let i = index"
+            class="color-option-v4 cursor-pointer transition-all duration-300"
+            [class.selected-v4]="isColorSelected(itemIndex, option.value)"
+            (click)="onColorSelect(itemIndex, option.value)"
+          >
+            <div class="color-card p-6 rounded-2xl border-2 text-center">
+              <div 
+                class="color-swatch-v4 w-16 h-16 rounded-2xl mx-auto mb-4 border-3"
+                [style.background-color]="option.hex"
+                [style.border-color]="option.border"
+              ></div>
+              <h4 class="font-semibold text-lg mb-1">{{ option.value }}</h4>
+              <p class="text-sm text-gray-600">{{ option.available_options.size.length }} مقاسات</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Size Selection Step -->
+      <div *ngIf="getCurrentStep(itemIndex) === 'size'" class="size-selection-step">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div
+            *ngFor="let option of customOptions.size; let i = index"
+            class="size-option-v4 cursor-pointer transition-all duration-300"
+            [class.selected-v4]="isSizeSelected(itemIndex, option.value)"
+            [class.available]="option.available_colors.includes(getSelectedColorData(itemIndex)?.value || '')"
+            (click)="option.available_colors.includes(getSelectedColorData(itemIndex)?.value || '') && onSizeSelect(itemIndex, option.value)"
+          >
+            <div class="size-card p-6 rounded-2xl border-2">
+              <div class="text-center">
+                <div class="size-badge w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                  <span class="text-2xl font-bold">{{ option.value }}</span>
+                </div>
+                <h4 class="font-semibold text-lg mb-1">{{ option.description }}</h4>
+                <p class="text-sm text-gray-600 mb-2">{{ option.recommended }}</p>
+                <div 
+                  *ngIf="!option.available_colors.includes(getSelectedColorData(itemIndex)?.value || '')"
+                  class="text-xs text-red-500"
+                >
+                  غير متاح بهذا اللون
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+          <button 
+            class="back-btn py-3 px-6 rounded-lg font-medium"
+            (click)="currentStep[itemIndex] = 'color'"
+          >
+            العودة لاختيار اللون
+          </button>
+        </div>
+      </div>
+  
+    </div>
+  </div>

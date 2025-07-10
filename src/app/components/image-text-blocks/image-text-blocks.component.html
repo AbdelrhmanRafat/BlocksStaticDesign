@@ -1,12 +1,12 @@
-<section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
+<section class="py-4 container">
 
   <!-- Variation 1: Original Side by Side Layout -->
-  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section id="classic-image-text-beside" class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+  <section class="py-4 container">
+    <section id="classic-image-text-beside" class="classic-section w-full">
       <!-- Header -->
       <div class="classic-section-header">
         <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
-        <h5 class="classic-middle-title">معلومات عن المنتج - التخطيط الجانبي</h5>
+        <h5>معلومات عن المنتج - التخطيط الجانبي</h5>
       </div>
       
       <!-- Product Grid -->
@@ -40,13 +40,133 @@
     </section>
   </section>
 
+  <!-- variation 6 -->
+   <section class="py-4 container">
+  <section id="classic-image-text-hero" class="classic-section w-full relative isolate overflow-hidden">
+    <!-- Header -->
+    <div class="classic-section-header text-center mb-6">
+      <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
+      <h5 class="text-xl font-semibold mt-2">معلومات عن المنتج - التخطيط الجانبي</h5>
+    </div>
+
+    <!-- Image with overlay content -->
+    <div class="relative rounded-2xl overflow-hidden h-[500px] sm:h-[600px] flex items-center justify-center bg-black/10">
+      <img
+        src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+        alt="صورة المنتج"
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      />
+      
+      <!-- Floating Card Content -->
+      <div class="classic-image-text-beside-content relative z-10 max-w-2xl mx-auto p-8 sm:p-10 backdrop-blur-md rounded-2xl shadow-xl text-right">
+        <h2 class="classic-image-text-beside-title text-3xl font-bold mb-4">
+          لماذا هذا المنتج هو الأفضل؟
+        </h2>
+        <p class="classic-image-text-beside-description text-base leading-relaxed mb-6">
+          هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة. استثمر في الأفضل الآن!
+        </p>
+
+        <!-- CTA -->
+        <div class="text-center sm:text-left">
+          <a class="classic-buy-now-button inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
+            <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+            <span>شراء المنتج الآن</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- variation 7 -->
+ <section class="py-4 container">
+  <section id="classic-image-text-columns" class="classic-section w-full">
+    <!-- Header -->
+    <div class="classic-section-header text-center mb-8">
+      <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
+      <h5 class="text-xl font-semibold mt-2">معلومات عن المنتج - التخطيط الجانبي</h5>
+    </div>
+
+    <!-- Staggered Column Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Image on Left -->
+      <div class="md:col-span-1 h-64 sm:h-80 rounded-2xl overflow-hidden">
+        <img
+          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+          alt="صورة المنتج"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105 classic-image-text-beside-image"
+        />
+      </div>
+
+      <!-- Text Content Spread in Two Columns -->
+      <div class="md:col-span-2 classic-image-text-beside-content flex flex-col justify-between gap-6 p-6 sm:p-10 rounded-2xl text-right">
+        <div>
+          <h2 class="classic-image-text-beside-title text-3xl font-bold mb-4">
+            لماذا هذا المنتج هو الأفضل؟
+          </h2>
+          <p class="classic-image-text-beside-description text-base leading-relaxed">
+            هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة. استثمر في الأفضل الآن!
+          </p>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="flex justify-start">
+          <a class="classic-buy-now-button inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
+            <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+            <span>شراء المنتج الآن</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- variation 8 -->
+ <section class="py-4 container">
+  <section id="classic-image-text-split-overlay" class="classic-section w-full">
+    <!-- Header -->
+    <div class="classic-section-header text-center mb-8">
+      <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
+      <h5 class="text-xl font-semibold mt-2">معلومات عن المنتج - التخطيط الجانبي</h5>
+    </div>
+
+    <!-- Split Layout with full height sections -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-xl">
+      <!-- Left: Text Panel -->
+      <div class="classic-image-text-beside-content flex flex-col justify-center items-start gap-6 p-8 sm:p-10 text-right">
+        <h2 class="classic-image-text-beside-title text-3xl font-bold">
+          لماذا هذا المنتج هو الأفضل؟
+        </h2>
+        <p class="classic-image-text-beside-description text-base leading-relaxed">
+          هذا المنتج مصمم خصيصًا لتلبية احتياجاتك اليومية بجودة عالية ومتانة فائقة. تصميمه العصري يجعله مناسبًا لجميع الأذواق، كما يوفر تجربة استخدام مريحة وسهلة. استثمر في الأفضل الآن!
+        </p>
+
+        <a class="classic-buy-now-button inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105" href="#classic-quantity-selection">
+          <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
+          <span>شراء المنتج الآن</span>
+        </a>
+      </div>
+
+      <!-- Right: Full Height Image -->
+      <div class="h-96 md:h-auto">
+        <img
+          src="https://media.istockphoto.com/id/1158358904/photo/spraying-perfume-on-dark-background-closeup-image.jpg?s=612x612&w=0&k=20&c=FgO1tJIxW_fVH0e7YHb-oMb_iDshELnMR6qXGILQFcU="
+          alt="صورة المنتج"
+          class="w-full h-full object-cover classic-image-text-beside-image"
+        />
+      </div>
+    </div>
+  </section>
+</section>
+
+
   <!-- Variation 2: Original Content Overlay -->
-  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+  <section class="py-4 container">
+    <section class="classic-section w-full">
       <!-- Header -->
       <div class="classic-section-header">
         <i class="fa-solid fa-layer-group text-3xl classic-secondary-icon"></i>
-        <h5 class="classic-middle-title">تخطيط المحتوى المتراكب</h5>
+        <h5>تخطيط المحتوى المتراكب</h5>
       </div>
       
       <!-- Overlay Layout -->
@@ -78,12 +198,12 @@
   </section>
 
   <!-- Variation 3: Vertical Card Layout -->
-  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full">
+  <section class="py-4 container">
+    <section class="classic-section w-full">
       <!-- Header -->
       <div class="classic-section-header">
         <i class="fa-solid fa-grip-vertical text-3xl classic-tertiary-icon"></i>
-        <h5 class="classic-middle-title">تخطيط البطاقة العمودية</h5>
+        <h5>تخطيط البطاقة العمودية</h5>
       </div>
       
       <!-- Vertical Card -->
@@ -115,12 +235,12 @@
   </section>
 
   <!-- Variation 4: Split Screen Layout -->
-  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+  <section class="py-4 container">
+    <section class="classic-section w-full">
       <!-- Header -->
       <div class="classic-section-header">
         <i class="fa-solid fa-columns text-3xl classic-warning-icon"></i>
-        <h5 class="classic-middle-title">تخطيط الشاشة المقسمة</h5>
+        <h5>تخطيط الشاشة المقسمة</h5>
       </div>
       
       <!-- Split Screen Container -->
@@ -173,12 +293,12 @@
   </section>
 
   <!-- Variation 5: Floating Banner Layout -->
-  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+  <section class="py-4 container">
+    <section class="classic-section w-full">
       <!-- Header -->
       <div class="classic-section-header">
         <i class="fa-solid fa-window-restore text-3xl classic-info-icon"></i>
-        <h5 class="classic-middle-title">تخطيط البانر العائم</h5>
+        <h5>تخطيط البانر العائم</h5>
       </div>
       
       <!-- Floating Banner Container -->
@@ -213,12 +333,12 @@
   </section>
 
   <!-- Variation 6: Diagonal Split Layout -->
-  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+  <section class="py-4 container">
+    <section class="classic-section w-full">
       <!-- Header -->
       <div class="classic-section-header">
         <i class="fa-solid fa-slash text-3xl classic-secondary-icon"></i>
-        <h5 class="classic-middle-title">تخطيط القسم القطري</h5>
+        <h5>تخطيط القسم القطري</h5>
       </div>
       
       <!-- Diagonal Container -->
@@ -259,12 +379,12 @@
   </section>
 
   <!-- Variation 7: Zigzag Layout -->
-  <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
-    <section class="classic-section px-4 sm:px-6 lg:px-12 py-12 w-full max-w-7xl">
+  <section class="py-4 container">
+    <section class="classic-section w-full">
       <!-- Header -->
       <div class="classic-section-header">
         <i class="fa-solid fa-wave-square text-3xl classic-success-icon"></i>
-        <h5 class="classic-middle-title">تخطيط متعرج</h5>
+        <h5>تخطيط متعرج</h5>
       </div>
       
       <!-- Zigzag Container -->
@@ -311,5 +431,128 @@
       </div>
     </section>
   </section>
+
+  <!-- variation 10 -->
+   <section class="py-4 container">
+  <section id="classic-image-text-gallery" class="classic-section w-full">
+    <!-- Header -->
+    <div class="classic-section-header text-center mb-8">
+      <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
+      <h5 class="text-xl font-semibold mt-2">معلومات عن المنتج - معرض صور متعدد</h5>
+    </div>
+
+    <!-- Gallery Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Item 1 -->
+      <div class="classic-card-vertical rounded-2xl overflow-hidden shadow-md">
+        <img
+          src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80"
+          alt="منتج 1"
+          class="w-full h-56 object-cover classic-image-text-beside-image"
+        />
+        <div class="classic-card-content p-6 text-right">
+          <h3 class="classic-card-title text-xl font-bold mb-2">لماذا هذا المنتج رائع؟</h3>
+          <p class="classic-card-description text-sm leading-relaxed mb-4">
+            جودة فاخرة وتصميم مميز يجمع بين الأناقة والعملية.
+          </p>
+          <a href="#classic-quantity-selection" class="classic-buy-now-button inline-block px-6 py-3 rounded-lg font-semibold text-sm transition hover:scale-105">
+            شراء الآن
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="classic-card-vertical rounded-2xl overflow-hidden shadow-md">
+        <img
+          src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80"
+          alt="منتج 2"
+          class="w-full h-56 object-cover classic-image-text-beside-image"
+        />
+        <div class="classic-card-content p-6 text-right">
+          <h3 class="classic-card-title text-xl font-bold mb-2">منتج موثوق</h3>
+          <p class="classic-card-description text-sm leading-relaxed mb-4">
+            صُمم ليدوم طويلًا ويوفر أداءً استثنائيًا يوميًا.
+          </p>
+          <a href="#classic-quantity-selection" class="classic-buy-now-button inline-block px-6 py-3 rounded-lg font-semibold text-sm transition hover:scale-105">
+            شراء الآن
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="classic-card-vertical rounded-2xl overflow-hidden shadow-md">
+        <img
+          src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80"
+          alt="منتج 3"
+          class="w-full h-56 object-cover classic-image-text-beside-image"
+        />
+        <div class="classic-card-content p-6 text-right">
+          <h3 class="classic-card-title text-xl font-bold mb-2">الأفضل لمتعتك</h3>
+          <p class="classic-card-description text-sm leading-relaxed mb-4">
+            تجربة فريدة تجمع بين الراحة والفخامة.
+          </p>
+          <a href="#classic-quantity-selection" class="classic-buy-now-button inline-block px-6 py-3 rounded-lg font-semibold text-sm transition hover:scale-105">
+            شراء الآن
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</section>
+
+<!-- variation 11 -->
+ <section class="py-4 container">
+  <section id="classic-image-text-zigzag" class="classic-section w-full">
+    <!-- Header -->
+    <div class="classic-section-header text-center mb-8">
+      <i class="fa-solid fa-images text-3xl classic-primary-icon"></i>
+      <h5 class="text-xl font-semibold mt-2">مميزات متعددة - عرض متعرج</h5>
+    </div>
+
+    <!-- Zigzag Layout -->
+    <div class="flex flex-col space-y-12">
+      <!-- Item 1 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80" alt="مميزات المنتج" class="rounded-2xl w-full h-64 object-cover classic-image-text-beside-image" />
+        </div>
+        <div class="order-1 md:order-2 classic-zigzag-content p-6 sm:p-8 rounded-2xl text-right">
+          <h3 class="classic-zigzag-title text-2xl font-bold mb-2">تصميم عصري ومميز</h3>
+          <p class="classic-zigzag-description text-sm sm:text-base leading-relaxed">
+            واجهة استخدام أنيقة تناسب جميع الأذواق وتمنح تجربة استخدام فريدة.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="classic-zigzag-content p-6 sm:p-8 rounded-2xl text-right">
+          <h3 class="classic-zigzag-title text-2xl font-bold mb-2">أداء عالي ومتانة</h3>
+          <p class="classic-zigzag-description text-sm sm:text-base leading-relaxed">
+            مصمم بأحدث التقنيات ليقدم أفضل أداء دون المساومة على الجودة.
+          </p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80" alt="مميزات المنتج" class="rounded-2xl w-full h-64 object-cover classic-image-text-beside-image" />
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80" alt="مميزات المنتج" class="rounded-2xl w-full h-64 object-cover classic-image-text-beside-image" />
+        </div>
+        <div class="order-1 md:order-2 classic-zigzag-content p-6 sm:p-8 rounded-2xl text-right">
+          <h3 class="classic-zigzag-title text-2xl font-bold mb-2">راحة ومرونة</h3>
+          <p class="classic-zigzag-description text-sm sm:text-base leading-relaxed">
+            سهل الاستخدام والتخزين، مما يجعله مثاليًا للاستخدام اليومي.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
 
 </section>

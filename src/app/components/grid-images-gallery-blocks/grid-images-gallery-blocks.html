@@ -87,34 +87,6 @@
     </div>
   </section>
 
-  <!-- Variation 4: Hexagon Style -->
-  <section id="gallery-variation-4" class="classic-section w-full py-12 md:py-16 lg:py-20">
-    <div class="classic-section-header">
-      <i [class]="galleryData.data.icon"></i>
-      <h3>{{ isArabic ? galleryData.data.title_ar : galleryData.data.title_en }} - Hexagon Style</h3>
-    </div>
-    
-    <div class="flex flex-col justify-center items-center gap-10">
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-        @for (item of galleryData.data.items; track trackByImage($index, item)) {
-          <div class="gallery-item-v4 cursor-pointer text-center" (click)="onImageClick(item, $index)">
-            <div class="hexagon-gallery-shape mx-auto mb-3">
-              <div class="hexagon-gallery-inner">
-                <img 
-                  [src]="item.image" 
-                  [alt]="item.label"
-                  class="hexagon-gallery-image"
-                  loading="lazy"
-                  (error)="onImageError($event)"
-                />
-              </div>
-            </div>
-            <p class="text-xs classic-text-variant">{{ item.label }}</p>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
 
   <!-- Variation 5: Masonry Style -->
   <section id="gallery-variation-5" class="classic-section w-full py-12 md:py-16 lg:py-20">

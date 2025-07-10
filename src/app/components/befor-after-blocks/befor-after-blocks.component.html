@@ -1,7 +1,7 @@
 <section class="py-4 container mx-auto flex flex-col justify-center items-center gap-5">
 
   <!-- Variation 1: Original Side-by-Side Layout -->
-  <section id="classic-before-after-1" class="classic-section">
+  <section id="classic-before-after-1" class="classic-section w-full">
     <!-- Section Header -->
     <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
       <h3 class="text-center classic-section-title">
@@ -86,10 +86,12 @@
       </div>
 
       <!-- Call to Action -->
-      <a class="classic-buy-now-button" href="#classic-quantity-selection">
+           <div class="text-center mt-10 w-fit mx-auto">
+      <a class="classic-buy-now-button w-fit mx-auto" href="#classic-quantity-selection">
         <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
         <span>شراء المنتج الآن</span>
       </a>
+    </div>
     </div>
   </section>
 
@@ -162,16 +164,18 @@
     </div>
 
     <!-- Call to Action -->
-    <a class="classic-buy-now-button flex items-center gap-3 text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-lg transition duration-300" href="#classic-quantity-selection">
+         <div class="text-center mt-10 w-fit mx-auto">
+    <a class="classic-buy-now-button w-fit mx-auto" href="#classic-quantity-selection">
       <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
       <span>شراء المنتج الآن</span>
     </a>
+    </div>
   </div>
 </section>
 
 
   <!-- Variation 3: Vertical Stack Layout -->
-  <section id="classic-before-after-3" class="classic-section">
+  <section id="classic-before-after-3" class="classic-section w-full">
     <!-- Section Header -->
     <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
       <h3 class="text-center classic-section-title">
@@ -237,7 +241,7 @@
       </div>
 
       <!-- Call to Action -->
-      <a class="classic-buy-now-button w-full" href="#classic-quantity-selection">
+      <a class="classic-buy-now-button w-fit mx-auto" href="#classic-quantity-selection">
         <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
         <span>شراء المنتج الآن</span>
       </a>
@@ -245,7 +249,7 @@
   </section>
 
   <!-- Variation 4: Card-Based Layout with Stats -->
-  <section id="classic-before-after-4" class="classic-section">
+  <section id="classic-before-after-4" class="classic-section w-full">
     <!-- Section Header -->
     <div class="classic-middle-title flex flex-col justify-center items-center gap-3">
       <h3 class="text-center classic-section-title">
@@ -330,7 +334,7 @@
     </div>
 
     <!-- Call to Action -->
-    <div class="text-center mt-10">
+    <div class="text-center mt-10 w-fit mx-auto">
       <a class="classic-buy-now-button" href="#classic-quantity-selection">
         <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
         <span>شراء المنتج الآن</span>
@@ -413,7 +417,7 @@
     </div>
 
     <!-- Call to Action -->
-    <div class="text-center mt-10">
+    <div class="text-center mt-10 w-fit mx-auto">
       <a class="classic-buy-now-button" href="#classic-quantity-selection">
         <i class="fa-solid fa-cart-shopping classic-buy-now-button-icon"></i>
         <span>شراء المنتج الآن</span>
@@ -422,11 +426,3 @@
   </section>
 
 </section>
-
-<script>
-function updateComparison(value) {
-  const afterImage = document.getElementById('after-image');
-  const clipValue = 100 - value;
-  afterImage.style.clipPath = `inset(0 ${clipValue}% 0 0)`;
-}
-</script>

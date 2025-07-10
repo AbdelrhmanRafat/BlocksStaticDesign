@@ -75,3 +75,22 @@
         transform: none;
     }
 }
+
+// variation 3 
+.review-grid-card {
+  --tw-shadow-color: rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.review-grid-card:hover {
+  transform: translateY(-4px);
+}
+.review-author-image img {
+  transition: transform 0.3s ease;
+}
+.classic-review-description::before,
+.classic-review-description::after {
+  color: var(--classic-color-primary);
+  font-size: 1.25rem;
+  content: '"';
+}
+// end of variation 3

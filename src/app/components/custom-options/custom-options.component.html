@@ -1,0 +1,73 @@
+<div id="classic-bundle-options-container" class="classic-bundle-options-container">
+    <div *ngFor="let itemIndex of getItemNumbers()" class="classic-bundle-options-container-panel p-4 border mb-4">
+      <!-- Header with Selection Indicators -->
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 pb-3">
+        <div class="classic-bundle-options-container-header font-bold text-lg sm:text-xl">
+          <p class="inline">{{ getTranslation("dynamicPanel.selectOptionsForProduct") }}</p>
+          <span class="mr-2">{{ itemIndex }}</span>
+        </div>
+  
+        <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+          <div 
+            *ngIf="selectedOptions[itemIndex]?.color"
+            class="classic-bundle-options-container-selection-indicator flex items-center gap-1 justify-center sm:justify-start py-1 px-3 rounded-full text-xs sm:text-sm"
+          >
+            <span>اللون:</span>
+            <span>{{ selectedOptions[itemIndex]?.color }}</span>
+          </div>
+          <div 
+            *ngIf="selectedOptions[itemIndex]?.size"
+            class="classic-bundle-options-container-selection-indicator flex items-center gap-1 justify-center sm:justify-start py-1 px-3 rounded-full text-xs sm:text-sm"
+          >
+            <span>المقاس:</span>
+            <span>{{ selectedOptions[itemIndex]?.size }}</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="py-2 md:py-1 flex flex-col justify-center md:justify-between items-start md:items-start md:flex-row gap-6 md:gap-0">
+        <!-- Color Options Section -->
+        <div class="select-option-section md:w-1/2 space-y-2">
+          <p class="classic-bundle-options-container-selection-title text-base sm:text-lg font-semibold">
+            اللون
+          </p>
+  
+          <div class="flex flex-wrap justify-start content-center gap-2">
+            <div
+              *ngFor="let option of customOptions.color; let i = index"
+              class="classic-bundle-options-container-color-option w-24 flex flex-col items-center gap-1 cursor-pointer hover:scale-105 transition-transform"
+              [class.selected]="isColorSelected(itemIndex, option.value)"
+              (click)="onColorSelect(itemIndex, option.value)"
+            >
+              <div
+                class="classic-bundle-options-container-color-swatch w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2"
+                [style.background-color]="option.hex || '#ccc'"
+                [class.selected-swatch]="isColorSelected(itemIndex, option.value)"
+              ></div>
+              <span class="classic-bundle-options-container-color-name text-xs sm:text-sm text-center">
+                {{ option.value }}
+              </span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Size Options Section -->
+        <div class="md:w-1/2 select-option-section space-y-2">
+          <p class="classic-bundle-options-container-selection-title text-base sm:text-lg font-semibold">
+            المقاس
+          </p>
+  
+          <div class="w-full grid grid-cols-3 gap-2 p-1">
+            <div
+              *ngFor="let option of customOptions.size; let i = index"
+              class="classic-bundle-options-container-size-option py-2 px-3 sm:py-2.5 sm:px-5 border rounded-lg sm:rounded-xl cursor-pointer text-xs sm:text-sm font-medium text-center transition-all"
+              [class.selected]="isSizeSelected(itemIndex, option.value)"
+              (click)="onSizeSelect(itemIndex, option.value)"
+            >
+              {{ option.value }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

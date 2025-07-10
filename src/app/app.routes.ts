@@ -24,6 +24,7 @@ import { GridImagesGalleryBlocks } from './components/grid-images-gallery-blocks
 import { LogosCarouselBlocks } from './components/logos-carousel-blocks/logos-carousel-blocks';
 import { TextBarBlocks } from './components/text-bar-blocks/text-bar-blocks';
 import { TodayStatisticsBlocks } from './components/today-statistics-blocks/today-statistics-blocks';
+import { ImageTextOverlayComponent } from './components/image-text-overlay/image-text-overlay.component';
 
 export const routes: Routes = [
     {
@@ -39,6 +40,7 @@ export const routes: Routes = [
             { path: 'footer-blocks', component: FooterBlocksComponent },
             { path: 'form-field-blocks', component: FormFieldBlocksComponent },
             { path: 'image-text-blocks', component: ImageTextBlocksComponent },
+            { path: 'image-text-2-blocks', component: ImageTextOverlayComponent },
             { path: 'modal-purchase-info-blocks', component: ModalPurchaseInfoBlocksComponent },
             { path: 'order-confirmation-notice-blocks', component: OrderConfirmationNoticeBlocksComponent },
             { path: 'produc-blocks', component: ProducBlocksComponent },

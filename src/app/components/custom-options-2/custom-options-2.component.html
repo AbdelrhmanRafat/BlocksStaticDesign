@@ -1,0 +1,76 @@
+<!-- Variation 2: Horizontal Layout with larger color swatches -->
+<div id="classic-bundle-options-container-v2" class="classic-bundle-options-container-v2">
+    <div *ngFor="let itemIndex of getItemNumbers()" class="classic-bundle-options-container-panel-v2 p-6 border mb-6">
+      <!-- Header -->
+      <div class="flex flex-col items-center gap-3 pb-4 border-b border-gray-200">
+        <div class="classic-bundle-options-container-header-v2 font-bold text-xl">
+          <span>{{ getTranslation("dynamicPanel.selectOptionsForProduct") }} {{ itemIndex }}</span>
+        </div>
+  
+        <div class="flex flex-row gap-4">
+          <div 
+            *ngIf="selectedOptions[itemIndex]?.color"
+            class="classic-bundle-options-container-selection-indicator-v2 flex items-center gap-2 py-2 px-4 rounded-full text-sm"
+          >
+            <div 
+              class="w-4 h-4 rounded-full border"
+              [style.background-color]="getColorHex(itemIndex)"
+            ></div>
+            <span>{{ selectedOptions[itemIndex]?.color }}</span>
+          </div>
+          <div 
+            *ngIf="selectedOptions[itemIndex]?.size"
+            class="classic-bundle-options-container-selection-indicator-v2 flex items-center gap-2 py-2 px-4 rounded-full text-sm"
+          >
+            <span>المقاس: {{ selectedOptions[itemIndex]?.size }}</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Options in horizontal layout -->
+      <div class="flex flex-col gap-6 mt-6">
+        <!-- Color Options Section -->
+        <div class="select-option-section-v2">
+          <p class="classic-bundle-options-container-selection-title-v2 text-lg font-semibold mb-4 text-center">
+            اختر اللون
+          </p>
+  
+          <div class="flex flex-wrap justify-center gap-4">
+            <div
+              *ngFor="let option of customOptions.color; let i = index"
+              class="classic-bundle-options-container-color-option-v2 flex flex-col items-center gap-2 cursor-pointer transition-all duration-200"
+              [class.selected-v2]="isColorSelected(itemIndex, option.value)"
+              (click)="onColorSelect(itemIndex, option.value)"
+            >
+              <div
+                class="classic-bundle-options-container-color-swatch-v2 w-12 h-12 rounded-full border-3 shadow-lg"
+                [style.background-color]="option.hex"
+                [class.selected-swatch-v2]="isColorSelected(itemIndex, option.value)"
+              ></div>
+              <span class="classic-bundle-options-container-color-name-v2 text-sm font-medium text-center max-w-20">
+                {{ option.value }}
+              </span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Size Options Section -->
+        <div class="select-option-section-v2">
+          <p class="classic-bundle-options-container-selection-title-v2 text-lg font-semibold mb-4 text-center">
+            اختر المقاس
+          </p>
+  
+          <div class="flex flex-wrap justify-center gap-3">
+            <div
+              *ngFor="let option of customOptions.size; let i = index"
+              class="classic-bundle-options-container-size-option-v2 py-3 px-6 border-2 rounded-full cursor-pointer text-sm font-semibold text-center transition-all duration-200 min-w-16"
+              [class.selected-v2]="isSizeSelected(itemIndex, option.value)"
+              (click)="onSizeSelect(itemIndex, option.value)"
+            >
+              {{ option.value }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

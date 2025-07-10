@@ -1,0 +1,116 @@
+<!-- Variation 3: Card-based layout with images -->
+<div id="classic-bundle-options-container-v3" class="classic-bundle-options-container-v3">
+    <div *ngFor="let itemIndex of getItemNumbers()" class="classic-bundle-options-container-panel-v3 p-6 border mb-6">
+      <!-- Header with image preview -->
+      <div class="flex flex-col items-center gap-4 pb-6">
+        <div class="classic-bundle-options-container-header-v3 font-bold text-2xl text-center">
+          <span>{{ getTranslation("dynamicPanel.selectOptionsForProduct") }} {{ itemIndex }}</span>
+        </div>
+  
+        <!-- Product Preview -->
+        <div class="product-preview-card w-32 h-32 rounded-2xl overflow-hidden shadow-lg border-3" 
+             *ngIf="getSelectedColorData(itemIndex)">
+          <img 
+            [src]="getSelectedColorData(itemIndex)?.image" 
+            [alt]="getSelectedColorData(itemIndex)?.value"
+            class="w-full h-full object-cover"
+          />
+        </div>
+  
+        <div class="flex flex-wrap justify-center gap-3">
+          <div 
+            *ngIf="selectedOptions[itemIndex]?.color"
+            class="classic-bundle-options-container-selection-indicator-v3 flex items-center gap-2 py-2 px-4 rounded-2xl text-sm font-semibold"
+          >
+            <div 
+              class="w-5 h-5 rounded-full border-2 border-white shadow-sm"
+              [style.background-color]="getColorHex(itemIndex)"
+            ></div>
+            <span>{{ selectedOptions[itemIndex]?.color }}</span>
+          </div>
+          <div 
+            *ngIf="selectedOptions[itemIndex]?.size"
+            class="classic-bundle-options-container-selection-indicator-v3 flex items-center gap-2 py-2 px-4 rounded-2xl text-sm font-semibold"
+          >
+            <span>{{ selectedOptions[itemIndex]?.size }}</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Options in card layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Color Options Section -->
+        <div class="select-option-section-v3">
+          <p class="classic-bundle-options-container-selection-title-v3 text-xl font-bold mb-6 text-center">
+            اختر اللون المفضل
+          </p>
+  
+          <div class="grid grid-cols-1 gap-4">
+            <div
+              *ngFor="let option of customOptions.color; let i = index"
+              class="classic-bundle-options-container-color-card cursor-pointer transition-all duration-300"
+              [class.selected-card]="isColorSelected(itemIndex, option.value)"
+              (click)="onColorSelect(itemIndex, option.value)"
+            >
+              <div class="flex items-center gap-4 p-4 rounded-xl border-2">
+                <div 
+                  class="w-16 h-16 rounded-xl overflow-hidden shadow-md border-2 border-white"
+                >
+                  <img 
+                    [src]="option.image" 
+                    [alt]="option.value"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-lg">{{ option.value }}</h4>
+                  <div class="flex items-center gap-2 mt-1">
+                    <div 
+                      class="w-4 h-4 rounded-full border"
+                      [style.background-color]="option.hex"
+                    ></div>
+                    <span class="text-sm text-gray-600">{{ option.available_options.size.length }} مقاسات متاحة</span>
+                  </div>
+                </div>
+                <div class="color-selection-check" *ngIf="isColorSelected(itemIndex, option.value)">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Size Options Section -->
+        <div class="select-option-section-v3">
+          <p class="classic-bundle-options-container-selection-title-v3 text-xl font-bold mb-6 text-center">
+            اختر المقاس المناسب
+          </p>
+  
+          <div class="grid grid-cols-1 gap-3">
+            <div
+              *ngFor="let option of customOptions.size; let i = index"
+              class="classic-bundle-options-container-size-card cursor-pointer transition-all duration-300"
+              [class.selected-card]="isSizeSelected(itemIndex, option.value)"
+              (click)="onSizeSelect(itemIndex, option.value)"
+            >
+              <div class="flex items-center justify-between p-4 rounded-xl border-2">
+                <div class="flex-1">
+                  <div class="flex items-center gap-3">
+                    <span class="text-2xl font-bold">{{ option.value }}</span>
+                    <span class="text-sm text-gray-600">{{ option.description }}</span>
+                  </div>
+                </div>
+                <div class="size-selection-check" *ngIf="isSizeSelected(itemIndex, option.value)">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
