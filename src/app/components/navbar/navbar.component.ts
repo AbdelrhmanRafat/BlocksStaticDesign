@@ -25,10 +25,9 @@ export class NavbarComponent implements OnInit {
     { path: '/image-text-blocks', label: 'Product Information' },
     { path: '/image-text-2-blocks', label: 'Product Information 2' },
     { path: '/faq', label: 'FAQ' },
+    { path: '/product-features', label: 'Delivery Information' },
     { path: '/count-down-blocks', label: 'Countdown' },
-    { path: '/footer-blocks', label: 'Footer Preview' },
-    { path: '/form-field-blocks', label: 'Form Fields' },
-    { path: '/product-funnel-blocks', label: 'Product Funnel' },
+    { path: '/footer-blocks', label: 'Footer' },
   ];
 
   ngOnInit() {
